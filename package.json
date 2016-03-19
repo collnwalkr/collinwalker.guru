@@ -1,0 +1,15 @@
+{
+  "name": "collinwalker.guru",
+  "version": "0.0.1",
+  "description": "collinwalker.guru portfolio website",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/collnwalkr/collinwalker.guru.git"
+  },
+  "author": "Collin Walker",
+  "license": "ISC"
+}

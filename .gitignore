@@ -1,0 +1,3 @@
+# GIT IGNORE
+node_modules/
+.idea/
