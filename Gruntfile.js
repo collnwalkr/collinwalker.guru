@@ -20,7 +20,7 @@ module.exports = function(grunt) {
             },
             my_target: {
                 files: {
-                    'js/weekli.min.js': ['js/weekli.js']
+                    //'js/weekli.min.js': ['js/weekli.js']
                 }
             }
         },
@@ -34,10 +34,25 @@ module.exports = function(grunt) {
                     paths: ['less/']
                 },
                 files: {
-                    //compilation.css  :  source.less
-                    "css/weekli.css": "css/weekli.less",
-                    "css/index.css": "css/index.less"
+                    //compiled.css  :  source.less
+                    "production/css/portfolio.css": "dev/less/portfolio.less"
                 }
+            }
+        },
+
+        //COMPILE handlebars
+        'compile-handlebars': {
+            globbedTemplateAndOutput: {
+                files: [{
+                    expand: true,
+                    cwd: 'dev/handlebars/templates',
+                    src: '*.hbs',
+                    dest: 'production/',
+                    ext: '.html'
+                }],
+                templateData: 'dev/handlebars/templates/*.json',
+                partials: 'dev/handlebars/partials/*.hbs'
+                //helpers: 'test/helpers/**/*.js',
             }
         },
 
@@ -45,14 +60,15 @@ module.exports = function(grunt) {
         connect: {
             server: {
                 options: {
-                    port: 9002
+                    port: 9002,
+                    base: 'production'
                 }
             }
         },
 
         watch: {
-            files: ['js/*.js', 'js/*.js', 'css/*.less'],
-            tasks: ['jshint', 'uglify', 'less']
+            files: ['dev/js/*.js', 'dev/js/*.js', 'dev/less/*.less', 'dev/handlebars/**/*'],
+            tasks: ['jshint', 'uglify', 'less', 'compile-handlebars']
         },
 
         bump: {
@@ -69,6 +85,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-compile-handlebars');
     grunt.loadNpmTasks('grunt-bump');
 
     grunt.registerTask('default', ['jshint', 'uglify', 'less','connect', 'watch']);
