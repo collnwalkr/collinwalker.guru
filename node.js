@@ -1,19 +1,17 @@
-var http = require('http');
+var express = require('express');
+//var path    = require("path");
+var app = express();
 
-//Lets define a port we want to listen to
-const PORT=8080;
-
-//We need a function which handles requests and send response
-function handleRequest(request, response){
-    response.end('Path Hit: ' + request.url);
-    console.log('hit me');
-}
-
-//Create a server
-var server = http.createServer(handleRequest);
-
-//Lets start our server
-server.listen(PORT, function(){
-    //Callback triggered when server is successfully listening. Hurray!
-    console.log("Server listening on :%s", PORT);
+/*
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname + '/production/index.html'));
 });
+
+app.get('/test', function(req, res) {
+    res.sendFile(path.join(__dirname + '/production/templates/test.html'));
+});
+*/
+
+app.use(express.static('production'));
+
+app.listen(8080);

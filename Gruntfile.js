@@ -42,17 +42,33 @@ module.exports = function(grunt) {
 
         //COMPILE handlebars
         'compile-handlebars': {
-            globbedTemplateAndOutput: {
+            globbedTemplateAndOutput_templates: {
                 files: [{
                     expand: true,
-                    cwd: 'dev/handlebars/templates',
+                    cwd: 'dev/handlebars/pages',
+                    src: '*.hbs',
+                    dest: 'production/templates',
+                    ext: '.html'
+                }],
+                registerFullPath: false,
+                templateData: 'dev/handlebars/pages/*.json',
+                partials: 'dev/handlebars/partials/*.hbs',
+                helpers: 'dev/handlebars/helpers_pages/*.js'
+
+            },
+            globbedTemplateAndOutput_pages: {
+                files: [{
+                    expand: true,
+                    cwd: 'dev/handlebars/pages',
                     src: '*.hbs',
                     dest: 'production/',
                     ext: '.html'
                 }],
-                templateData: 'dev/handlebars/templates/*.json',
-                partials: 'dev/handlebars/partials/*.hbs'
-                //helpers: 'test/helpers/**/*.js',
+                registerFullPath: true,
+                templateData: 'dev/handlebars/pages/*.json',
+                partials: 'dev/handlebars/partials/*.hbs',
+                helpers: 'dev/handlebars/helpers_templates/*.js'
+                //helpers_templates: 'test/helpers_templates/**/*.js',
             }
         },
 
@@ -88,5 +104,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-compile-handlebars');
     grunt.loadNpmTasks('grunt-bump');
 
-    grunt.registerTask('default', ['jshint', 'uglify', 'less','connect', 'watch']);
+    grunt.registerTask('default', ['jshint', 'uglify', 'less','connect','compile-handlebars', 'watch']);
 };
