@@ -1,3 +1,10 @@
 # GIT IGNORE
 node_modules/
 .idea/
+dev/js/components
+production/js/components
+dev/js/app.js
+dev/js/main.js
+dev/js/router.js
+
+

@@ -82,9 +82,24 @@ module.exports = function(grunt) {
             }
         },
 
+        //COMPILE requirejs to one file
+        requirejs: {
+            compile: {
+                options: {
+                    //appDir: "src/",
+                    baseUrl: "./dev/js",
+                    //dir: "target/",
+                    optimize: 'uglify',
+                    name: 'main',
+                    out: 'production/js/app.min.js',
+                    mainConfigFile:'dev/js/main.js'
+                }
+            }
+        },
+
         watch: {
-            files: ['dev/js/*.js', 'dev/js/*.js', 'dev/less/*.less', 'dev/handlebars/**/*'],
-            tasks: ['jshint', 'uglify', 'less', 'compile-handlebars']
+            files: ['dev/js/*.js', 'dev/less/*.less', 'dev/handlebars/**/*'],
+            tasks: ['jshint', 'less', 'compile-handlebars']
         },
 
         bump: {
@@ -97,12 +112,12 @@ module.exports = function(grunt) {
     });
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-compile-handlebars');
+    grunt.loadNpmTasks('grunt-contrib-requirejs');
     grunt.loadNpmTasks('grunt-bump');
 
-    grunt.registerTask('default', ['jshint', 'uglify', 'less','connect','compile-handlebars', 'watch']);
+    grunt.registerTask('default', ['jshint', 'less','connect','compile-handlebars', 'watch']);
 };
