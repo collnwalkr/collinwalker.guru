@@ -1,13 +1,17 @@
-h1 {
-  color: green;
-}
 .page {
-  height: 880px;
-  margin-bottom: 140px;
+  height: 150px;
+  margin: 0 10px 140px;
   min-height: 0;
   max-height: none;
   width: calc(30%);
   display: inline-block;
+  overflow: hidden;
+}
+.page-active {
+  background-color: red;
+}
+h1 {
+  color: green;
 }
 img {
   max-width: 100%;

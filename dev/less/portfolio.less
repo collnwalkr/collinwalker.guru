@@ -1,15 +1,53 @@
-h1{
-  color: green;
-}
+/////////////////////////////
+// IMPORTS
+/////////////////////////////
 
+
+
+/////////////////////////////
+// VARIABLES
+/////////////////////////////
+@light-color:       #79bd8f;
+@light-grey: #f4f4f4;
+@dark-accent:       #255c37;
+@dark-color:        #312d30;
+@secondary-color:   #f26d5b;
+
+// BREAKPOINTS
+// Source: http://blog.scur.pl/2012/06/variable-media-queries-less-css/
+@mobile:      ~"only screen and (max-width: 599px)";
+@tablet:      ~"only screen and (min-width: 600px) and (max-width: 674px)";
+@desktop:     ~"only screen and (min-width: 675px) and (max-width: 884px)";
+@desktop-xl:  ~"only screen and (min-width: 885px)";
+
+/////////////////////////////
+// META
+/////////////////////////////
+
+
+
+/////////////////////////////
+// PAGE
+/////////////////////////////
 .page{
-  height: 880px;
-  margin-bottom: 140px;
+  height: 150px;
+  margin: 0 10px 140px;
   min-height: 0;
   max-height: none;
   width: calc(50% - 20px);
   display: inline-block;
+  overflow: hidden;
+
 }
+
+.page-active{
+  background-color: red;
+}
+
+h1{
+  color: green;
+}
+
 
 img{
   max-width: 100%;

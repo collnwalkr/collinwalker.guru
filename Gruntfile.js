@@ -4,7 +4,7 @@ module.exports = function(grunt) {
 
         //LINT javascript files
         jshint: {
-            files: ['Gruntfile.js', 'js/*.js'],
+            files: ['Gruntfile.js', 'production/js/*.js'],
             options: {
                 globals: {
                     jQuery: true
@@ -68,7 +68,6 @@ module.exports = function(grunt) {
                 templateData: 'dev/handlebars/pages/*.json',
                 partials: 'dev/handlebars/partials/*.hbs',
                 helpers: 'dev/handlebars/helpers_templates/*.js'
-                //helpers_templates: 'test/helpers_templates/**/*.js',
             }
         },
 
@@ -98,7 +97,7 @@ module.exports = function(grunt) {
         },
 
         watch: {
-            files: ['dev/js/*.js', 'dev/less/*.less', 'dev/handlebars/**/*'],
+            files: ['production/js/*.js', 'dev/less/*.less', 'dev/handlebars/**/*'],
             tasks: ['jshint', 'less', 'compile-handlebars']
         },
 
@@ -116,7 +115,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-compile-handlebars');
-    grunt.loadNpmTasks('grunt-contrib-requirejs');
     grunt.loadNpmTasks('grunt-bump');
 
     grunt.registerTask('default', ['jshint', 'less','connect','compile-handlebars', 'watch']);
