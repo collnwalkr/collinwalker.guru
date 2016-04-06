@@ -28,7 +28,7 @@ $(function () {
 
     for(var i = 0; i < pages_list.length; i++) {
         $.ajax({
-                url: "templates/" + pages_list[i] + ".html",
+                url: "previews/" + pages_list[i] + ".html",
                 headers: {page: pages_list[i]},
                 type: "GET"
             })

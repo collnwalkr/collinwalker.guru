@@ -42,18 +42,32 @@ module.exports = function(grunt) {
 
         //COMPILE handlebars
         'compile-handlebars': {
-            globbedTemplateAndOutput_templates: {
+            globbedTemplateAndOutput_previews: {
                 files: [{
                     expand: true,
                     cwd: 'dev/handlebars/pages',
                     src: '*.hbs',
-                    dest: 'production/templates',
+                    dest: 'production/previews',
                     ext: '.html'
                 }],
                 registerFullPath: false,
                 templateData: 'dev/handlebars/pages/*.json',
                 partials: 'dev/handlebars/partials/*.hbs',
-                helpers: 'dev/handlebars/helpers_pages/*.js'
+                helpers: 'dev/handlebars/helpers_previews/*.js'
+
+            },
+            globbedTemplateAndOutput_content: {
+                files: [{
+                    expand: true,
+                    cwd: 'dev/handlebars/pages',
+                    src: '*.hbs',
+                    dest: 'production/content',
+                    ext: '.html'
+                }],
+                registerFullPath: false,
+                templateData: 'dev/handlebars/pages/*.json',
+                partials: 'dev/handlebars/partials/*.hbs',
+                helpers: 'dev/handlebars/helpers_content/*.js'
 
             },
             globbedTemplateAndOutput_pages: {
@@ -67,7 +81,7 @@ module.exports = function(grunt) {
                 registerFullPath: true,
                 templateData: 'dev/handlebars/pages/*.json',
                 partials: 'dev/handlebars/partials/*.hbs',
-                helpers: 'dev/handlebars/helpers_templates/*.js'
+                helpers: 'dev/handlebars/helpers_pages/*.js'
             }
         },
 

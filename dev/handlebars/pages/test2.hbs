@@ -1,13 +1,27 @@
-{{#ignorePartialsTemplate}}
+{{#BothIgnoreThis}}
 {{> html_head}}
-{{/ignorePartialsTemplate}}
+{{/BothIgnoreThis}}
 
 <div class="page--container">
-    <h1>{{title}}</h1>
-    <img src="/img/collin.jpg">
-    {{body}}
+    {{#ContentIgnoreThis}}
+
+    <div class="page-preview">
+        <h1>{{title}}</h1>
+    </div>
+
+    {{/ContentIgnoreThis}}
+
+    {{#PreviewsIgnoreThis}}
+
+    <div class="page-content">
+        <img src="/img/collin.jpg">
+        <h3>hello content</h3>
+        {{body}}
+    </div>
+
+    {{/PreviewsIgnoreThis}}
 </div>
 
-{{#ignorePartialsTemplate}}
+{{#BothIgnoreThis}}
 {{> html_foot}}
-{{/ignorePartialsTemplate}}
+{{/BothIgnoreThis}}
