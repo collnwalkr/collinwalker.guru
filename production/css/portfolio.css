@@ -5,10 +5,35 @@
   max-height: none;
   width: calc(30%);
   display: inline-block;
+  position: relative;
   overflow: hidden;
 }
-.page-active {
+.page.page-active {
   background-color: red;
+  height: auto;
+  margin: 0 10px 140px;
+  min-height: 0;
+  max-height: none;
+  width: calc(100%);
+  display: block;
+  overflow: auto;
+}
+.page.page-inactive:hover {
+  cursor: pointer;
+}
+.zoom-in header {
+  display: none;
+}
+.page-moving {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 200ms ease-out;
+}
+.page-moving.zoom-out .page-moving-inner {
+  height: 150px!important;
+  width: calc(35%) !important;
+  transform: scale(0.5);
 }
 h1 {
   color: green;

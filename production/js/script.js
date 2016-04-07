@@ -36,17 +36,6 @@ $(function () {
             .always(ajax_always());
     }
 
-
-
-    $(window).on('hashchange', function(){
-        // On every hash change the render function is called with the new hash.
-        // This is how the navigation of our app happens.
-        render(decodeURI(window.location.hash));
-    });
-
-
-
-
     /////////////////////////////
     // GENERATE all pages
     /////////////////////////////
@@ -70,15 +59,45 @@ $(function () {
 
     var changePageHandler = function(){
         return function(e){
-            var page_attr = $(this).attr("data-page");
-            var page = $(".page[data-page='" + page_attr + "']");
+            var page_attr       = $(this).attr("data-page");
+            var page            = $(".page[data-page='" + page_attr + "']");
+
+            move_preview(page);
 
             e.preventDefault();
 
-            history.pushState($(this).attr("data-page"), '', $(this).attr("href"));
+            //history.pushState($(this).attr("data-page"), '', $(this).attr("href"));
 
-            renderPage(page);
+            //renderPage(page);
         };
+    };
+
+    var move_preview = function(page){
+        var preview_content     = page.html();
+        var page_moving         = $('.page-moving');
+        var page_moving_inner   = $('.page-moving-inner');
+        var page_offset = page.offset();
+
+        page_moving_inner.html(preview_content);
+
+        //page_moving.offset({ top: page_offset.top, left: page_offset.left });
+
+        var starting_position = 'translate(' + page_offset.left + 'px, ' + page_offset.top + 'px);';
+
+        console.log(starting_position);
+
+        page_moving.css('transform', starting_position);
+        page_moving.css('-webkit-transform', starting_position);
+        page_moving.css('background-color', 'red');
+
+        $('.page-moving').css('left', '100px');
+
+        //page_moving.css({
+        //    '-webkit-transform':starting_position,
+        //    '-ms-transform':starting_position,
+        //   'transform':starting_position
+        //});
+
     };
 
 
@@ -86,56 +105,17 @@ $(function () {
     /////////////////////////////
     // RENDER certain pages
     /////////////////////////////
-    function render(url) {
-        // Get the keyword from the url.
-        var temp = url.split('/')[0];
-
-        // Hide whatever page is currently shown.
-        $('.main-content .page').removeClass('visible');
-
-
-        var map = {
-
-            // The Homepage.
-            '': function() {
-
-                // Clear the filters object, uncheck all checkboxes, show all the pages
-
-                renderHome(page_data);
-            },
-
-            // Single Pages page.
-            '#page': function() {
-
-                // Get the index of which page we want to show and call the appropriate function.
-                var index = url.split('#page/')[1].trim();
-
-                //renderPage(index, pages);
-            }
-
-
-        };
-
-
-        // Execute the needed function depending on the url keyword (stored in temp).
-        if(map[temp]){
-            map[temp]();
-        }
-        // If the keyword isn't listed in the above - render the error page.
-        else {
-            //renderErrorPage();
-        }
-
-    }
-
     function renderHome(){
 
-        var allPages = $('.pages > .page');
-
         // Hide all the pages in the pages list.
+        var allPages = $('.pages > .page');
         allPages.addClass('page-inactive');
         allPages.removeClass('page-active ');
 
+        // SHOW header
+        var content = $('.content');
+        content.addClass('zoom-out');
+        content.removeClass('zoom-in');
 
     }
 
@@ -147,10 +127,13 @@ $(function () {
         allPages.addClass('page-inactive');
         allPages.removeClass('page-active ');
 
+        // HIDE header
+        var content = $('.content');
+        content.addClass('zoom-in');
+        content.removeClass('zoom-out');
 
         // TURN on page
         $(page).toggleClass('page-active page-inactive');
-
     }
 
 
@@ -159,7 +142,6 @@ $(function () {
     // HANDLE back button
     /////////////////////////////
     $('#exit-button').on('click', function () {
-
         parent.history.back();
         return false;
     });
@@ -177,8 +159,7 @@ $(function () {
         else{
             renderHome();
         }
-        
-        
+
     });
 
 });

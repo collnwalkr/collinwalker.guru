@@ -36,12 +36,66 @@
   max-height: none;
   width: calc(50% - 20px);
   display: inline-block;
+  position: relative;
   overflow: hidden;
+
+  &.page-active{
+    background-color: red;
+
+    height: auto;
+    margin: 0 10px 140px;
+    min-height: 0;
+    max-height: none;
+    width: calc(100%);
+    display: block;
+    overflow: auto;
+  }
+
+  &.page-inactive{
+    &:hover{
+      cursor: pointer;
+    }
+  }
+}
+
+
+// ZOOMED OUT
+.zoom-out{
 
 }
 
-.page-active{
-  background-color: red;
+.zoom-in{
+
+  header{
+    display: none;
+
+  }
+
+}
+
+
+// MOVEMENT
+.page-moving{
+  position: absolute;
+
+  top:0;
+  left:0;
+
+  transition: transform 200ms ease-out;
+
+  &.zoom-out{
+    .page-moving-inner {
+      height: 150px!important;
+      width: calc(50% - 15px)!important;
+      transform: scale(0.5);
+    }
+  }
+
+  &.zoom-in{
+
+  }
+
+
 }
 
 h1{
