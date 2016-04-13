@@ -1,9 +1,12 @@
+body {
+  margin: 0;
+}
 .page {
   height: 150px;
   margin: 0 10px 140px;
   min-height: 0;
   max-height: none;
-  width: calc(30%);
+  width: calc(50% - 20px);
   display: inline-block;
   position: relative;
   overflow: hidden;
@@ -24,20 +27,35 @@
 .zoom-in header {
   display: none;
 }
-.page-moving {
+.page-move {
   position: absolute;
   top: 0;
   left: 0;
+  height: 300px;
+  width: calc(100% - 55px);
+  overflow: hidden;
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  -o-transform: scale(0.5);
+  transform: scale(0.5);
   transition: transform 200ms ease-out;
 }
-.page-moving.zoom-out .page-moving-inner {
-  height: 150px!important;
-  width: calc(35%) !important;
-  transform: scale(0.5);
+.page-move.zoom-in {
+  height: 100%;
+  width: 100%;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
 }
 h1 {
   color: green;
 }
 img {
   max-width: 100%;
+}
+.test1 {
+  background-color: red;
 }

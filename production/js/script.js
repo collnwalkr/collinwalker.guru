@@ -74,31 +74,43 @@ $(function () {
 
     var move_preview = function(page){
         var preview_content     = page.html();
-        var page_moving         = $('.page-moving');
-        var page_moving_inner   = $('.page-moving-inner');
+        var page_move         = $('.page-move');
+        var page_move_inner   = $('.page-move-inner');
         var page_offset = page.offset();
 
-        page_moving_inner.html(preview_content);
 
-        //page_moving.offset({ top: page_offset.top, left: page_offset.left });
+        page_move_inner.html(preview_content);
 
-        var starting_position = 'translate(' + page_offset.left + 'px, ' + page_offset.top + 'px);';
+        //var starting_position = 'translate(' + page_offset.left + 'px, ' + page_offset.top + 'px)';
+        var starting_position = '' + page_offset.left * 2 + 'px ' + page_offset.top * 2 + 'px';
+        var end_position      = 'translate(' + 0 + 'px, ' + 0 + 'px)';
 
-        console.log(starting_position);
+        page_move.css({
+            '-webkit-transform-origin':starting_position,
+            '-ms-transform-origin':starting_position,
+           'transform-origin':starting_position
+        });
 
-        page_moving.css('transform', starting_position);
-        page_moving.css('-webkit-transform', starting_position);
-        page_moving.css('background-color', 'red');
+        page_move.addClass('zoom-in');
 
-        $('.page-moving').css('left', '100px');
+        page_move.on("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(e){
+            console.log('hello');
+        });
 
-        //page_moving.css({
-        //    '-webkit-transform':starting_position,
-        //    '-ms-transform':starting_position,
-        //   'transform':starting_position
-        //});
-
+        /*
+        page_move.css({
+            '-webkit-transform':end_position,
+            '-ms-transform':end_position,
+            'transform':end_position
+        });
+        */
     };
+
+    $('#test-button').on('click', function(){
+        //test
+        console.log('test');
+
+    });
 
 
 
