@@ -1,8 +1,15 @@
 body {
   margin: 0;
 }
+.is-hidden {
+  display: none;
+}
+.pages {
+  width: 200%;
+  transform: scale(0.5);
+  transform-origin: 0 0;
+}
 .page {
-  height: 150px;
   margin: 0 10px 140px;
   min-height: 0;
   max-height: none;
@@ -21,6 +28,9 @@ body {
   display: block;
   overflow: auto;
 }
+.page.page-inactive {
+  height: 400px;
+}
 .page.page-inactive:hover {
   cursor: pointer;
 }
@@ -31,8 +41,8 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  height: 300px;
-  width: calc(100% - 55px);
+  height: 400px;
+  width: calc(100% - 20px);
   overflow: hidden;
   -webkit-transform: scale(0.5);
   -moz-transform: scale(0.5);
@@ -57,5 +67,8 @@ img {
   max-width: 100%;
 }
 .test1 {
-  background-color: red;
+  background-color: lightgrey;
+}
+.test2 {
+  background-color: lightgrey;
 }

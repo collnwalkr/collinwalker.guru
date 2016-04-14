@@ -66,7 +66,7 @@ $(function () {
 
             e.preventDefault();
 
-            //history.pushState($(this).attr("data-page"), '', $(this).attr("href"));
+            history.pushState($(this).attr("data-page"), '', $(this).attr("href"));
 
             //renderPage(page);
         };
@@ -77,6 +77,7 @@ $(function () {
         var page_move         = $('.page-move');
         var page_move_inner   = $('.page-move-inner');
         var page_offset = page.offset();
+
 
 
         page_move_inner.html(preview_content);
@@ -91,19 +92,11 @@ $(function () {
            'transform-origin':starting_position
         });
 
-        page_move.addClass('zoom-in');
+        page_move.removeClass('is-hidden');
+        setTimeout(function() {
+            page_move.addClass('zoom-in');
+        }.bind(this), 10);
 
-        page_move.on("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(e){
-            console.log('hello');
-        });
-
-        /*
-        page_move.css({
-            '-webkit-transform':end_position,
-            '-ms-transform':end_position,
-            'transform':end_position
-        });
-        */
     };
 
     $('#test-button').on('click', function(){
@@ -119,6 +112,8 @@ $(function () {
     /////////////////////////////
     function renderHome(){
 
+        console.log('back');
+
         // Hide all the pages in the pages list.
         var allPages = $('.pages > .page');
         allPages.addClass('page-inactive');
@@ -128,6 +123,13 @@ $(function () {
         var content = $('.content');
         content.addClass('zoom-out');
         content.removeClass('zoom-in');
+
+        // Zoom out.
+        var page_move = $('.page-move');
+        page_move.removeClass('is-hidden');
+        setTimeout(function() {
+            page_move.removeClass('zoom-in');
+        }.bind(this), 10);
 
     }
 
@@ -143,6 +145,13 @@ $(function () {
         var content = $('.content');
         content.addClass('zoom-in');
         content.removeClass('zoom-out');
+
+        // Zoom in.
+        var page_move = $('.page-move');
+        page_move.removeClass('is-hidden');
+        setTimeout(function() {
+            page_move.addClass('zoom-in');
+        }.bind(this), 10);
 
         // TURN on page
         $(page).toggleClass('page-active page-inactive');
@@ -162,6 +171,7 @@ $(function () {
         var state = e.originalEvent.state;
         var page = $(".page[data-page='" + state + "']");
         if(state === null){ state = 'index'; }
+        console.log('hello');
 
         if ($.inArray(state, pages_list) != -1)
         {
@@ -172,6 +182,17 @@ $(function () {
             renderHome();
         }
 
+    });
+
+    $(window).on("navigate", function (event, data) {
+        var direction = data.state.direction;
+        console.log(direction);
+        if (direction == 'back') {
+            // do something
+        }
+        if (direction == 'forward') {
+            // do something else
+        }
     });
 
 });
