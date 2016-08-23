@@ -1,28 +1,38 @@
 {
-  "name": "collinwalker.guru",
-  "version": "0.0.1",
-  "description": "collinwalker.guru portfolio website",
-  "main": "index.html",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/collnwalkr/collinwalker.guru.git"
-  },
-  "author": "Collin Walker",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.13.4",
-    "path": "^0.12.7"
+  "name": "collinwalker-guru",
+  "version": "0.0.0",
+  "description": "A portfolio of sorts",
+  "homepage": "http://collinwalker.guru/",
+  "author": {
+    "name": "Collin Walker",
+    "email": ""
   },
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-bump": "^0.7.0",
-    "grunt-compile-handlebars": "^2.0.1",
-    "grunt-contrib-connect": "^0.11.2",
-    "grunt-contrib-jshint": "^1.0.0",
-    "grunt-contrib-less": "^1.2.0",
-    "grunt-contrib-watch": "^0.6.1"
+    "autoprefixer": "^6.2.3",
+    "babel-preset-es2015": "^6.9.0",
+    "browser-sync": "^2.11.0",
+    "del": "^2.2.0",
+    "gulp": "git://github.com/gulpjs/gulp.git#4.0",
+    "gulp-cache": "^0.4.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssnano": "^2.1.0",
+    "gulp-gzip": "^1.1.0",
+    "gulp-htmlmin": "^2.0.0",
+    "gulp-if": "^2.0.0",
+    "gulp-imagemin": "^3.0.0",
+    "gulp-inject": "^4.0.0",
+    "gulp-newer": "^1.1.0",
+    "gulp-postcss": "^6.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-rev": "^7.0.0",
+    "gulp-sass": "^2.1.1",
+    "gulp-size": "^2.0.0",
+    "gulp-sourcemaps": "^1.3.0",
+    "gulp-uglify": "^1.5.1",
+    "require-dir": "^0.3.0",
+    "shelljs": "^0.7.0",
+    "yargs": "^4.7.0",
+    "gulp-babel": "^6.1.2",
+    "gulp-rsync": "^0.0.6"
   }
 }
