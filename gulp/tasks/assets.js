@@ -26,8 +26,9 @@ gulp.task('scripts', () =>
   // top to bottom, so you want vendor scripts etc on top
   gulp.src([
     'src/assets/javascript/vendor.js',
-    'src/assets/javascript/main.js'
-  ])
+    'src/assets/javascript/main.js',
+    'src/assets/javascript/footer.js'
+    ])
     .pipe(newer('.tmp/assets/javascript/index.js', {dest: '.tmp/assets/javascript', ext: '.js'}))
     .pipe(when(!argv.prod, sourcemaps.init()))
     .pipe(babel({
@@ -95,8 +96,9 @@ function reload(done) {
 // in all your files and update them when needed
 gulp.task('serve', (done) => {
   browserSync.init({
-    // tunnel: true,
+    //tunnel: true,
     // open: false,
+    tunnel: "collin",
     server: ['.tmp', 'dist']
   });
   done();
