@@ -10,15 +10,17 @@ $base-line-height: 1.5;
 
 $spacing-unit:     30px;
 
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
+// Colors
+$dark-text-color:  #262932;
+$light-text-color: #FFFFFF;
 
-$grey-color:       #828282;
+$background-color: #FFFFFF;
+$brand-color:      #CA6AFF;
+$light-grey-color: #FAFAFA;
+$dark-grey-color:  #383838;
 
 // Width of the content area
 $content-width:    800px;
-
 $on-mobile:        374px;
 $on-tablet:        375px;
 $on-laptop:        768px;

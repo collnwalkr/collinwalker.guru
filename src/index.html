@@ -2,10 +2,84 @@
 layout: default
 ---
 
-<div class="home">
+<div class="index">
 
-  <h1 class="page-heading">Posts</h1>
+  <div id="index-splash">
 
+    <div id="index-splash-hello">
+      <p>UX Engineer by day<p/>
+      <p>slackliner by later in the day<p/>
+      <p>sleeper by night<p/>
+    </div>
+
+    <div id="index-splash-gifs">
+
+    </div>
+
+  </div>
+
+  {% include index-nav.html %}
+
+
+  <div id="index-work" class="index-full_height">
+
+    <div class="left-side">
+
+      <h2>work</h2>
+
+      {% include index-nav.html %}
+
+    </div>
+
+    <div class="right-side">
+
+      <ul class="project-list">
+        {% for project in site.posts %}
+        <li>
+          <span class="post-meta">{{ project.date | date: "%b %-d, %Y" }}</span>
+
+          <h2>
+            <a class="project-link" href="{{ project.url | prepend: site.baseurl }}">{{ project.title }}</a>
+          </h2>
+        </li>
+        {% endfor %}
+      </ul>
+
+    </div>
+
+  </div>
+
+
+  <div id="index-about" class="index-full_height">
+
+    <div class="left-side">
+      <h2>about</h2>
+      {% include index-nav.html %}
+    </div>
+
+    <div class="right-side">
+      <img src="/assets/images/collin_rainier.jpg" title="Me at Mt Rainier" alt="Collin Walker looking at Mt Rainier">
+      <p>
+        Selvage hashtag microdosing flannel put a bird on it DIY. Wolf butcher mlkshk, flannel scenester XOXO vegan drinking vinegar food truck. Raw denim cray YOLO, pour-over williamsburg humblebrag single-origin coffee lumbersexual trust fund post-ironic photo booth chicharrones tote bag celiac hashtag. Gochujang yuccie hammock, banjo portland keytar thundercats. Kickstarter mumblecore umami retro irony messenger bag, cred cold-pressed gluten-free bushwick tofu +1 banjo meggings kale chips. Fixie narwhal crucifix, banh mi bitters fap venmo hammock YOLO. Hashtag pitchfork hella taxidermy, affogato next level fap blue bottle keffiyeh PBR&B tilde tofu literally squid.
+      </p>
+    </div>
+
+  </div>
+
+
+  <div id="index-contact" class="index-full_height">
+    <div class="left-side">
+      <h2>contact</h2>
+      {% include index-nav.html %}
+    </div>
+
+    <div class="right-side">
+
+    </div>
+
+  </div>
+
+  <!--
   <ul class="post-list">
     {% for post in site.posts %}
       <li>
@@ -17,5 +91,6 @@ layout: default
       </li>
     {% endfor %}
   </ul>
+  -->
 
 </div>

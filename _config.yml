@@ -14,11 +14,9 @@ exclude: ['assets']
 # NOTE: Don't use @ in front of your Twitter username
 author:
   name: Collin Walker
-  email: 
+  email:
   uri: http://collinwalker.guru/
-  bio: 
-  twitter:
-  github: collnwalkr
+  bio:
 
 # _config.build.yml overwrites these options when you run `gulp build`
 # Enables future posts (posts with dates in the future) and drafts

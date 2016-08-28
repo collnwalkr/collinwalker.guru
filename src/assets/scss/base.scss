@@ -15,7 +15,7 @@ dl, dd, ol, ul, figure {
  */
 body {
     font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-    color: $text-color;
+    color: $dark-text-color;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
@@ -99,7 +99,7 @@ a {
     }
 
     &:hover {
-        color: $text-color;
+        color: $dark-text-color;
         text-decoration: underline;
     }
 }
@@ -110,8 +110,8 @@ a {
  * Blockquotes
  */
 blockquote {
-    color: $grey-color;
-    //border-left: 4px solid $grey-color-light;
+    color: $light-grey-color;
+    border-left: 4px solid $light-grey-color;
     padding-left: $spacing-unit / 2;
     font-size: 18px;
     letter-spacing: -1px;
@@ -200,7 +200,7 @@ pre {
         vertical-align: middle;
 
         path {
-            fill: $grey-color;
+            fill: $light-grey-color;
         }
     }
 }
