@@ -4,35 +4,49 @@ layout: default
 
 <div class="index">
 
-  <div id="index-splash">
+  <!----------- SPLASH ----------->
+  <div id="index-splash" class="half-height flex-container flex-row">
 
-    <div id="index-splash-hello">
-      <p>UX Engineer by day<p/>
-      <p>slackliner by later in the day<p/>
-      <p>sleeper by night<p/>
-    </div>
-
-    <div id="index-splash-gifs">
-
-    </div>
-
-  </div>
-
-  {% include index-nav.html %}
-
-
-  <div id="index-work" class="index-full_height">
-
-    <div class="left-side">
-
-      <h2>work</h2>
+    <div class="left-side center-text">
+      <div id="index-splash-hello">
+        <span><span class="underline-default_color-white_bg hello-hover" id="hello-ux">
+          UX Engineer</span>
+          by day,</span>
+        <span><span class="underline-default_color-white_bg hello-hover" id="hello-slack">
+          slackliner</span>
+          by later in the day,</span>
+        <span><span class="underline-default_color-white_bg hello-hover" id="hello-sleep">
+          sleeper</span>
+          by night.</span>
+      </div>
 
       {% include index-nav.html %}
 
     </div>
 
-    <div class="right-side">
+    <div class="right-side" id="index-splash-gifs">
+      <img class="visibility-hidden" id="gif-ux"    src="/assets/images/ux-engineer.gif">
+      <img class="visibility-hidden" id="gif-slack" src="/assets/images/slackline.gif">
+      <img class="visibility-hidden" id="gif-sleep" src="/assets/images/sleep.gif">
+    </div>
 
+
+  </div>
+
+
+  <!----------- WORK ----------->
+  <div id="index-work" class="full-height flex-container flex-row">
+
+
+
+    <div class="left-side flex-container flex-column center-children">
+      <h2>work</h2>
+      {% include index-nav.html %}
+    </div>
+
+
+
+    <div class="right-side flex-container flex-column center-children">
       <ul class="project-list">
         {% for project in site.posts %}
         <li>
@@ -44,40 +58,59 @@ layout: default
         </li>
         {% endfor %}
       </ul>
-
     </div>
 
   </div>
 
+  <!----------- ABOUT ----------->
+  <div id="index-about" class="full-height flex-container flex-row">
 
-  <div id="index-about" class="index-full_height">
 
-    <div class="left-side">
+
+    <div class="left-side flex-container flex-column center-children">
       <h2>about</h2>
       {% include index-nav.html %}
     </div>
 
-    <div class="right-side">
+
+
+    <div class="right-side flex-container flex-column center-children">
       <img src="/assets/images/collin_rainier.jpg" title="Me at Mt Rainier" alt="Collin Walker looking at Mt Rainier">
       <p>
         Selvage hashtag microdosing flannel put a bird on it DIY. Wolf butcher mlkshk, flannel scenester XOXO vegan drinking vinegar food truck. Raw denim cray YOLO, pour-over williamsburg humblebrag single-origin coffee lumbersexual trust fund post-ironic photo booth chicharrones tote bag celiac hashtag. Gochujang yuccie hammock, banjo portland keytar thundercats. Kickstarter mumblecore umami retro irony messenger bag, cred cold-pressed gluten-free bushwick tofu +1 banjo meggings kale chips. Fixie narwhal crucifix, banh mi bitters fap venmo hammock YOLO. Hashtag pitchfork hella taxidermy, affogato next level fap blue bottle keffiyeh PBR&B tilde tofu literally squid.
       </p>
     </div>
 
+
   </div>
 
+  <!----------- CONTACT ----------->
+  <div id="index-contact" class="full-height flex-container flex-row">
 
-  <div id="index-contact" class="index-full_height">
-    <div class="left-side">
+
+    <div class="left-side flex-container flex-column center-children">
       <h2>contact</h2>
       {% include index-nav.html %}
     </div>
 
-    <div class="right-side">
 
+
+    <div class="right-side flex-container flex-column center-children">
+
+      <div id="index-contact-details">
+        <h1>Collin Walker</h1>
+        <p>Raw denim cray YOLO, pour-over williamsburg humblebrag single-origin coffee lumbersexual trust fund post-ironic.</p>
+
+        <a>colln.walkr@gmail.com</a>
+        <a>resume</a>
+
+        <i class="fa fa-github" aria-hidden="true"></i>
+        <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+      </div>
     </div>
 
   </div>
+
 
   <!--
   <ul class="post-list">

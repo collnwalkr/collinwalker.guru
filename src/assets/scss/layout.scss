@@ -3,10 +3,41 @@
  */
 .site-header {
   min-height: 56px;
+
+  padding-top: 5em;
+  padding-bottom: 9em;
+  h1{
+    display:inline-block;
+    margin-left: 20px;
+    font-family: $secondary-font-family;
+    font-size: 1em;
+    font-weight: $bold-font-weight;
+    vertical-align: middle;
+  }
+
+  .wrapper{
+    position: relative;
+    text-align: center;
+  }
+
+  .wrapper:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+  }
 }
 
+
 #logo{
-  display: inline;
+  display: inline-block;
+  width:  61px;
+  height: 31px;
+
+  svg{
+    width: 100%;
+    height: 100%;
+  }
 }
 
 /**
@@ -15,6 +46,8 @@
 #footer-canv{
   width: 100%;
   height: 3px;
+  position:absolute;
+
 }
 
 .footer-col {
@@ -51,20 +84,18 @@
     }
 }
 
-
-
 /**
  * Page content
  */
 .page-content {
-    padding: $spacing-unit 0;
-}
 
+}
 
 
 /**
  * Posts
  */
 .post-header {
-    margin-bottom: $spacing-unit;
+  margin-bottom: $spacing-unit;
 }
+

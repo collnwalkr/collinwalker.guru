@@ -26,8 +26,9 @@ gulp.task('scripts', () =>
   // top to bottom, so you want vendor scripts etc on top
   gulp.src([
     'src/assets/javascript/vendor.js',
-    'src/assets/javascript/main.js',
-    'src/assets/javascript/footer.js'
+    'src/assets/javascript/footer.js',
+    'src/assets/javascript/index.js',
+    'src/assets/javascript/mobile-vh-bugfix.js'
     ])
     .pipe(newer('.tmp/assets/javascript/index.js', {dest: '.tmp/assets/javascript', ext: '.js'}))
     .pipe(when(!argv.prod, sourcemaps.init()))

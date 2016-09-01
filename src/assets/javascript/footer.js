@@ -3,13 +3,13 @@ Based off pen by Tiffany Rayside http://codepen.io/tmrDevelops/pen/vOPZBv
 */
 
 var c = document.getElementById('footer-canv');
-var $ = c.getContext('2d');
+var cxt = c.getContext('2d');
 var x, y = 0;
 
 
 var col = function(x, y, r, g, b) {
-  $.fillStyle = "rgb(" + r + "," + g + "," + b + ")";
-  $.fillRect(x, y, 1,1);
+  cxt.fillStyle = "rgb(" + r + "," + g + "," + b + ")";
+  cxt.fillRect(x, y, 1,1);
 };
 var R = function(x, y, t) {
   return( Math.floor(192 + 64*Math.cos( (x*x-y*y)/300 + t )) );
@@ -33,6 +33,6 @@ var run = function() {
   }
   t = t + 0.010;
   window.requestAnimationFrame(run);
-}
+};
 
 run();

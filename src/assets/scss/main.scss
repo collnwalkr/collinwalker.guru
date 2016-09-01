@@ -5,6 +5,7 @@ $base-font-family: "Didact Gothic", Helvetica, Arial, sans-serif;
 $secondary-font-family: "Open Sans", Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
 $base-font-weight: 400;
+$bold-font-weight: 700;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
@@ -21,10 +22,17 @@ $dark-grey-color:  #383838;
 
 // Width of the content area
 $content-width:    800px;
-$on-mobile:        374px;
-$on-tablet:        375px;
-$on-laptop:        768px;
-$on-desktop:       1024px;
+$on-mobile:        375px;
+$on-tablet:        768px;
+$on-laptop:        1024px;
+$on-desktop:       99999px;
+
+
+// Margin for different screens
+$margin-mobile:   20px;
+$margin-tablet:   60px;
+$margin-laptop:   60px;
+$margin-desktop:  100px;
 
 
 

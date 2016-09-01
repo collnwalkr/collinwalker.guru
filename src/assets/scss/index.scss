@@ -1,0 +1,97 @@
+/**
+ * Index content
+ */
+
+.index-full_height .flexcontainer{
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+
+#index-work {
+  .left-side {
+    background-color: $dark-grey-color;
+    color: white;
+  }
+  .right-side {
+    background-color: $light-grey-color;
+  }
+}
+
+#index-about {
+  .left-side {
+    background-color: $light-grey-color;
+  }
+  .right-side {
+    background-color: white;
+  }
+}
+
+#index-contact {
+  .left-side {
+    background-color: $brand-color;
+    color: white;
+  }
+  .right-side {
+    background-color: $light-grey-color;
+  }
+}
+
+#index-splash-hello{
+  span{
+    font-size: 1.5rem;
+    margin-bottom: 0;
+  }
+
+  span{
+    cursor: default;
+  }
+
+  .hello-hover:hover{
+    @include linkUnderlines(white, $brand-color);
+  }
+
+  height: 200px;
+  display: inline-flex;
+  text-align: left;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#index-splash-gifs{
+  text-align: center;
+  height: 200px;
+
+  img{
+    position: absolute;
+    top: 0;
+    margin: auto;
+    display: block;
+    left: 0;
+    right: 0;
+  }
+}
+
+.index-nav{
+  position: absolute;
+  bottom: 5rem;
+  width: 100%;
+
+  p{
+    text-align: center;
+    font-size: 1rem;
+  }
+}
+
+.index{
+  h1{
+    font-family: $secondary-font-family;
+    font-size: 1rem;
+    font-weight: $bold-font-weight;
+  }
+
+  h2{
+    font-size: 2rem;
+  }
+}

@@ -8,6 +8,11 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
+html, body{
+  width: 100%;
+  height: 100%;
+}
+
 
 
 /**
@@ -25,7 +30,71 @@ body {
     font-kerning: normal;
 }
 
+.visibility-hidden{
+  visibility:hidden;
+}
 
+
+/**
+ * Underline
+ */
+
+.underline-default_color-white_bg{
+  @include linkUnderlines(white, $dark-text-color)
+}
+
+.underline-secondary_color-white_bg{
+  @include linkUnderlines(white, $brand-color)
+}
+
+
+/**
+ * Flexbox
+ */
+
+.flex-container{
+  display: -webkit-flex;
+  display: flex;
+}
+
+.flex-row{
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+
+.flex-column{
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+.right-side, .left-side{
+  flex:1;
+  position: relative;
+}
+
+.center-children{
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.center-text{
+  text-align: center;
+}
+
+.full-height{
+  height: 100vh;
+}
+
+.half-height{
+  height: 50vh;
+}
+
+.vertical-align{
+  display: inline-block;
+  vertical-align: middle;
+}
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
@@ -37,14 +106,54 @@ ul, ol, dl, figure,
     margin-bottom: $spacing-unit / 2;
 }
 
+/**
+ * Margins
+ */
+
+@include media-query($on-desktop) {
+  .margin-left{
+    margin-left:  $margin-desktop;
+  }
+  .margin-right{
+    margin-right: $margin-desktop;
+  }
+}
+
+@include media-query($on-laptop) {
+  .margin-left{
+    margin-left:  $margin-laptop;
+  }
+  .margin-right{
+    margin-right: $margin-laptop;
+  }
+}
+
+@include media-query($on-laptop) {
+  .margin-left{
+    margin-left:  $margin-tablet;
+  }
+  .margin-right{
+    margin-right: $margin-tablet;
+  }
+}
+
+@include media-query($on-mobile) {
+  .margin-left{
+    margin-left:  $margin-mobile;
+  }
+  .margin-right{
+    margin-right: $margin-mobile;
+  }
+}
 
 
 /**
  * Images
  */
 img {
-    max-width: 100%;
-    vertical-align: middle;
+  max-width: 100%;
+  max-height: 100%;
+  vertical-align: middle;
 }
 
 
@@ -156,8 +265,6 @@ pre {
  * Wrapper
  */
 .wrapper {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
     margin-right: auto;
     margin-left: auto;
     padding-right: $spacing-unit;
@@ -165,12 +272,12 @@ pre {
     @extend %clearfix;
 
     @include media-query($on-laptop) {
-        max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-        max-width:         calc(#{$content-width} - (#{$spacing-unit}));
         padding-right: $spacing-unit / 2;
         padding-left: $spacing-unit / 2;
     }
 }
+
+
 
 
 
