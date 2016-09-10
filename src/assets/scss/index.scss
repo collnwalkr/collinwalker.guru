@@ -5,41 +5,39 @@
 .index{
 
   h1{
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
-
 
   .left-side {
     background-color: $light-grey-color;
 
-    .index-about{
+    .index-box{
       background-color: white;
+      position: relative;
+      padding: $spacing-unit * 2 $spacing-unit;
 
       p{
         margin-top: $spacing-unit * 2;
         margin-bottom: $spacing-unit;
       }
-
     }
-
   }
+
   .right-side {
     background-color: $brand-color;
 
-    .index-about{
+    .index-box{
       background-color: $dark-grey-color;
       color: white;
     }
   }
 }
 
-
-.index-about{
+.index-box{
   height: 600px;
   width: 80%;
   max-width: 500px;
   box-sizing: border-box;
-  padding: $spacing-unit * 2 $spacing-unit;
 }
 
 .index-full_height .flexcontainer{
@@ -53,4 +51,51 @@
   width: 100%;
   height: 100%;
   position:absolute;
+}
+
+.social-group{
+  margin-top: $spacing-unit / 2;
+  font-size: 1.25rem;
+  a{
+    color: $dark-text-color;
+  }
+
+  i{
+    margin-right: 10px;
+  }
+}
+
+.copyright{
+  position: absolute;
+  bottom: $spacing-unit / 2;
+  right: $spacing-unit;
+  color: $light-text-color;
+}
+
+.project{
+
+}
+
+#project-weekli{
+  //noinspection CssUnknownTarget
+  background: url('/assets/images/thumbnails/weekli.jpg') no-repeat;
+  background-size: cover;
+}
+
+#project-night_light{
+  //noinspection CssUnknownTarget
+  background: url('/assets/images/thumbnails/night-light.jpg') no-repeat right top;
+  background-size: cover;
+}
+
+#project-dover{
+  //noinspection CssUnknownTarget
+  background: url('/assets/images/thumbnails/dover.jpg') no-repeat center bottom;
+  background-size: cover;
+}
+
+#project-mobile_family{
+  //noinspection CssUnknownTarget
+  background: url('/assets/images/thumbnails/mobile-family.jpg') no-repeat;
+  background-size: cover;
 }

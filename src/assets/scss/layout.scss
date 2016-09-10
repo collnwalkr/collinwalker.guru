@@ -85,6 +85,7 @@
 .flex-row{
   -webkit-flex-direction: row;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .flex-column{
@@ -120,8 +121,17 @@
   height: 100vh;
 }
 
+
 .half-height{
   height: 50vh;
+}
+
+.half-width{
+  flex: 1 0 50%;
+}
+
+.full-width{
+  flex: 1 0 100%;
 }
 
 .vertical-align{
