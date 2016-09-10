@@ -26,7 +26,7 @@ gulp.task('scripts', () =>
   // top to bottom, so you want vendor scripts etc on top
   gulp.src([
     'src/assets/javascript/vendor.js',
-    'src/assets/javascript/footer.js',
+    'src/assets/javascript/index-canvas.js',
     'src/assets/javascript/index.js',
     'src/assets/javascript/mobile-vh-bugfix.js'
     ])
@@ -99,7 +99,7 @@ gulp.task('serve', (done) => {
   browserSync.init({
     //tunnel: true,
     // open: false,
-    tunnel: "collin",
+    tunnel: false,
     server: ['.tmp', 'dist']
   });
   done();
