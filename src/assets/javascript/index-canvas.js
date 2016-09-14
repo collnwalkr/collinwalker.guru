@@ -20,7 +20,7 @@ var col = function(x, y, r, g, b) {
   lxt.fillRect(x, y, 1,1);
 };
 var R = function(x, y, t) {
-  return( Math.floor(202 + 5*Math.cos( (x*x-y*y)/300 + t )) );
+  return( Math.floor(202 + 6*Math.cos( (x*x-y*y)/300 + t )) );
 };
 
 var G = function(x, y, t) {

@@ -44,6 +44,18 @@ p{
 
 
 /**
+ * Animation
+ */
+
+@mixin color-animation{
+  -webkit-transition: color 200ms ease-out;
+  -moz-transition: color 200ms ease-out;
+  -o-transition: color 200ms ease-out;
+  transition: color 200ms ease-out;
+}
+
+
+/**
  * Underline
  */
 
@@ -185,6 +197,10 @@ a {
   font-weight: $light-font-weight;
   line-height: 1.75;
   font-size: 0.75rem;
+}
+
+span.email{
+  font-weight: $base-font-weight;
 }
 
 

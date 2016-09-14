@@ -61,7 +61,12 @@
   }
 
   i{
-    margin-right: 10px;
+    margin: 0 10px;
+    font-size: 1rem;
+  }
+  a:hover{
+    @include color-animation();
+    color: $brand-color;
   }
 }
 
