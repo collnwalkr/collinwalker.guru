@@ -127,12 +127,18 @@
   h3{
     font-weight: $bold-font-weight;
     font-size: 1em;
+    margin-bottom: $spacing-unit/3;
   }
 
   span{
     display: block;
     font-size: 0.65em;
-    line-height: 2.5em;
+    line-height: 1.75em;
+  }
+
+  span.soon{
+    color: $light-brand-color;
+    font-weight: $bold-font-weight;
   }
 
   @include project-image-hover();
@@ -179,5 +185,48 @@
     //noinspection CssUnknownTarget
     @include project-image-after('mobile-family');
   }
+
+}
+
+
+
+// ON TABLET
+@include media-query($on-tablet){
+
+
+  .index {
+
+    h1 {
+      font-size: 1rem;
+    }
+
+    p{
+      font-size: 0.7em;
+    }
+
+    .left-side, .right-side{
+      justify-content: center;
+    }
+
+    .index-box{
+      height: inherit;
+      min-height: 50vh;
+      width: 100%;
+      margin: 20px;
+    }
+
+    .copyright{
+      bottom: 0;
+    }
+  }
+
+  .index.flex-container{
+    flex-direction: column;
+  }
+
+  .full-height{
+    height: auto;
+  }
+
 
 }
