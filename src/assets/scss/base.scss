@@ -47,11 +47,58 @@ p{
  * Animation
  */
 
+$base-animation-speed: 200ms;
+
 @mixin color-animation{
-  -webkit-transition: color 200ms ease-out;
-  -moz-transition: color 200ms ease-out;
-  -o-transition: color 200ms ease-out;
-  transition: color 200ms ease-out;
+  -webkit-transition: color $base-animation-speed ease-out;
+  -moz-transition: color $base-animation-speed ease-out;
+  -o-transition: color $base-animation-speed ease-out;
+  transition: color $base-animation-speed ease-out;
+}
+
+
+@mixin opacity-animation{
+  -webkit-transition: opacity $base-animation-speed ease-out;
+  -moz-transition: opacity $base-animation-speed ease-out;
+  -o-transition: opacity $base-animation-speed ease-out;
+  transition: opacity $base-animation-speed ease-out;
+}
+
+
+@mixin visibility-animation{
+  -webkit-transition: visibility $base-animation-speed ease-out;
+  -moz-transition: visibility $base-animation-speed ease-out;
+  -o-transition: visibility $base-animation-speed ease-out;
+  transition: visibility $base-animation-speed ease-out;
+}
+
+@mixin scale-animation{
+  -webkit-transition: -webkit-transform $base-animation-speed ease-out;
+  -moz-transition: -moz-transform $base-animation-speed ease-out;
+  -o-transition: -o-transform $base-animation-speed ease-out;
+  transition: transform $base-animation-speed ease-out;
+}
+
+@mixin top-animation{
+  -webkit-transition: top $base-animation-speed ease-out;
+  -moz-transition: top $base-animation-speed ease-out;
+  -o-transition: top $base-animation-speed ease-out;
+  transition: top $base-animation-speed ease-out;
+}
+
+@mixin left-animation{
+  -webkit-transition: left $base-animation-speed ease-out;
+  -moz-transition: left $base-animation-speed ease-out;
+  -o-transition: left $base-animation-speed ease-out;
+  transition: left $base-animation-speed ease-out;
+}
+
+@mixin grow{
+  -webkit-transform: scale(1.03);
+  -ms-transform:  scale(1.03);
+  -moz-transform: scale(1.03);
+  -o-transform:   scale(1.03);
+  transform:      scale(1.03);
 }
 
 

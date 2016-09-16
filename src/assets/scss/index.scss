@@ -77,30 +77,107 @@
   color: $light-text-color;
 }
 
+
+@mixin project-image-after($image){
+  content: "";
+  opacity: $index-image-opacity;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  background:url('/assets/images/thumbnails/'+ $image + '.jpg') no-repeat;
+  background-size: cover;
+
+  @include opacity-animation();
+
+}
+
+@mixin project-image-hover{
+  &:hover{
+
+
+    h3, span{
+      top: 10px;
+      visibility: hidden;
+    }
+
+    &::after{
+      opacity: 1 !important;
+    }
+  }
+}
+
+
 .project{
+  display: block;
+  position: relative;
+
+
+  padding: 20px;
+  box-sizing: border-box;
+
+  h3, span{
+    @include top-animation();
+    position: relative;
+    top: 0;
+  }
+
+  h3{
+    font-weight: $bold-font-weight;
+    font-size: 1em;
+  }
+
+  span{
+    display: block;
+    font-size: 0.65em;
+    line-height: 2.5em;
+  }
+
+  @include project-image-hover();
 
 }
 
 #project-weekli{
-  //noinspection CssUnknownTarget
-  background: url('/assets/images/thumbnails/weekli.jpg') no-repeat;
-  background-size: cover;
+
+
+  &::after{
+    //noinspection CssUnknownTarget
+    @include project-image-after('weekli');
+  }
+
+
 }
 
 #project-night_light{
-  //noinspection CssUnknownTarget
-  background: url('/assets/images/thumbnails/night-light.jpg') no-repeat right top;
-  background-size: cover;
+
+
+  &::after {
+    //noinspection CssUnknownTarget
+    @include project-image-after('night-light');
+    background-position: right top;
+  }
+
 }
 
 #project-dover{
-  //noinspection CssUnknownTarget
-  background: url('/assets/images/thumbnails/dover.jpg') no-repeat center bottom;
-  background-size: cover;
+
+
+  &:after{
+    //noinspection CssUnknownTarget
+    @include project-image-after('dover');
+    background-position: center bottom;
+  }
+
 }
 
 #project-mobile_family{
-  //noinspection CssUnknownTarget
-  background: url('/assets/images/thumbnails/mobile-family.jpg') no-repeat;
-  background-size: cover;
+
+
+  &::after{
+    //noinspection CssUnknownTarget
+    @include project-image-after('mobile-family');
+  }
+
 }

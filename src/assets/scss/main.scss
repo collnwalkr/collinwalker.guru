@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 // Our variables
-$base-font-family: "Didact Gothic", Helvetica, Arial, sans-serif;
+$base-font-family: "Righteous", Helvetica, Arial, sans-serif;
 $secondary-font-family: "Open Sans", Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
 $base-font-weight: 400;
@@ -36,6 +36,9 @@ $margin-tablet:   60px;
 $margin-laptop:   60px;
 $margin-desktop:  100px;
 
+
+// Opacity
+$index-image-opacity: 0.3;
 
 
 // Use media queries like this:

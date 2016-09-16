@@ -15,7 +15,7 @@ var col = function(x, y, r, g, b) {
   rxt.fillStyle = "rgb(" + r + "," + g + "," + b + ")";
   rxt.fillRect(x, y, 1,1);
 
-  g+= 190;
+  g+= 188;
   lxt.fillStyle = "rgb(" + g + "," + g + "," + g + ")";
   lxt.fillRect(x, y, 1,1);
 };
@@ -24,7 +24,7 @@ var R = function(x, y, t) {
 };
 
 var G = function(x, y, t) {
-  return( Math.floor(62 + 5*Math.sin( (x*x*Math.cos(t/4)+y*y*Math.sin(t/3))/300 ) ) );
+  return( Math.floor(62 + 9*Math.sin( (x*x*Math.cos(t/4)+y*y*Math.sin(t/3))/300 ) ) );
 };
 
 var B = function(x, y, t) {
