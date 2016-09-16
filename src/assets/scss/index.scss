@@ -37,7 +37,9 @@
   height: 600px;
   width: 80%;
   max-width: 500px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
 }
 
 .index-full_height .flexcontainer{
@@ -51,7 +53,10 @@
   width: 100%;
   height: 100%;
   position:absolute;
+  top: 0;
+  left: 0;
 }
+
 
 .social-group{
   margin-top: $spacing-unit / 2;
@@ -115,8 +120,9 @@
   position: relative;
 
 
-  padding: 20px;
-  box-sizing: border-box;
+  //-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  //-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  //box-sizing: border-box;         /* Opera/IE 8+ */
 
   h3, span{
     @include top-animation();
@@ -212,8 +218,7 @@
       height: inherit;
       min-height: 50vh;
       width: 100%;
-      margin: 20px;
-    }
+}
 
     .copyright{
       bottom: 0;
