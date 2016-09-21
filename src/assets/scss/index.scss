@@ -6,6 +6,16 @@
 
   h1{
     font-size: 1.25rem;
+    margin-bottom: 0;
+  }
+
+  span{
+    font-size: 0.75rem;
+  }
+
+  img{
+    display: block;
+    position: absolute;
   }
 
   .left-side {
@@ -17,8 +27,13 @@
       padding: $spacing-unit * 2 $spacing-unit;
 
       p{
-        margin-top: $spacing-unit * 2;
+        margin-top: $spacing-unit * 1.5;
         margin-bottom: $spacing-unit;
+
+        span{
+          display: block;
+          margin-top: 0.5em;
+        }
       }
     }
   }
@@ -216,8 +231,9 @@
 
     .index-box{
       height: inherit;
-      min-height: 50vh;
       width: 100%;
+      min-height: 70vh;
+      margin: 20px;
 }
 
     .copyright{
