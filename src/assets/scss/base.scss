@@ -17,7 +17,9 @@ html, body{
   margin: 20px;
 }
 
-
+@mixin stop-flicker{
+  -webkit-transform-style: preserve-3d;
+}
 
 
 /**
@@ -53,6 +55,7 @@ p{
  */
 
 $base-animation-speed: 200ms;
+$base-animation-delay: 25ms;
 
 @mixin color-animation{
   -webkit-transition: color $base-animation-speed ease-out;
@@ -91,11 +94,33 @@ $base-animation-speed: 200ms;
   transition: top $base-animation-speed ease-out;
 }
 
+@mixin top-animation-delay{
+  -webkit-transition: top $base-animation-speed ease-out $base-animation-delay;
+  -moz-transition: top $base-animation-speed ease-out $base-animation-delay;
+  -o-transition: top $base-animation-speed ease-out $base-animation-delay;
+  transition: top $base-animation-speed ease-out $base-animation-delay;
+}
+
 @mixin left-animation{
   -webkit-transition: left $base-animation-speed ease-out;
   -moz-transition: left $base-animation-speed ease-out;
   -o-transition: left $base-animation-speed ease-out;
   transition: left $base-animation-speed ease-out;
+}
+
+@mixin bottom-animation{
+  -webkit-transition: bottom $base-animation-speed ease-out;
+  -moz-transition: bottom $base-animation-speed ease-out;
+  -o-transition: bottom $base-animation-speed ease-out;
+  transition: bottom $base-animation-speed ease-out;
+}
+
+@mixin slide-up{
+  -webkit-animation: slide-up $base-animation-speed ease-out forwards; /* Safari 4+ */
+  -moz-animation:    slide-up $base-animation-speed ease-out forwards; /* Fx 5+ */
+  -o-animation:      slide-up $base-animation-speed ease-out forwards; /* Opera 12+ */
+  animation:         slide-up $base-animation-speed ease-out forwards; /* IE 10+, Fx 29+ */
+
 }
 
 @mixin grow{
@@ -104,6 +129,20 @@ $base-animation-speed: 200ms;
   -moz-transform: scale(1.03);
   -o-transform:   scale(1.03);
   transform:      scale(1.03);
+}
+
+
+@-webkit-keyframes slide-up {
+  100% {  transform: translate(0, -25px);  }
+}
+@-moz-keyframes slide-up {
+  100% {  transform: translate(0, -25px);  }
+}
+@-o-keyframes slide-up {
+  100% {  transform: translate(0, -25px);  }
+}
+@keyframes slide-up {
+  100% {  transform: translate(0, -25px);  }
 }
 
 
