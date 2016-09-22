@@ -29,10 +29,11 @@
       p{
         margin-top: $spacing-unit * 1.5;
         margin-bottom: $spacing-unit;
+        line-height: 1.5em;
 
-        span{
+        span.newline{
           display: block;
-          margin-top: 0.5em;
+          margin-top: 1em;
         }
       }
     }
@@ -45,6 +46,12 @@
       background-color: $dark-grey-color;
       color: white;
     }
+  }
+}
+
+.hello-span{
+  &:hover{
+    cursor: default;
   }
 }
 
@@ -81,7 +88,7 @@
   }
 
   i{
-    margin: 0 10px;
+    margin: 0 10px 0 2px;
     font-size: 1rem;
   }
   a:hover{
@@ -113,6 +120,8 @@
   @include opacity-animation();
 
 }
+
+
 
 @mixin project-image-hover{
   &:hover{
@@ -168,17 +177,16 @@
 
 #project-weekli{
 
-
   &::after{
     //noinspection CssUnknownTarget
     @include project-image-after('weekli');
+    background-position: center center;
   }
 
 
 }
 
 #project-night_light{
-
 
   &::after {
     //noinspection CssUnknownTarget
@@ -190,7 +198,6 @@
 
 #project-dover{
 
-
   &:after{
     //noinspection CssUnknownTarget
     @include project-image-after('dover');
@@ -201,10 +208,10 @@
 
 #project-mobile_family{
 
-
   &::after{
     //noinspection CssUnknownTarget
     @include project-image-after('mobile-family');
+    background-position: center center;
   }
 
 }

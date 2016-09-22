@@ -5,8 +5,6 @@
 
 $( document ).ready(function() {
 
-  console.log('hello');
-
   var hello_ux    = $('#hello-ux');
   var hello_slack = $('#hello-slack');
   var hello_sleep = $('#hello-sleep');
