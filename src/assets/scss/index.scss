@@ -128,7 +128,7 @@
 
 
     h3, span{
-      top: 10px;
+      @include slide-down();
       visibility: hidden;
     }
 
@@ -148,27 +148,30 @@
 
   h3, span{
     position: relative;
-    top: 0;
+    @include slide-up();
+    top: 25px;
   }
 
   span{
     @for $i from 1 through 5 {
 
-      &:nth-child(#{$i}) {
-
-        @include top-animation();
-
-        -webkit-transition-delay:(#{$i*$base-animation-delay});
-        transition-delay:(#{$i*$base-animation-delay});
-
-      }
+      //&:nth-child(#{$i}) {
+      //
+      //  @include slide-up();
+      //
+      //  -webkit-animation-delay:(#{$i*$base-animation-delay});
+      //  -moz-animation-delay:(#{$i*$base-animation-delay});
+      //  -ms-animation-delay:(#{$i*$base-animation-delay});
+      //  animation-delay:(#{$i*$base-animation-delay});
+      //
+      //}
     }
 
 
   }
 
   h3{
-    @include top-animation();
+    //@include slide-up();
     font-weight: $bold-font-weight;
     font-size: 1em;
     margin-bottom: $spacing-unit/3;
