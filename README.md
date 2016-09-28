@@ -1,4 +1,4 @@
-## collinwalker.guru
+## [collinwalker.guru](http://collinwalker.guru/)
 
 > a portfolio of all the work I'm not too embarrassed to put on the internet
 
@@ -6,7 +6,7 @@
 
 Well, friend, I'm glad you asked! My website lives on a [digitalocean](https://www.digitalocean.com/) droplet as a [NGINX](https://www.nginx.com/resources/wiki/) server. I used this [wonderful tutorial](https://www.digitalocean.com/community/tutorials/how-to-setup-fastcgi-caching-with-nginx-on-your-vps) to create a virtual front-facing server that caches all static files to make it lickety split fast. 
 
-In terms of my developer workflow, I [Yeoman'ed](http://yeoman.io/) up a project using [this generator](https://github.com/sondr3/generator-jekyllized) that utilizes [Jekyll](https://jekyllrb.com/) (a static website builder) and [Gulp]](http://gulpjs.com/) (an automation tool).
+In terms of my developer workflow, I [Yeoman'ed](http://yeoman.io/) up a project using [this generator](https://github.com/sondr3/generator-jekyllized) that utilizes [Jekyll](https://jekyllrb.com/) (a static website builder) and [Gulp](http://gulpjs.com/) (an automation tool).
 
 
 ## OK, but how did you design it?
