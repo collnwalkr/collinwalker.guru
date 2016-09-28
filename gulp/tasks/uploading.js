@@ -14,7 +14,6 @@ gulp.task('upload', () => {
       hostname: credentials.hostname,
       username: credentials.username,
       destination: credentials.destination,
-      archive: true,
       incremental: true,
       options:{
         "e": "ssh",
