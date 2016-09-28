@@ -1,41 +1,23 @@
-# collinwalker.guru
+## collinwalker.guru
 
-> A portfolio of sorts
+> a portfolio of all the work I'm not too embarrassed to put on the internet
 
-## To get started
+## How did you build this?
 
-```sh
-$ gulp [--prod]
-```
+Well, friend, I'm glad you asked! My website lives on a [digitalocean](https://www.digitalocean.com/) droplet as a [NGINX](https://www.nginx.com/resources/wiki/) server. I used this [wonderful tutorial](https://www.digitalocean.com/community/tutorials/how-to-setup-fastcgi-caching-with-nginx-on-your-vps) to create a virtual front-facing server that caches all static files to make it lickety split fast. 
 
-## Usage
+In terms of my developer workflow, I [Yeoman'ed](http://yeoman.io/) up a project using [this generator](https://github.com/sondr3/generator-jekyllized) that utilizes [Jekyll](https://jekyllrb.com/) (a static website builder) and [Gulp]](http://gulpjs.com/) (an automation tool).
 
-```sh
-$ gulp build [--prod]
-```
 
-```sh
-$ gulp deploy
-```
+## OK, but how did you design it?
 
-#### Settings
-In your `_config.yml` and `humans.txt` you should add your Github and Twitter
-profile if you want to.
+After scouring the internet looking inspiration, it became obvious to me that my target audience (potential employers) wanted to get right into the meat of my portfolio: the projects. I peeled away all the excess that was being added and made these front and center with only a short description of my story and contact information to balance it out.
 
-## Install
-If you have cloned this repo or want to reinstall, make sure there&#39;s no
-`node_modules` or `Gemfile.lock` folder/file and then run `npm install` and
-`bundle install`.
 
-#### Update
-To update: `npm update generator-jekyllized -g`, then run `yo jekyllized:gulp
-[--rsync|amazon|pages]` in this directory. Note that this will overwrite any
-local changes, so back it up.
+## Do you have a favorite part?
 
-## Github
-For more information on how to use your new project, please refer to the [README
-on Github](https://github.com/sondr3/generator-jekyllized).
+Wow, you're asking some great questions! I think my favorite part would have to be the gifs that pop up when you hover (or click on mobile) the links under my name.
 
-## Owner
+## Any future plans?
 
-> [Collin Walker](http://collinwalker.guru/)
+Right now I'm making a [iot](https://www.google.com/search?q=internet+of+things) candy dispenser that has no way of dispensing in person (ie no physical interface). The only way to dispense candy is by pressing a button on my website. My reasoning? It's a blend of my favorite things: Internet of Things, web design, candy, and positive social interactions.

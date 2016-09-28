@@ -28,7 +28,8 @@ gulp.task('scripts', () =>
     'src/assets/javascript/vendor.js',
     'src/assets/javascript/index-canvas.js',
     'src/assets/javascript/index.js',
-    'src/assets/javascript/mobile-vh-bugfix.js'
+    'src/assets/javascript/mobile-vh-bugfix.js',
+    'src/assets/javascript/pretty-console.js'
     ])
     .pipe(newer('.tmp/assets/javascript/index.js', {dest: '.tmp/assets/javascript', ext: '.js'}))
     .pipe(when(!argv.prod, sourcemaps.init()))
