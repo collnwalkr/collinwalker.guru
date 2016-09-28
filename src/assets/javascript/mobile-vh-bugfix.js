@@ -3,6 +3,7 @@
  */
 $( document ).ready(function() {
 
+  //console.log('hello');
   //if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
   //  set_height();
   //}
