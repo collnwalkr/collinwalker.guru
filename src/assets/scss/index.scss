@@ -122,10 +122,11 @@
 }
 
 
-
 @mixin project-image-hover{
-  &:hover{
-
+  &.hover{
+    .project-go{
+      @include slide-up();
+    }
 
     h3, span{
       @include slide-down();
@@ -202,11 +203,6 @@
     }
   }
 
-  &:hover{
-    .project-go{
-      @include slide-up();
-    }
-  }
 
   @include project-image-hover();
 
