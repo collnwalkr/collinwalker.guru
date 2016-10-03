@@ -277,7 +277,7 @@
       height: inherit;
       width: 100%;
       margin: 20px;
-}
+    }
 
     .copyright{
       bottom: 0;
@@ -292,5 +292,18 @@
     height: auto;
   }
 
+}
+
+@include media-query($on-mobile) {
+  .index {
+    img{
+      max-width: 80%;
+    }
+    .left-side{
+      .index-box span{
+        font-size: 0.6em;
+      }
+    }
+  }
 
 }
