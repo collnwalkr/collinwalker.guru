@@ -2,6 +2,7 @@ source "http://rubygems.org"
 
 gem 'jekyll'
 gem 'redcarpet'
+gem 'kramdown'
 
 # jekyll plugins
 gem 'jekyll-feed'

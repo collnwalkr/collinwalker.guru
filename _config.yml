@@ -3,6 +3,7 @@
 title: collinwalker.guru
 description: A portfolio of sorts
 url: http://collinwalker.guru/
+images: http://collinwalker.guru/assets/images/
 
 # Used so Jekyll outputs the site correctly so Gulp can do what it wants
 source: .tmp/src
@@ -34,7 +35,7 @@ paginate_path: 'page:num'
 excerpt_separator: '<!--more-->'
 
 # Markdown library and options
-markdown: redcarpet
+markdown: kramdown
 redcarpet:
   extensions: ['no_intra_emphasis', 'tables', 'fenced_code_blocks', 'autolink', 'smart',
               'strikethrough', 'superscript', 'underline', 'highlight', 'footnotes']
