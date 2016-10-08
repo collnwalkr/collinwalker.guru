@@ -49,6 +49,7 @@ p{
   visibility:hidden;
 }
 
+$dashed-border: #d1d1d1 1px dashed;
 
 /**
  * Animation
@@ -248,7 +249,14 @@ img {
   vertical-align: middle;
 }
 
-
+img[data-action="zoom"] {
+  cursor: zoom-in !important;
+  cursor: -moz-zoom-in;
+}
+img.zoom-img {
+  cursor: zoom-out !important;
+  cursor: -moz-zoom-out;
+}
 
 /**
  * Figures
@@ -317,6 +325,10 @@ a {
 
 span.email{
   font-weight: $base-font-weight;
+}
+
+span.newline{
+  display:block;
 }
 
 

@@ -32,7 +32,6 @@
         line-height: 1.5em;
 
         span.newline{
-          display: block;
           margin-top: 1em;
         }
       }
@@ -85,15 +84,15 @@
   font-size: 1.25rem;
   a{
     color: $dark-text-color;
+    &:hover{
+      @include color-animation();
+      color: $brand-color;
+    }
   }
 
   i{
     margin: 0 10px 0 2px;
     font-size: 1rem;
-  }
-  a:hover{
-    @include color-animation();
-    color: $brand-color;
   }
 }
 
@@ -153,24 +152,6 @@
     top: 25px;
   }
 
-  span{
-    @for $i from 1 through 5 {
-
-      //&:nth-child(#{$i}) {
-      //
-      //  @include slide-up();
-      //
-      //  -webkit-animation-delay:(#{$i*$base-animation-delay});
-      //  -moz-animation-delay:(#{$i*$base-animation-delay});
-      //  -ms-animation-delay:(#{$i*$base-animation-delay});
-      //  animation-delay:(#{$i*$base-animation-delay});
-      //
-      //}
-    }
-
-
-  }
-
   h3{
     //@include slide-up();
     font-weight: $bold-font-weight;
@@ -219,7 +200,7 @@
 
 }
 
-#project-night_light{
+#project-night-light{
 
   &::after {
     //noinspection CssUnknownTarget
@@ -239,7 +220,7 @@
 
 }
 
-#project-mobile_family{
+#project-mobile-family{
 
   &::after{
     //noinspection CssUnknownTarget

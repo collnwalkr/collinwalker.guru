@@ -27,6 +27,7 @@ gulp.task('scripts', () =>
   gulp.src([
     'src/assets/javascript/vendor.js',
     'src/assets/javascript/index-canvas.js',
+    'node_modules/zoom-vanilla.js/dist/zoom-vanilla.min.js',
     'src/assets/javascript/index.js',
     'src/assets/javascript/mobile-vh-bugfix.js',
     'src/assets/javascript/pretty-console.js'
@@ -61,7 +62,7 @@ gulp.task('scripts', () =>
 // 'gulp styles --prod' -- creates a CSS file from your SASS, adds prefixes and
 // then minwhenies, gzips and cache busts it. Does not create a Sourcemap
 gulp.task('styles', () =>
-  gulp.src('src/assets/scss/style.scss')
+  gulp.src(['src/assets/scss/style.scss', 'node_modules/zoom-vanilla.js/css/zoom.css'])
     .pipe(when(!argv.prod, sourcemaps.init()))
     .pipe(sass({
       precision: 10

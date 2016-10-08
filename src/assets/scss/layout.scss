@@ -30,26 +30,51 @@ $z-back:     0;
  * Site footer
  */
 
-.footer-col {
-    float: left;
-    margin-bottom: $spacing-unit / 2;
-    padding-left: $spacing-unit / 2;
+footer{
+  max-width: $content-width + 200px;
+  border-top: $dashed-border;
+  margin: $spacing-unit auto;
+
+  #more-projects{
+    background-color: $brand-color;
+    color: white;
+  }
+  .project{
+    z-index: $z-front;
+    display: flex;
+    color: white;
+  }
 }
 
-.footer-col-1 {
-    width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-    width:         calc(35% - (#{$spacing-unit} / 2));
+
+@mixin project-image-hover{
+  &.hover{
+    .project-go{
+      @include slide-up();
+    }
+
+    h3, span{
+      @include slide-down();
+      visibility: hidden;
+    }
+
+    &::after{
+      opacity: 1 !important;
+    }
+  }
 }
 
-.footer-col-2 {
-    width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-    width:         calc(20% - (#{$spacing-unit} / 2));
+.footer-wrapper{
+  margin: $spacing-unit auto;
+  height: 400px;
+  max-width: $content-width / 1.5;
+  align-items: stretch;
+  background-color: $dark-grey-color;
+  @include project-image-hover();
+
 }
 
-.footer-col-3 {
-    width: -webkit-calc(45% - (#{$spacing-unit} / 2));
-    width:         calc(45% - (#{$spacing-unit} / 2));
-}
+
 
 @include media-query($on-laptop) {
     .footer-col-1,
@@ -115,6 +140,10 @@ $z-back:     0;
 
 .flex-end{
   justify-content: flex-end;
+}
+
+.flex-items-end{
+  align-items: flex-end;
 }
 
 .flex-start{

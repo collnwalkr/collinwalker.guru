@@ -1,25 +1,32 @@
 ---
 layout: default
 ---
+
+
+<nav>
+  <a href="{{site.url}}">{{site.title}}</a>
+</nav>
+
 <article class="post center-children" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <nav>
-    <a href="{{site.url}}">home</a>
-  </nav>
+  <header class="post-header flex-container flex-items-end">
 
-  <header class="post-header flex-container">
     <div class="left-side">
+
+
       <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
       <p>{{page.description}}</p>
-      <span>team mates </span>
+
+      <span class="newline"><span class="span-bold">timeline</span>{{page.time}}</span>
+
+      <span class="span-bold">team mates </span>
       {% for member in page.team %}
-      <a href={{member.link}} target="_blank"><span>{{ member.name }}</span></a>
+      <a href={{member.link}} target="_blank">{{ member.name }}</a>
       {% endfor %}
-      <span><span>time </span>{{page.time}}</span>
     </div>
 
     <div class="right-side">
-      <img src="{{site.url}}assets/images/thumbnails/{{page.thumbnail}}.jpg">
+      <img src="{{site.url}}assets/images/thumbnails/{{page.thumbnail}}.jpg" data-action="zoom">
     </div>
 
   </header>
@@ -29,3 +36,5 @@ layout: default
   </div>
 
 </article>
+
+{% include footer.html %}

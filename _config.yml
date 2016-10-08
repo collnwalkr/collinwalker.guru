@@ -19,6 +19,25 @@ author:
   uri: http://collinwalker.guru/
   bio:
 
+footer_project:
+  - Night Light:
+    title: Night Light
+    link: night-light
+    published: true
+  - Dover:
+    title: Dover
+    link: dover
+    published: false
+  - Weekli:
+    title: Weekli
+    link: weekli
+    published: false
+  - Mobile Family:
+    title: Mobile Family
+    link: mobile-family
+    published: false
+
+
 # _config.build.yml overwrites these options when you run `gulp build`
 # Enables future posts (posts with dates in the future) and drafts
 future: true

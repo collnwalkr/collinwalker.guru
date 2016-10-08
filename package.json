@@ -34,5 +34,8 @@
     "require-dir": "^0.3.0",
     "shelljs": "^0.7.0",
     "yargs": "^4.7.0"
+  },
+  "dependencies": {
+    "zoom-vanilla.js": "^2.0.1"
   }
 }

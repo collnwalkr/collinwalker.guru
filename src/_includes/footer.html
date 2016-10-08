@@ -1,25 +1,26 @@
-<footer class="site-footer">
-  <canvas id="footer-canv" width="32" height="3"></canvas>
+<footer class="site-footer" xmlns="http://www.w3.org/1999/html">
+  <a href="{{site.url}}">{{site.title}}</a>
+  <div class="flex-container flex-row flex-start footer-wrapper">
 
-  <div class="wrapper">
+    <div class="project half-width flex-container center-children" id="more-projects">
+      <h3>more projects</h3>
+    </div>
+    {% for project in site.footer_project %}
+    {% if project.title != page.title %}
+    <div class="project half-width flex-container center-children flex-column" id="project-{{project.link}}">
 
-    <div class="footer-col-wrapper">
+      <h3>{{ project.title }}</h3>
 
-      <div class="footer-col footer-col-1">
-        <p><i class="fa fa-copyright" aria-hidden="true"></i> Collin Walker</p>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        <p>made with <i class="fa fa-stack-overflow" aria-hidden="true"></i> in Seattle</p>
-      </div>
-
-      <div class="footer-col footer-col-3">
-
-        <p><i class="fa fa-chevron-up" aria-hidden="true"></i> beam me up</p>
-      </div>
+      {% if project.published %}
+        {{ project.link }}
+      {% else %}
+        <p>coming soon</p>
+      {% endif %}
 
     </div>
 
+    {% endif %}
+    {% endfor %}
   </div>
 
 </footer>
