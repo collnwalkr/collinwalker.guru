@@ -5,42 +5,9 @@ article.post{
   margin-right: auto;
 
 
-
-  header{
-    margin-top: $spacing-unit * 2;
-    margin-bottom: $spacing-unit * 4;
-
-
-    .left-side{
-      background: white;
-    }
-    span, a{
-      font-family: $secondary-font-family;
-      font-weight: $light-font-weight;
-      font-size: 0.75rem;
-      line-height: 0.5rem;
-    }
-    a {
-      @include linkUnderlines(white, $dark-text-color);
-      color: $dark-text-color;
-      &:hover{
-        @include color-animation();
-        @include linkUnderlines(white, $brand-color);
-        color: $brand-color;
-      }
-    }
-    span.span-bold{
-      font-weight: $semi-font-weight;
-      margin-right: 0.5em;
-    }
-    p{
-      width: 300px;
-      line-height: 1.5rem;
-      margin-bottom: 2rem;
-    }
+  header p{
+    line-height: 1.5em;
   }
-
-
   h1{
     font-family: $base-font-family;
     font-size: 2em;

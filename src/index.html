@@ -3,152 +3,57 @@ layout: page
 title: Collin Walker
 ---
 
-<div class="index flex-container">
+<div class="index">
 
-  <!-- LEFT SIDE -->
-  <div class="index-full_height flex-container full-height center-children flex-end left-side">
+  <header class="flex-container flex-items-end">
+    <div class="flex-container flex-column left-side">
 
-    <canvas id="index-canv-left" width="32" height="32" class="z-back"></canvas>
 
-    <div class="z-middle index-box">
-
-      <h1>COLLIN WALKER</h1>
+      <h1 class="post-title" itemprop="name headline">Collin Walker</h1>
       <span class="hello-span">
-        <span class="underline-default_color-white_bg" id="hello-ux">ux engineer</span> <span>+</span> <span class="underline-default_color-white_bg" id="hello-slack">slackliner</span>
+        <span>Hello there friend. I'm a </span>
+        <span class="underline-default_color-white_bg" id="hello-ux">ux engineer</span>
+        <span>up here in </span>
+        <span class="underline-default_color-white_bg" id="hello-seattle">Seattle</span>
+        <span>Washington. When I'm offline you can catch me </span>
+        <span class="underline-default_color-white_bg" id="hello-slack">slacklining</span>
+        <span>or bumping my</span>
+        <span class="underline-default_color-white_bg" id="hello-music">music</span>
+        <span>a bit too loud.</span>
       </span>
 
+    </div>
+    <div class="right-side" id="index-right">
       <img id="gif-ux" class="visibility-hidden" src="./assets/images/ux-engineer.gif">
-      <img id="gif-slack" class="visibility-hidden" src="./assets/images/slackline.gif">
+      <img id="gif-slack" class="visibility-hidden" src="./assets/images/slackline-dog.gif">
+      <img id="gif-seattle" class="visibility-hidden" src="./assets/images/seattle.gif">
+      <img id="gif-music" class="visibility-hidden" src="./assets/images/music.gif">
 
-      <!-- paragraph -->
-      <p>
-        <span class="newline">
-        If it weren't for the dog my door alarm would've been perfect.
-        </span>
+    </div>
+  </header>
 
-        <span class="newline">
-        At nine years old, I had put together together a door alarm with repurposed wires, a speaker, aluminum foil, and a roll of duct tape. The problem was that our family dog took pleasure in ripping up the carefully placed aluminum foil that was integral to the alarms circuitry.
-        </span>
+  <div class="flex-container flex-row flex-start">
 
-        <span class="newline">
-        Today, I am still designing and building. This time with a bigger tool belt after receiving a degree in computer engineering and masters in human-computer interaction. With this holistic understanding of technology and human behavior, I design and prototype solutions with the big picture in mind.
-        </span>
 
-        <span class="newline">
-        Even if that big picture includes a spirited family pet.
-        </span>
+    {% for project in site.footer_project %}
+    {% if project.title != page.title %}
+    <div class="project flex-container center-children" id="project-{{project.link}}">
 
-      </p>
-
-      <!-- email -->
-      <span class="email">EMAIL:</span>
-      <a href="mailto:colln.walkr@gmail.com" class="email underline-default_color-white_bg" target="_top">
-        colln.walkr@gmail.com
+      {% if project.published %}
+      <a href="{{site.url}}project/{{project.link}}">
+        <h3>{{ project.title }}</h3>
       </a>
-
-      <!-- social -->
-      <div class="social-group">
-        <span class="email">LINKS:</span>
-        <a href="https://github.com/collnwalkr" aria-label="collin walker's github" target="_blank">
-          <i class="fa fa-github" aria-hidden="true"></i>
-        </a>
-
-        <a href="https://www.linkedin.com/in/walkercollin" aria-label="collin walker's linkedin" target="_blank">
-          <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-        </a>
-
-        <a href="https://www.instagram.com/collnwalkr/" aria-label="collin walker's instagram" target="_blank">
-          <i class="fa fa-instagram" aria-hidden="true"></i>
-        </a>
-
-        <a href="https://open.spotify.com/user/12110227" aria-label="collin walker's instagram" target="_blank">
-          <i class="fa fa-spotify" aria-hidden="true"></i>
-        </a>
-      </div>
-
-      <!-- copyright -->
-
-      <p class="copyright">© 2016</p>
-
+      {% else %}
+      <a>
+        <h3>{{ project.title }}</h3>
+      </a>
+      <p>coming soon</p>
+      {% endif %}
 
     </div>
 
-  </div>
-
-
-  <!-- RIGHT SIDE -->
-  <div class="index-full_height flex-container full-height center-children flex-start right-side">
-    <canvas id="index-canv-right" width="32" height="32" class="z-back"></canvas>
-
-    <div class="z-middle index-box flex-container flex-row">
-
-      <div class="project half-width" id="project-weekli">
-
-        <div class="simulate-padding">
-          <h3>Weekli</h3>
-
-          <span>web development</span>
-          <span>interaction design</span>
-          <span class="soon">coming soon</span>
-
-          <div class="project-go"><p>coming soon</p></div>
-
-        </div>
-
-      </div>
-
-      <div class="project half-width" id="project-mobile-family">
-
-        <div class="simulate-padding">
-
-          <h3>Mobile Family</h3>
-
-          <span>rapid prototyping</span>
-          <span>ux design</span>
-          <span class="soon">coming soon</span>
-
-          <div class="project-go"><p>coming soon</p></div>
-
-        </div>
-
-      </div>
-
-      <div class="project full-width" id="project-dover">
-
-        <div class="simulate-padding">
-
-          <h3>Dover</h3>
-
-          <span>digital prototyping</span>
-          <span>ux design</span>
-          <span>interaction design</span>
-          <span class="soon">coming soon</span>
-
-          <div class="project-go"><p>coming soon</p></div>
-
-        </div>
-
-      </div>
-
-      <div class="project full-width" id="project-night-light">
-
-        <div class="simulate-padding">
-
-          <h3>Night Light</h3>
-          <span>Arduino prototyping</span>
-          <span>rapid prototyping</span>
-          <span>industrial design</span>
-          <span class="soon">coming soon</span>
-
-
-          <div class="project-go"><p>coming soon</p></div>
-
-        </div>
-
-      </div>
-
-    </div>
-
+    {% endif %}
+    {% endfor %}
   </div>
 
 </div>

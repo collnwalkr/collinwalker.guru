@@ -2,81 +2,54 @@
  * Index content
  */
 
-.index{
+article.index{
+
+  max-width: $content-width;
+  margin-left: auto;
+  margin-right: auto;
+
+  header{
+    height: 255px;
+
+    div{
+      height: 193px;
+    }
+
+    img{
+      position:absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      margin: auto;
+      bottom: 0;
+    }
+
+    .right-side{
+      height: 240px;
+    }
+    .hello-span{
+      span{
+        font-size: 1rem;
+        font-weight: $base-font-weight;
+      }
+      &:hover{
+        cursor: default;
+      }
+
+    }
+
+  }
+
 
   h1{
-    font-size: 1.25rem;
-    margin-bottom: 0;
+    font-family: $base-font-family;
+    font-size: 2em;
+    text-transform: uppercase;
   }
 
-  span{
-    font-size: 0.75rem;
-  }
 
-  img{
-    display: block;
-    position: absolute;
-  }
-
-  .left-side {
-    background-color: $light-grey-color;
-
-    .index-box{
-      background-color: white;
-      position: relative;
-      padding: $spacing-unit * 2 $spacing-unit;
-
-      p{
-        margin-top: $spacing-unit * 1.5;
-        margin-bottom: $spacing-unit;
-        line-height: 1.5em;
-
-        span.newline{
-          margin-top: 1em;
-        }
-      }
-    }
-  }
-
-  .right-side {
-    background-color: $brand-color;
-
-    .index-box{
-      background-color: $dark-grey-color;
-      color: white;
-    }
-  }
 }
 
-.hello-span{
-  &:hover{
-    cursor: default;
-  }
-}
-
-.index-box{
-  height: 600px;
-  width: 80%;
-  max-width: 500px;
-  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-  box-sizing: border-box;         /* Opera/IE 8+ */
-}
-
-.index-full_height .flexcontainer{
-  -webkit-flex-direction: row;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-
-#index-canv-left, #index-canv-right{
-  width: 100%;
-  height: 100%;
-  position:absolute;
-  top: 0;
-  left: 0;
-}
 
 
 .social-group{
@@ -104,187 +77,22 @@
 }
 
 
-@mixin project-image-after($image){
-  content: "";
-  opacity: $index-image-opacity;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
-  background:url('/assets/images/thumbnails/'+ $image + '.jpg') no-repeat;
-  background-size: cover;
-
-  @include opacity-animation();
-
-}
-
-
-@mixin project-image-hover{
-  &.hover{
-    .project-go{
-      @include slide-up();
-    }
-
-    h3, span{
-      @include slide-down();
-      visibility: hidden;
-    }
-
-    &::after{
-      opacity: 1 !important;
-    }
-  }
-}
-
-
-.project{
-  display: block;
-  position: relative;
-  overflow: hidden;
-
-  @include stop-flicker();
-
-  h3, span{
-    position: relative;
-    @include slide-up();
-    top: 25px;
-  }
-
-  h3{
-    //@include slide-up();
-    font-weight: $bold-font-weight;
-    font-size: 1em;
-    margin-bottom: $spacing-unit/3;
-  }
-
-  span{
-    display: block;
-    font-size: 0.65em;
-    line-height: 1.75em;
-  }
-
-  span.soon{
-    color: $light-brand-color;
-    font-weight: $bold-font-weight;
-  }
-
-  .project-go{
-    position: absolute;
-    bottom: -25px;
-    left: 0;
-    width: 100%;
-    height: 25px;
-    background-color: $brand-color;
-    text-align: center;
-
-    p{
-      font-weight: $base-font-weight;
-    }
-  }
-
-
-  @include project-image-hover();
-
-}
-
-#project-weekli{
-
-  &::after{
-    //noinspection CssUnknownTarget
-    @include project-image-after('weekli');
-    background-position: center center;
-  }
-
-
-}
-
-#project-night-light{
-
-  &::after {
-    //noinspection CssUnknownTarget
-    @include project-image-after('night-light');
-    background-position: right top;
-  }
-
-}
-
-#project-dover{
-
-  &:after{
-    //noinspection CssUnknownTarget
-    @include project-image-after('dover');
-    background-position: center bottom;
-  }
-
-}
-
-#project-mobile-family{
-
-  &::after{
-    //noinspection CssUnknownTarget
-    @include project-image-after('mobile-family');
-    background-position: center center;
-  }
-
-}
-
-
 
 // ON TABLET
 @include media-query($on-tablet){
 
 
-  .index {
+  article.index {
 
-    h1 {
-      font-size: 1rem;
-    }
-
-    p{
-      font-size: 0.7em;
-    }
-
-    .left-side{
-      order: 2;
-    }
-
-    .left-side, .right-side{
-      justify-content: center;
-    }
-
-    .index-box{
-      height: inherit;
-      width: 100%;
-      margin: 20px;
-    }
-
-    .copyright{
-      bottom: 0;
-    }
   }
 
-  .index.flex-container{
-    flex-direction: column;
-  }
-
-  .full-height{
-    height: auto;
-  }
 
 }
 
 @include media-query($on-mobile) {
-  .index {
-    img{
-      max-width: 80%;
-    }
-    .left-side{
-      .index-box span{
-        font-size: 0.6em;
-      }
-    }
+
+  article.index {
+
   }
 
 }

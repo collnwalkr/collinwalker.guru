@@ -28,13 +28,9 @@ footer_project:
     title: Dover
     link: dover
     published: false
-  - Weekli:
-    title: Weekli
-    link: weekli
-    published: false
-  - Mobile Family:
-    title: Mobile Family
-    link: mobile-family
+  - Strava Club:
+    title: Strava Club
+    link: strava-club
     published: false
 
 

@@ -8,39 +8,10 @@ $( document ).ready(function() {
   $(function () {
     if ($('article').hasClass('index')) {
 
-      var hello_ux = $('#hello-ux');
-      var hello_slack = $('#hello-slack');
-      var hello_sleep = $('#hello-sleep');
-
-      var projects = $('.project');
-      projects.each(function (i, obj) {
-
-        // IF not mobile
-        if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-          $(obj).bind('click', function (e) {
-            toggle_focus.call(obj);
-          });
-          $(obj).bind('mouseenter', function (e) {
-            add_focus.call(obj);
-          });
-          $(obj).bind('mouseleave', function (e) {
-            remove_focus.call(obj);
-          });
-        }
-
-        // ELSE if mobile
-        else {
-          $(obj).bind('touchstart', function (e) {
-            toggle_focus.call(obj);
-          });
-
-          $(obj).bind('mouseleave', function (e) {
-            remove_focus.call(obj);
-          });
-        }
-
-
-      });
+      var hello_ux      = $('#hello-ux');
+      var hello_slack   = $('#hello-slack');
+      var hello_seattle = $('#hello-seattle');
+      var hello_music   = $('#hello-music');
 
       hello_ux.hover(
         function () {
@@ -48,6 +19,24 @@ $( document ).ready(function() {
         },
         function () {
           remove_image.call(this, 'ux')
+        }
+      );
+
+      hello_music.hover(
+        function () {
+          show_image.call(this, 'music')
+        },
+        function () {
+          remove_image.call(this, 'music')
+        }
+      );
+
+      hello_seattle.hover(
+        function () {
+          show_image.call(this, 'seattle')
+        },
+        function () {
+          remove_image.call(this, 'seattle')
         }
       );
 
@@ -61,17 +50,6 @@ $( document ).ready(function() {
         }
       );
 
-
-      hello_sleep.hover(
-        function () {
-          show_image.call(this, 'sleep')
-        },
-        function () {
-          remove_image.call(this, 'sleep')
-        }
-      );
-
-
     }
 
   });
@@ -79,10 +57,12 @@ $( document ).ready(function() {
 
   function show_image(img) {
     $('#gif-' + img).removeClass('visibility-hidden');
+    $('#index-right').css('background-color','#FAFAFA');
   }
 
   function remove_image(img) {
     $('#gif-' + img).addClass('visibility-hidden');
+    $('#index-right').css('background-color','white');
   }
 
   function toggle_focus() {

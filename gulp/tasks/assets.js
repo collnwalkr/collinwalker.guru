@@ -26,7 +26,6 @@ gulp.task('scripts', () =>
   // top to bottom, so you want vendor scripts etc on top
   gulp.src([
     'src/assets/javascript/vendor.js',
-    'src/assets/javascript/index-canvas.js',
     'node_modules/zoom-vanilla.js/dist/zoom-vanilla.min.js',
     'src/assets/javascript/index.js',
     'src/assets/javascript/mobile-vh-bugfix.js',
