@@ -1,29 +1,3 @@
-nav, footer{
-
-  max-width: $content-width + 200px;
-  margin: 50px auto -50px auto;
-  border-bottom: $dashed-border;
-
-  a{
-    @include linkUnderlines(white,$light-text-color);
-    color: $light-text-color;
-    font-size: 0.75rem;
-  }
-}
-
-
-nav {
-  a {
-    @include linkUnderlines(white, $light-text-color);
-    color: $light-text-color;
-    &:hover, &:visited:hover {
-      @include color-animation();
-      @include linkUnderlines(white, $brand-color);
-      color: $brand-color;
-    }
-  }
-}
-
 article.post{
 
   max-width: $content-width;
@@ -36,11 +10,24 @@ article.post{
     margin-top: $spacing-unit * 2;
     margin-bottom: $spacing-unit * 4;
 
+
+    .left-side{
+      background: white;
+    }
     span, a{
       font-family: $secondary-font-family;
       font-weight: $light-font-weight;
       font-size: 0.75rem;
       line-height: 0.5rem;
+    }
+    a {
+      @include linkUnderlines(white, $dark-text-color);
+      color: $dark-text-color;
+      &:hover{
+        @include color-animation();
+        @include linkUnderlines(white, $brand-color);
+        color: $brand-color;
+      }
     }
     span.span-bold{
       font-weight: $semi-font-weight;
@@ -49,7 +36,7 @@ article.post{
     p{
       width: 300px;
       line-height: 1.5rem;
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
     }
   }
 
@@ -98,11 +85,52 @@ article.post{
 
 @include media-query($on-tablet) {
   article.post{
-    img, img.small{
+    font-size: 14px;
+
+    h2{
+      margin-top: $spacing-unit;
+    }
+
+    nav{
+      margin: 0 auto -50px auto;
+    }
+
+    header {
+      margin-top: $spacing-unit * 2 - 10;
+      margin-bottom: $spacing-unit * 2;
+      a, a:visited{
+        @include linkUnderlines($dark-grey-color, white);
+        color: white;
+        &:hover{
+          @include linkUnderlines($dark-grey-color, $brand-color);
+
+        }
+      }
+    }
+    .post-header{
+      align-items: flex-start;
+      color: white;
+      img{
+        opacity: 0.2;
+      }
+      .right-side{
+        display: none;
+      }
+      .left-side{
+        margin: 0 -40px;
+        padding: 30px 40px;
+        background-color: $dark-grey-color;
+        z-index: $z-front;
+      }
+
+    }
+
+    img.small{
       max-width: 100%;
       display: block;
       margin-left: auto;
       margin-right: auto;
+      margin-top: 10px;
 
       &.right{
         float: none;
@@ -110,7 +138,18 @@ article.post{
     }
 
 
+    padding: 0 40px;
+  }
 
+}
+
+@include media-query($on-mobile) {
+  article.post{
+    padding: 0 20px;
+    .left-side {
+      margin: 0 -20px;
+      padding: 30px 20px;
+    }
   }
 
 }

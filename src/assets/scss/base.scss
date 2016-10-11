@@ -336,10 +336,11 @@ span.newline{
  * Blockquotes
  */
 blockquote {
-    color: $light-grey-color;
-    border-left: 4px solid $light-grey-color;
+    color: $light-text-color;
+    border-left: 4px solid $light-text-color;
     padding-left: $spacing-unit / 2;
     font-size: 18px;
+    max-width: $content-width / 1.5;
     letter-spacing: -1px;
     font-style: italic;
 

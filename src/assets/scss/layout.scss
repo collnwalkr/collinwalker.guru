@@ -2,7 +2,6 @@
  * Order
  */
 
-
 $z-front: 1000;
 $z-middle: 100;
 $z-back:     0;
@@ -25,13 +24,63 @@ $z-back:     0;
  */
 
 
+/**
+ * Nav
+ */
+
+nav {
+  border-bottom: $dashed-border;
+
+  a {
+    @include linkUnderlines(white, $light-text-color);
+    color: $light-text-color;
+  }
+}
+
+@include media-query($project-header) {
+  nav {
+    padding: 0 40px;
+  }
+}
+
+
+@include media-query($on-mobile) {
+  nav {
+    padding: 0 20px;
+  }
+}
+
+nav, footer{
+
+  max-width: $project-header;
+  margin: 50px auto -50px auto;
+
+  a{
+    @include linkUnderlines(white,$light-text-color);
+    color: $light-text-color;
+    font-size: 0.75rem;
+    &:hover, &:visited:hover {
+      @include color-animation();
+      @include linkUnderlines(white, $brand-color);
+      color: $brand-color;
+    }
+  }
+}
+
+@include media-query($on-tablet) {
+  nav {
+    padding-bottom: 10px;
+    margin: 10px auto -50px auto;
+  }
+}
+
 
 /**
  * Site footer
  */
 
 footer{
-  max-width: $content-width + 200px;
+  max-width: $project-header;
   border-top: $dashed-border;
   margin: $spacing-unit auto;
 
@@ -43,6 +92,45 @@ footer{
     z-index: $z-front;
     display: flex;
     color: white;
+
+    a{
+      color: white;
+      text-shadow: none;
+      background-image: none;
+      font-size: 1rem;
+    }
+  }
+}
+
+
+@include media-query($project-header) {
+  footer {
+    a{
+      margin: 20px 40px;
+    }
+  }
+}
+
+@include media-query($on-tablet) {
+  footer{
+    margin: 0;
+    padding-top: 10px;
+    .footer-wrapper {
+      margin: 10px auto 0 auto;
+    }
+  }
+}
+
+
+@include media-query($on-mobile) {
+  footer{
+    a{
+      margin: 20px 20px;
+    }
+    .footer-wrapper{
+      height: 325px;
+      margin: 10px auto 0 auto;
+    }
   }
 }
 

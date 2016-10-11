@@ -3,18 +3,21 @@
   <div class="flex-container flex-row flex-start footer-wrapper">
 
     <div class="project half-width flex-container center-children" id="more-projects">
-      <h3>more projects</h3>
+      <h3>More Projects</h3>
     </div>
     {% for project in site.footer_project %}
     {% if project.title != page.title %}
     <div class="project half-width flex-container center-children flex-column" id="project-{{project.link}}">
 
-      <h3>{{ project.title }}</h3>
-
       {% if project.published %}
-        {{ project.link }}
+        <a href="{{site.url}}project/{{project.link}}">
+          <h3>{{ project.title }}</h3>
+        </a>
       {% else %}
-        <p>coming soon</p>
+      <a>
+        <h3>{{ project.title }}</h3>
+      </a>
+      <p>coming soon</p>
       {% endif %}
 
     </div>
