@@ -7,17 +7,15 @@ title: Collin Walker
 
   <header class="flex-container flex-items-end">
     <div class="flex-container flex-column left-side">
-
-
       <h1 class="post-title" itemprop="name headline">Collin Walker</h1>
       <span class="hello-span">
-        <span>Hello there friend. I'm a </span>
+        <span>Hello there friend! I'm a </span>
         <span class="underline-default_color-white_bg" id="hello-ux">ux engineer</span>
-        <span>up here in </span>
-        <span class="underline-default_color-white_bg" id="hello-seattle">Seattle</span>
-        <span>Washington. When I'm offline you can catch me </span>
+        <span>gallivanting up in </span>
+        <span class="underline-default_color-white_bg" id="hello-seattle">Seattle.</span>
+        <span>When I'm offline you can catch me </span>
         <span class="underline-default_color-white_bg" id="hello-slack">slacklining</span>
-        <span>or bumping my</span>
+        <span>and bumping my</span>
         <span class="underline-default_color-white_bg" id="hello-music">music</span>
         <span>a bit too loud.</span>
       </span>
@@ -33,27 +31,66 @@ title: Collin Walker
   </header>
 
   <div class="flex-container flex-row flex-start">
+    {% for project in site.project_list %}
+    <div class="project" id="index-project-{{project.link}}">
+
+      <span class="project-block" id="project-block-{{project.link}}"></span>
+
+      <div class="flex-container project-contents">
+
+          {% if project.published %}
+          <a href="{{site.url}}project/{{project.link}}/" class="left-side">
+          {% else %}
+          <a class="left-side">
+          {% endif %}
+
+            <h2>{{ project.title }}</h2>
+            {% for takeaway in project.takeaways %}
+            <span>{{takeaway}}</span>
+            {% endfor %}
+
+            {% if project.published %}
+            <span class="span-read-more">read more</span>
+            <span class="span-underline"></span>
+            {% else %}
+            <span class="span-read-more">coming soon</span>
+            <span class="span-underline-soon"></span>
+            {% endif %}
 
 
-    {% for project in site.footer_project %}
-    {% if project.title != page.title %}
-    <div class="project flex-container center-children" id="project-{{project.link}}">
+          {% if project.published %}
+          </a>
+          {% else %}
+          </a>
+          {% endif %}
 
-      {% if project.published %}
-      <a href="{{site.url}}project/{{project.link}}">
-        <h3>{{ project.title }}</h3>
-      </a>
-      {% else %}
-      <a>
-        <h3>{{ project.title }}</h3>
-      </a>
-      <p>coming soon</p>
-      {% endif %}
+
+
+        <div class="right-side">
+          <img src="{{site.images}}thumbnails/{{project.link}}.jpg" data-action="zoom">
+        </div>
+
+      </div>
+
+
+
 
     </div>
-
-    {% endif %}
     {% endfor %}
+  </div>
+
+  <div class="contact">
+    <h2>Contact</h2>
+    <span class="email">EMAIL</span>
+    <a href="mailto:colln.walkr@gmail.com" class="email underline-default_color-white_bg" target="_top">colln.walkr@gmail.com</a>
+    <div class="social-group">
+      <span class="email">LINKS</span>
+      <a href="https://github.com/collnwalkr" aria-label="collin walker's github" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+      <a href="https://www.linkedin.com/in/walkercollin" aria-label="collin walker's linkedin" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
+      <a href="https://www.instagram.com/collnwalkr/" aria-label="collin walker's instagram" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i> </a>
+      <a href="https://open.spotify.com/user/12110227" aria-label="collin walker's instagram" target="_blank"><i class="fa fa-spotify" aria-hidden="true"></i></a>
+    </div>
+
   </div>
 
 </div>

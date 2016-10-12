@@ -116,6 +116,22 @@ $base-animation-delay: 10ms;
   transition: bottom $base-animation-speed ease-out;
 }
 
+@mixin width-animation{
+  -webkit-transition: width $base-animation-speed ease-out;
+  -moz-transition: width $base-animation-speed ease-out;
+  -o-transition: width $base-animation-speed ease-out;
+  transition: width $base-animation-speed ease-out;
+}
+
+@mixin underline-pre{
+  width: 0;
+  white-space: nowrap;
+  height: 25px;
+  text-decoration: none;
+  display: inline-block;
+  border-bottom: 1px solid transparent;
+}
+
 @mixin slide-up{
   -webkit-animation: slide-up $base-animation-speed ease-out forwards; /* Safari 4+ */
   -moz-animation:    slide-up $base-animation-speed ease-out forwards; /* Fx 5+ */
@@ -300,7 +316,7 @@ h1{
 
 header{
   margin-top: $spacing-unit;
-  margin-bottom: $spacing-unit * 4;
+  margin-bottom: $spacing-unit * 2;
 
 
   .left-side{
@@ -508,7 +524,6 @@ pre {
 
   h3, span{
     position: relative;
-    @include slide-up();
     top: 25px;
   }
 

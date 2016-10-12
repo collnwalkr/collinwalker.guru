@@ -19,19 +19,31 @@ author:
   uri: http://collinwalker.guru/
   bio:
 
-footer_project:
-  - Night Light:
-    title: Night Light
-    link: night-light
-    published: true
+project_list:
   - Dover:
     title: Dover
     link: dover
     published: false
+    takeaways:
+      - digital prototyping
+      - ux design
+      - interaction design
+  - Night Light:
+    title: Night Light
+    link: night-light
+    published: true
+    takeaways:
+      - Arduino prototyping
+      - rapid prototyping
+      - industrial design
   - Strava Club:
     title: Strava Club
     link: strava-club
     published: false
+    takeaways:
+      - web development
+      - data visualization
+      - rapid prototyping
 
 
 # _config.build.yml overwrites these options when you run `gulp build`

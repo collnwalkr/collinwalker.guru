@@ -8,6 +8,30 @@ article.index{
   margin-left: auto;
   margin-right: auto;
 
+  h2{
+    text-transform: uppercase;
+    font-weight: $bold-font-weight;
+    font-size: 1.5rem;
+  }
+
+  .social-group{
+    margin-top: $spacing-unit / 2;
+    font-size: 1.25rem;
+    a{
+      color: $dark-text-color;
+      &:hover{
+        @include color-animation();
+        color: $brand-color;
+      }
+    }
+    i{
+      margin: 0 10px 0 2px;
+      font-size: 1rem;
+    }
+  }
+
+
+  // INDEX HEADER
   header{
     height: 255px;
 
@@ -15,6 +39,11 @@ article.index{
       height: 193px;
     }
 
+    h1{
+      font-family: $base-font-family;
+      font-size: 2em;
+      text-transform: uppercase;
+    }
     img{
       position:absolute;
       left: 0;
@@ -23,7 +52,6 @@ article.index{
       margin: auto;
       bottom: 0;
     }
-
     .right-side{
       height: 240px;
     }
@@ -35,47 +63,134 @@ article.index{
       &:hover{
         cursor: default;
       }
-
-    }
-
-  }
-
-
-  h1{
-    font-family: $base-font-family;
-    font-size: 2em;
-    text-transform: uppercase;
-  }
-
-
-}
-
-
-
-.social-group{
-  margin-top: $spacing-unit / 2;
-  font-size: 1.25rem;
-  a{
-    color: $dark-text-color;
-    &:hover{
-      @include color-animation();
-      color: $brand-color;
     }
   }
 
-  i{
-    margin: 0 10px 0 2px;
-    font-size: 1rem;
+  #index-project-dover{
+    .project-contents{
+      top: 25px;
+    }
+    span.project-block{
+      background-color: #FDFFE2;
+    }
   }
-}
 
-.copyright{
-  position: absolute;
-  bottom: $spacing-unit / 2;
-  right: $spacing-unit;
-  color: $light-text-color;
-}
+  #index-project-night-light{
+    .project-contents{
+      flex-direction: row-reverse;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+    img{
+      margin-left: 0;
+    }
+    span.project-block{
+      float: right;
+      background-color: #FFE8E8;
+    }
+  }
 
+
+  #index-project-strava-club{
+    .project-contents{
+      bottom: 25px;
+      top: initial;
+    }
+    span.project-block{
+      background-color: #DEF8F1;
+    }
+  }
+
+
+  // INDEX BODY
+  .project{
+    width: 100%;
+
+    margin-top: $spacing-unit;
+    margin-bottom: $spacing-unit;
+
+
+    a{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 0 30px;
+      color: $dark-text-color;
+
+      .span-read-more{
+        margin-top: 20px;
+        border-bottom:0;
+      }
+
+      .span-underline{
+        @include width-animation();
+        @include underline-pre();
+        margin-top: -27px;
+      }
+
+      .span-underline-soon{
+        @include width-animation();
+        @include underline-pre();
+        margin-top: -27px;
+      }
+
+      &:hover{
+        .span-underline{
+          border-bottom: 1px solid $dark-text-color;
+          width: 60px;
+        }
+
+        .span-underline-soon{
+          border-bottom: 1px solid $dark-text-color;
+          width: 72px;
+        }
+      }
+
+      span{
+        top: 0;
+        font-size: 0.75rem;
+      }
+    }
+
+    .project-contents{
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 292px;
+    }
+
+    .left-side{
+      flex: 1;
+    }
+
+    .right-side{
+      flex: 2;
+    }
+
+    span.project-block{
+      top:initial;
+      width: 470px;
+      height: 405px;
+      background-color: #d1d1d1;
+    }
+
+    img{
+      max-width: 480px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      margin: auto;
+      margin-right: 0;
+      bottom: 0;
+    }
+  }
+
+
+}
 
 
 // ON TABLET

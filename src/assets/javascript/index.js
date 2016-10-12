@@ -57,7 +57,7 @@ $( document ).ready(function() {
 
   function show_image(img) {
     $('#gif-' + img).removeClass('visibility-hidden');
-    $('#index-right').css('background-color','#FAFAFA');
+    $('#index-right').css('background-color','white');
   }
 
   function remove_image(img) {
