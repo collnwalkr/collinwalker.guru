@@ -37,6 +37,11 @@ nav {
   }
 }
 
+body.zoom-overlay-open.transition-overlay nav{
+  z-index: 500;
+  position:relative;
+}
+
 @include media-query($project-header) {
   nav {
     padding: 0 40px;
