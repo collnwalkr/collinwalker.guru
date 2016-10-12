@@ -27,10 +27,18 @@ title: Collin Walker
       <img id="gif-seattle" class="visibility-hidden" src="./assets/images/seattle.gif">
       <img id="gif-music" class="visibility-hidden" src="./assets/images/music.gif">
 
+      <div class="index-scroll-down">
+        <span>
+          <i class="fa fa-angle-down" aria-hidden="true"></i>
+          <a href="#projects">
+            the good stuff
+          </a>
+        </span>
+      </div>
     </div>
   </header>
 
-  <div class="flex-container flex-row flex-start">
+  <div class="flex-container flex-row flex-start" id="projects">
     {% for project in site.project_list %}
     <div class="project" id="index-project-{{project.link}}">
 
@@ -80,11 +88,12 @@ title: Collin Walker
   </div>
 
   <div class="contact">
+    <span class="contact-divider"></span>
     <h2>Contact</h2>
-    <span class="email">EMAIL</span>
+    <span class="contact-label">EMAIL</span>
     <a href="mailto:colln.walkr@gmail.com" class="email underline-default_color-white_bg" target="_top">colln.walkr@gmail.com</a>
     <div class="social-group">
-      <span class="email">LINKS</span>
+      <span class="contact-label">LINKS</span>
       <a href="https://github.com/collnwalkr" aria-label="collin walker's github" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
       <a href="https://www.linkedin.com/in/walkercollin" aria-label="collin walker's linkedin" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
       <a href="https://www.instagram.com/collnwalkr/" aria-label="collin walker's instagram" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i> </a>

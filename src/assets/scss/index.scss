@@ -14,22 +14,6 @@ article.index{
     font-size: 1.5rem;
   }
 
-  .social-group{
-    margin-top: $spacing-unit / 2;
-    font-size: 1.25rem;
-    a{
-      color: $dark-text-color;
-      &:hover{
-        @include color-animation();
-        color: $brand-color;
-      }
-    }
-    i{
-      margin: 0 10px 0 2px;
-      font-size: 1rem;
-    }
-  }
-
 
   // INDEX HEADER
   header{
@@ -54,6 +38,9 @@ article.index{
     }
     .right-side{
       height: 240px;
+      img{
+        z-index: $z-front;
+      }
     }
     .hello-span{
       span{
@@ -63,6 +50,10 @@ article.index{
       &:hover{
         cursor: default;
       }
+    }
+
+    .index-scroll-down {
+      visibility: hidden;
     }
   }
 
@@ -190,6 +181,52 @@ article.index{
   }
 
 
+  // INDEX CONTACT
+  .contact{
+
+    margin-top: $spacing-unit * 4;
+    margin-bottom: $spacing-unit * 2;
+
+    .contact-divider{
+      margin-bottom: $spacing-unit;
+      max-width: 550px;
+      height: 30px;
+      background-color: #ECE6FF;
+      display: block;
+    }
+
+    span.contact-label{
+      font-weight: $base-font-weight;
+    }
+
+    span{
+      font-family: $secondary-font-family;
+      font-weight: $light-font-weight;
+      line-height: 1.75;
+      font-size: 1rem;
+    }
+
+
+    .social-group{
+      margin-top: $spacing-unit / 2;
+      font-size: 1.25rem;
+      a{
+        color: $dark-text-color;
+        &:hover{
+          @include color-animation();
+          color: $brand-color;
+        }
+      }
+      i{
+        margin: 0 12px 0 5px;
+        font-size: 1.25rem;
+      }
+    }
+
+
+  }
+
+
 }
 
 
@@ -198,7 +235,39 @@ article.index{
 
 
   article.index {
+    max-width: 100%;
 
+    header{
+      margin-left: 40px;
+      margin-right: 40px;
+    }
+
+    .contact{
+      margin-left: 40px;
+      margin-right: 40px;
+      .contact-divider{
+        max-width:100%;
+      }
+    }
+
+    .project{
+      margin-left: 40px;
+      margin-right: 40px;
+      span.project-block{
+          height: 355px;
+      }
+
+      %project-night-light{
+        .left-side{
+          padding: 0;
+        }
+
+      }
+
+      img{
+        width: 90%;
+      }
+    }
   }
 
 
@@ -208,6 +277,79 @@ article.index{
 
   article.index {
 
+
+    #index-project-night-light{
+      .project-contents{
+        flex-direction: column-reverse;
+      }
+
+      img{
+        margin-left: auto;
+      }
+
+      .project-block{
+        float: none !important;
+      }
+    }
+
+    #index-project-dover{
+      .project-contents{
+        top: 0;
+      }
+    }
+
+    .project{
+      span.project-block{
+        margin-top: $spacing-unit * 2;
+        width: 100%;
+        height: 405px;
+      }
+      .left-side{
+        margin-bottom: $spacing-unit;
+      }
+      .project-contents{
+        flex-direction: column-reverse;
+        height: 100%;
+        top: 0;
+      }
+
+      a {
+        .span-underline, .span-underline-soon{
+          margin-top: initial;
+        }
+      }
+
+      .right-side{
+        img{
+          width: 430px;
+          max-width: 100%;
+        }
+      }
+    }
+
+
+    header{
+      flex-direction: column;
+      height: initial;
+      margin-left: 20px;
+      margin-right:20px;
+
+      .right-side{
+        width: 100%;
+      }
+
+      .index-scroll-down{
+        visibility: visible;
+        text-align: center;
+        span{
+          position: relative;
+          top: 50%;
+        }
+        span, a{
+          font-size: 1rem;
+        }
+      }
+    }
   }
 
 }

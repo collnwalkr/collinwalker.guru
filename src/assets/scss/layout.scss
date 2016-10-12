@@ -70,7 +70,7 @@ nav, footer{
 @include media-query($on-tablet) {
   nav {
     padding-bottom: 10px;
-    margin: 10px auto -50px auto;
+    margin: 10px auto 0 auto;
   }
 }
 
@@ -115,6 +115,7 @@ footer{
   footer{
     margin: 0;
     padding-top: 10px;
+    padding-bottom: 15px;
     .footer-wrapper {
       margin: 10px auto 0 auto;
     }

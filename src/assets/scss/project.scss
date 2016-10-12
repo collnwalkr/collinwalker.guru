@@ -58,12 +58,8 @@ article.post{
       margin-top: $spacing-unit;
     }
 
-    nav{
-      margin: 0 auto -50px auto;
-    }
-
     header {
-      margin-top: $spacing-unit * 2 - 10;
+      margin-top: 0;
       margin-bottom: $spacing-unit * 2;
       a, a:visited{
         @include linkUnderlines($dark-grey-color, white);
