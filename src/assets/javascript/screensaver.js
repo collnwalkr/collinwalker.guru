@@ -41,7 +41,7 @@ $(document).ready( function($) {
   }
 
   if (!isMobile) {
-    var time_to_wait = 3000;
+    var time_to_wait = 25000;
     window.screen_saver_timer = setTimeout(initScreenSaver,time_to_wait);
   } else {
     clearTimeout(window.screen_saver_timer);
@@ -78,13 +78,19 @@ function setUpYT(){
   player = new YT.Player('screen-saver-player', {
     height: '390',
     width: '640',
-    playerVars: { 'autoplay': 1, 'controls': 0 , 'showinfo':0},
+    playerVars: { 'autoplay': 1, 'controls': 0 , 'showinfo':0, 'loop':1},
     videoId: 'MKqrLGFoK9E',
     events: {
-      'onReady': onPlayerReady
+      'onReady': onPlayerReady,
+      'onStateChange': onPlayerStateChange
     }
   });
 
+  function onPlayerStateChange(event){
+    if (event.data === YT.PlayerState.ENDED) {
+      player.playVideo();
+    }
+  }
   function onPlayerReady(event) {
     event.target.playVideo();
     event.target.mute();

@@ -69,6 +69,9 @@ article.index{
     span.project-block{
       background-color: #FDFFE2;
     }
+    .span-stay {
+      border-bottom: 1px solid #b3b4a0;
+    }
   }
 
   #index-project-night-light{
@@ -87,6 +90,9 @@ article.index{
       float: right;
       background-color: #FFE8E8;
     }
+    .span-stay {
+      border-bottom: 1px solid #b49f9f;
+    }
   }
 
 
@@ -97,6 +103,9 @@ article.index{
     }
     span.project-block{
       background-color: #DEF8F1;
+    }
+    .span-stay {
+      border-bottom: 1px solid #9db4ae;
     }
   }
 
@@ -115,22 +124,30 @@ article.index{
       justify-content: flex-end;
       padding: 0 30px;
       color: $dark-text-color;
+      cursor: crosshair;
 
       .span-read-more{
         margin-top: 20px;
         border-bottom:0;
       }
 
-      .span-underline{
+      .span-underline, .span-underline-soon{
         @include width-animation();
         @include underline-pre();
         margin-top: -27px;
       }
 
-      .span-underline-soon{
-        @include width-animation();
-        @include underline-pre();
-        margin-top: -27px;
+
+      .span-underline-soon.span-stay{
+        border-bottom: 1px solid $light-grey-color;
+        width: 72px;
+        top: 1px;
+      }
+
+      .span-underline.span-stay{
+        border-bottom: 1px solid $light-grey-color;
+        width: 60px;
+        top: 1px;
       }
 
       &:hover{
@@ -142,6 +159,10 @@ article.index{
         .span-underline-soon{
           border-bottom: 1px solid $dark-text-color;
           width: 72px;
+        }
+        .span-stay{
+          border-bottom: 1px solid $light-grey-color;
+          width: 0;
         }
       }
 
@@ -191,6 +212,16 @@ article.index{
 
     margin-top: $spacing-unit * 4;
     margin-bottom: $spacing-unit * 2;
+
+    a.email{
+      @include linkUnderlines(white, $dark-text-color);
+      color: $dark-text-color;
+      &:hover{
+        @include color-animation();
+        @include linkUnderlines(white, $brand-color);
+        color: $brand-color;
+      }
+    }
 
     .contact-divider{
       margin-bottom: $spacing-unit;
@@ -262,7 +293,7 @@ article.index{
           height: 355px;
       }
 
-      %project-night-light{
+      #project-night-light{
         .left-side{
           padding: 0;
         }
