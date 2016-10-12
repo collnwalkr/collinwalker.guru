@@ -29,7 +29,8 @@ gulp.task('scripts', () =>
     'node_modules/zoom-vanilla.js/dist/zoom-vanilla.min.js',
     'src/assets/javascript/index.js',
     'src/assets/javascript/mobile-vh-bugfix.js',
-    'src/assets/javascript/pretty-console.js'
+    'src/assets/javascript/pretty-console.js',
+    'src/assets/javascript/screensaver.js'
     ])
     .pipe(newer('.tmp/assets/javascript/index.js', {dest: '.tmp/assets/javascript', ext: '.js'}))
     .pipe(when(!argv.prod, sourcemaps.init()))

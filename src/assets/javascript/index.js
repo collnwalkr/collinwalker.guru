@@ -56,10 +56,12 @@ $( document ).ready(function() {
 
 
   function show_image(img) {
+    $(this).addClass('hello-hover');
     $('#gif-' + img).removeClass('visibility-hidden');
   }
 
   function remove_image(img) {
+    $(this).removeClass('hello-hover');
     $('#gif-' + img).addClass('visibility-hidden');
   }
 

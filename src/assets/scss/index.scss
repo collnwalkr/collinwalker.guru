@@ -46,6 +46,11 @@ article.index{
       span{
         font-size: 1rem;
         font-weight: $base-font-weight;
+        @include color-animation();
+      }
+      .hello-hover{
+        color:$brand-color;
+        @include linkUnderlines(white, $brand-color);
       }
       &:hover{
         cursor: default;
@@ -299,6 +304,7 @@ article.index{
     }
 
     .project{
+      margin-top: 0;
       span.project-block{
         margin-top: $spacing-unit * 2;
         width: 100%;
@@ -333,9 +339,11 @@ article.index{
       height: initial;
       margin-left: 20px;
       margin-right:20px;
+      margin-bottom: 0;
 
       .right-side{
         width: 100%;
+        height: initial;
       }
 
       .index-scroll-down{
