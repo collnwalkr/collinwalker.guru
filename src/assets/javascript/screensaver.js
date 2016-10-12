@@ -30,7 +30,10 @@ $(document).ready( function($) {
   // Restart
   function restartScreenSaverTimer(){
     $('#screen-saver-player').remove();
-    $(document.body).removeClass('zoom-overlay-open');
+    if($(document.body).hasClass('screensaver')){
+      $(document.body).removeClass('zoom-overlay-open');
+    }
+    $(document.body).removeClass('screensaver');
     $('div.video-overlay').remove();
     setTimeout(function(){
       $('div.zoom-overlay.overlay-dark').remove();
@@ -64,6 +67,7 @@ function startScreenSaver(){
   $(vid_overlay).appendTo(document.body);
   setTimeout(function(){
     $(document.body).addClass('zoom-overlay-open');
+    $(document.body).addClass('screensaver');
     $(iframe_vid).appendTo(document.body);
     setUpYT();
   }, 300);
