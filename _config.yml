@@ -31,7 +31,7 @@ project_list:
   - Night Light:
     title: Night Light
     link: night-light
-    published: false
+    published: true
     takeaways:
       - Arduino prototyping
       - rapid prototyping

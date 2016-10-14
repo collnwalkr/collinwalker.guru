@@ -94,7 +94,7 @@ footer{
     color: white;
   }
   .project{
-    z-index: $z-front;
+    z-index: $z-front - 1;
     display: flex;
     color: white;
 
@@ -103,6 +103,7 @@ footer{
       text-shadow: none;
       background-image: none;
       font-size: 1rem;
+      margin-bottom: 1rem;
     }
   }
 }
@@ -130,8 +131,11 @@ footer{
 
 @include media-query($on-mobile) {
   footer{
+    padding-bottom: 0;
     a{
       margin: 20px 20px;
+      top: -6px;
+      position: relative;
     }
     .footer-wrapper{
       height: 325px;

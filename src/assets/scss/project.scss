@@ -26,6 +26,12 @@ article.post{
     font-size: 1em;
     line-height: 2em;
   }
+  p{
+    strong{
+      font-weight: $semi-font-weight;
+    }
+  }
+
   h3{
     font-weight: $semi-font-weight;
     margin-bottom: 0;
@@ -69,7 +75,7 @@ article.post{
 
         }
       }
-    }
+     }
     .post-header{
       align-items: flex-start;
       color: white;
@@ -80,7 +86,8 @@ article.post{
         display: none;
       }
       .left-side{
-        margin: 0 -40px;
+        margin: 0 -40px 0 -40px;
+        overflow-x: hidden;
         padding: 30px 40px;
         background-color: $dark-grey-color;
         z-index: $z-front;
@@ -109,6 +116,11 @@ article.post{
 @include media-query($on-mobile) {
   article.post{
     padding: 0 20px;
+    .post-header{
+      .left-side{
+        margin: 0 -20px 0 -40px;
+      }
+    }
     .left-side {
       margin: 0 -20px;
       padding: 30px 20px;

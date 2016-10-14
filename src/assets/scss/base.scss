@@ -383,7 +383,10 @@ blockquote {
     max-width: $content-width / 1.5;
     letter-spacing: -1px;
     font-style: italic;
-
+    margin-top: 2rem;
+    a{
+      @include linkUnderlines(white, $light-text-color);
+    }
     > :last-child {
         margin-bottom: 0;
     }

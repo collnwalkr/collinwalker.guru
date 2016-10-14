@@ -25,10 +25,9 @@ gulp.task('scripts', () =>
   // NOTE: The order here is important since it's concatenated in order from
   // top to bottom, so you want vendor scripts etc on top
   gulp.src([
-    'src/assets/javascript/vendor.js',
     'node_modules/zoom-vanilla.js/dist/zoom-vanilla.min.js',
     'src/assets/javascript/index.js',
-    'src/assets/javascript/mobile-vh-bugfix.js',
+    'src/assets/javascript/project.js',
     'src/assets/javascript/pretty-console.js',
     'src/assets/javascript/screensaver.js'
     ])

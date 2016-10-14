@@ -126,6 +126,10 @@ article.index{
       color: $dark-text-color;
       cursor: crosshair;
 
+      .published{
+        cursor: pointer;
+      }
+
       .span-read-more{
         margin-top: 20px;
         border-bottom:0;
@@ -170,7 +174,7 @@ article.index{
 
       span{
         top: 0;
-        font-size: 0.75rem;
+        font-size: 1rem;
       }
     }
 
@@ -355,6 +359,10 @@ article.index{
       a {
         .span-underline, .span-underline-soon{
           margin-top: initial;
+        }
+        span{
+          top: 0;
+          font-size: 0.75rem;
         }
       }
 
