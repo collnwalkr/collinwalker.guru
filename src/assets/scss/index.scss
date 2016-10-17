@@ -117,6 +117,10 @@ article.index{
     margin-top: $spacing-unit;
     margin-bottom: $spacing-unit;
 
+    a.published{
+      cursor: pointer;
+    }
+
 
     a{
       display: flex;
@@ -125,10 +129,6 @@ article.index{
       padding: 0 30px;
       color: $dark-text-color;
       cursor: crosshair;
-
-      .published{
-        cursor: pointer;
-      }
 
       .span-read-more{
         margin-top: 20px;

@@ -294,6 +294,10 @@ ul, ol {
     margin-left: $spacing-unit;
 }
 
+ul{
+  list-style-type: circle;
+}
+
 li {
     > ul,
     > ol {
@@ -381,7 +385,7 @@ blockquote {
     padding-left: $spacing-unit / 2;
     font-size: 18px;
     max-width: $content-width / 1.5;
-    letter-spacing: -1px;
+    //letter-spacing: -1px;
     font-style: italic;
     margin-top: 2rem;
     a{

@@ -14,7 +14,6 @@ $( document ).ready(function() {
         // get all of the links
         var a_links = $(' nav, footer ').find(' a ');
 
-        console.log(a_links)
         // give them handlers
         for( var i = 0; i < a_links.length; i++){
           (function( index ){

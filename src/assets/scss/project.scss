@@ -30,6 +30,13 @@ article.post{
     strong{
       font-weight: $semi-font-weight;
     }
+    a{
+      @include linkUnderlines(white, $dark-text-color);
+      @include color-animation();
+      &:hover{
+        @include linkUnderlines(white, $brand-color);
+      }
+    }
   }
 
   h3{

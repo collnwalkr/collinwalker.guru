@@ -88,6 +88,8 @@ footer{
   max-width: $project-header;
   border-top: $dashed-border;
   margin: $spacing-unit auto;
+  position: relative;
+  z-index: $z-back;
 
   #more-projects{
     background-color: $brand-color;
