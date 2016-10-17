@@ -39,7 +39,7 @@ project_list:
   - Strava Club:
     title: Strava Club
     link: strava-club
-    published: false
+    published: true
     takeaways:
       - web development
       - data visualization
