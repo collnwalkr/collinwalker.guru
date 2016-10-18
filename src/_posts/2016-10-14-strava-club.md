@@ -41,7 +41,7 @@ most] would be pretty cool.
 ### Ideation
 Equipped with our research findings, our team first set off to outline our design requirements. We decided early on that it was imperative that we visualize a club's activity data onto an interactive map. This would alleviate several user frustrations and needs: discovering groups in your area and popular routes taken by group members. Our team communicated our ideas the whiteboard in order to quickly generate ideas and visuals. Whiteboarding also allowed for the developers on the team (me and Li) to map the UI to the data we would need to access either via API or through data scraping techniques. While we did photograph our whiteboarding their kind of difficult to read. Below are some re-drawn sketches of our whiteboarding during our project.
 
-![Me whiteboarding potential designs]({{ site.images }}projects/{{page.thumbnail}}/{{page.thumbnail}}-4.jpg){: data-action="zoom"}
+![Me whiteboarding potential designs]({{ site.images }}projects/{{page.thumbnail}}/{{page.thumbnail}}-4.jpg){: .ignore-margin-bottom data-action="zoom"}
 ![High level view of data pipeline]({{ site.images }}projects/{{page.thumbnail}}/{{page.thumbnail}}-3.jpg){: .small .right data-action="zoom"}
 ![Mapping between UI and data]({{ site.images }}projects/{{page.thumbnail}}/{{page.thumbnail}}-2.jpg){: .small data-action="zoom"}
 

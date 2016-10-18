@@ -2,9 +2,9 @@ article.blog{
 
   header{
     margin-top: $spacing-unit * 3;
+    margin-bottom: $spacing-unit * 3;
     p{
       width: inherit;
-      font-style: italic;
     }
 
     h1{
@@ -16,3 +16,15 @@ article.blog{
 
 
 }
+
+@include media-query($on-tablet) {
+  article.blog{
+    header{
+      &.post-header{
+        color: $dark-grey-color !important;
+      }
+    }
+  }
+
+}
+

@@ -16,7 +16,7 @@ article.post{
   h2{
     font-family: $secondary-font-family;
     font-weight: $semi-font-weight;
-    font-size: 1.75em;
+    font-size: 1.5em;
     margin-top: $spacing-unit * 2;
   }
 
@@ -24,7 +24,7 @@ article.post{
     font-family: $secondary-font-family;
     font-weight: $base-font-weight;
     font-size: 1em;
-    line-height: 2em;
+    line-height: 1.75em;
   }
   p{
     strong{
@@ -47,7 +47,9 @@ article.post{
 
   img{
     margin-top: $spacing-unit / 2;
+    margin-bottom: $spacing-unit;
     width: 100%;
+
 
     &.small {
       max-width: $content-width / 2 - $spacing-unit / 4;
@@ -55,6 +57,10 @@ article.post{
 
     &.right {
       float: right;
+    }
+
+    &.ignore-margin-bottom{
+      margin-bottom: 0;
     }
   }
 

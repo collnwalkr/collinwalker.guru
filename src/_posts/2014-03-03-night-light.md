@@ -53,20 +53,20 @@ From our ideation sessions, our crosswalk had a shape (three twists) a main inte
 
 Next we wanted to test the main signal to drivers in a low-light scenario. Using laser cutters, power tools, and some very strong LED's, we assembled the top of the crosswalk and trekked out into the night to test its visibility. Pictured below is a shot of both our illuminated sign and a typical pedestrian crossing sign in the background. Excusing the quality of the photo, our team was satisfied with the direction and qualities that our crosswalk was taking on.
 
-![Adam testing the height of Night Light as seen by a car]({{ site.images }}projects/{{page.thumbnail}}/{{page.thumbnail}}-8.jpg){: .small data-action="zoom"}
-![Laser cutting the pedestrian sign]({{ site.images }}projects/{{page.thumbnail}}/{{page.thumbnail}}-13.jpg){: .small .right data-action="zoom"}
+![Adam testing the height of Night Light as seen by a car]({{ site.images }}projects/{{page.thumbnail}}/{{page.thumbnail}}-8.jpg){: .small .ignore-margin-bottom data-action="zoom"}
+![Laser cutting the pedestrian sign]({{ site.images }}projects/{{page.thumbnail}}/{{page.thumbnail}}-13.jpg){: .small .ignore-margin-bottom .right data-action="zoom"}
 ![Laser cutting the pedestrian and hand sign]({{ site.images }}projects/{{page.thumbnail}}/{{page.thumbnail}}-5.jpg){: data-action="zoom"}
 
 The next step was to assemble the electrical components of the crosswalk. I took on the bulk of these responsibilities. Starting out, I decided to leverage the Arduino platform because of its flexibility in prototyping. It took me a second to dust off my electrical engineering skills, but eventually we had a working circuit of high powered LEDs and beam laser pointers. The final hurdle was the vital communication between two crosswalk signs. Our team got our hands on some Xbee wireless shields in order to give our Arduinos wireless capabilities. Once we had established the ad-hoc network, I designed a simple handshake protocol between two crosswalk signs that relayed their current state and the trigger to begin the crosswalk sequence.
 
-![Me testing different configurations for stop-hand LED]({{ site.images }}projects/{{page.thumbnail}}/{{page.thumbnail}}-6.jpg){: .small data-action="zoom"}
-![fully assembled Arduino controller]({{ site.images }}projects/{{page.thumbnail}}/{{page.thumbnail}}-11.jpg){: .small .right data-action="zoom"}
+![Me testing different configurations for stop-hand LED]({{ site.images }}projects/{{page.thumbnail}}/{{page.thumbnail}}-6.jpg){: .small .ignore-margin-bottom data-action="zoom"}
+![fully assembled Arduino controller]({{ site.images }}projects/{{page.thumbnail}}/{{page.thumbnail}}-11.jpg){: .small .ignore-margin-bottom .right data-action="zoom"}
 ![Me wiring up the LEDs to the Arduino]({{ site.images }}projects/{{page.thumbnail}}/{{page.thumbnail}}-12.jpg){: data-action="zoom"}
 
 ## Results
 By the end of our prototyping sprint, we had gone from sketches to high-fidelity working prototype. We took it to the streets in order to see our prototype in its target context. Below our some photos of the final build as well as a video demonstrating the prototype and our collective vision for Night Light.
 
-![a motorcyclist waits for a pedestrian]({{ site.images }}projects/{{ page.thumbnail }}/{{ page.thumbnail }}-9.jpg){: data-action="zoom"}
-![Adam assembles Night Light]({{ site.images }}thumbnails/{{ page.thumbnail }}.jpg){: data-action="zoom"}
-[![Night Light video]({{ site.images }}projects/{{ page.thumbnail }}/{{ page.thumbnail }}-10.jpg)](https://vimeo.com/164376095 "Night Light video - click to watch!"){:target="_blank"}
+![a motorcyclist waits for a pedestrian]({{ site.images }}projects/{{ page.thumbnail }}/{{ page.thumbnail }}-9.jpg){: .ignore-margin-bottom data-action="zoom"}
+![Adam assembles Night Light]({{ site.images }}thumbnails/{{ page.thumbnail }}.jpg){: .ignore-margin-bottom data-action="zoom"}
+[![Night Light video]({{ site.images }}projects/{{ page.thumbnail }}/{{ page.thumbnail }}-10.jpg)](https://vimeo.com/164376095 "Night Light video - click to watch!"){: .ignore-margin-bottom target="_blank"}
 
