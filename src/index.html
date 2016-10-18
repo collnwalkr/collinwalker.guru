@@ -82,15 +82,25 @@ title: Collin Walker
 
       </div>
 
-
-
-
     </div>
     {% endfor %}
   </div>
 
+  <div class="blog-posts contact">
+    <span class="blog-divider divider"></span>
+    <h2>Writings</h2>
+    {% for post in site.posts %}
+    {% if post.layout == "blog" and post.published %}
+      <a href="{{site.url}}post/{{post.link}}"><h3>{{ post.title }}</h3></a>
+      <span>{{ post.date | date_to_string }}</span>
+      <p>{{ post.description }}</p>
+    {% endif %}
+    {% endfor %}
+
+  </div>
+
   <div class="contact">
-    <span class="contact-divider"></span>
+    <span class="contact-divider divider"></span>
     <h2>Contact</h2>
     <span class="contact-label">EMAIL</span>
     <a href="mailto:colln.walkr@gmail.com" class="email underline-default_color-white_bg" target="_top">colln.walkr@gmail.com</a>

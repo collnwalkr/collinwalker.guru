@@ -63,7 +63,7 @@ $( document ).ready(function() {
       $(function(){
 
         // get all of the links
-        var a_links = $('.project-contents').find(' a ');
+        var a_links = $('.project-contents , .blog-posts').find(' a ');
 
         // give them handlers
         for( var i = 0; i < a_links.length; i++){

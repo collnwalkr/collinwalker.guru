@@ -212,6 +212,36 @@ article.index{
     }
   }
 
+  .divider{
+    margin-bottom: $spacing-unit;
+    max-width: 550px;
+    height: 30px;
+    display: block;
+  }
+  // INDEX BLOG
+  .blog-posts{
+    .blog-divider{
+      background-color: #ddf3ff;
+    }
+    a{
+      h3{
+        @include linkUnderlines(white, $dark-text-color);
+        display: inline;
+
+        &:hover{
+          @include color-animation();
+          @include linkUnderlines(white, $brand-color);
+        }
+      }
+    }
+    p{
+      font-size: 1rem;
+    }
+    span{
+      display: block;
+      font-size: 0.75rem;
+    }
+  }
 
   // INDEX CONTACT
   .contact{
@@ -230,11 +260,7 @@ article.index{
     }
 
     .contact-divider{
-      margin-bottom: $spacing-unit;
-      max-width: 550px;
-      height: 30px;
       background-color: #ECE6FF;
-      display: block;
     }
 
     span.contact-label{
@@ -284,12 +310,17 @@ article.index{
       margin-right: 40px;
     }
 
+    .divider{
+      max-width:100%;
+    }
     .contact{
       margin-left: 40px;
       margin-right: 40px;
-      .contact-divider{
-        max-width:100%;
-      }
+    }
+
+    .blog-posts{
+      margin-left: 40px;
+      margin-right: 40px;
     }
 
     .project{
