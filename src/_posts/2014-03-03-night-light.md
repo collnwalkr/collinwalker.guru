@@ -30,8 +30,7 @@ To build and test a modern crosswalk solution that excels in low light situation
 This project took place in a prototyping studio class and was designed to showcase our prototyping skills.
 Our team decided at the beginning to make a concerted effort to actually design and build a working prototype by the end of the two weeks.
 
-## Process
-### Ideation
+## Ideation
 In order to validate our design, our team discussed the stakeholders involved and their goals.
 Three stakeholders were identified: the driver, the pedestrian, and the city. The driver and pedestrians are both direct stakeholders as they would be interacting directly with the system. The city, on the other hand, is an indirect stakeholder because the crosswalk impacts the city in an indirect way.
 
@@ -46,7 +45,7 @@ Taking queues from existing crosswalk systems, we would present pedestrians with
 ![final digital rendering]({{ site.images }}projects/{{page.thumbnail}}/{{page.thumbnail}}-0.jpg){: .small data-action="zoom"}
 ![original timing diagram]({{ site.images }}projects/{{page.thumbnail}}/{{page.thumbnail}}-1.jpg){: .small .right data-action="zoom"}
 
-### Prototype
+## Prototype
 From our ideation sessions, our crosswalk had a shape (three twists) a main interface (pedestrian facing console to trigger the crosswalk) and three signals (pedestrian facing hand/crossing sign, driver facing crossing sign, and lasers to define the crosswalk boundaries). Before jumping into a high-fidelity prototype, we wanted to validate our idea quickly. So we used big foam blocks and blue scotch tape to create a 1:1 low-fidelity prototype and simulated a crosswalk scenario (Adam and Tim are pictured below discussing this low-fidelity prototype). This prototype illuminated the sizing and placement of the crosswalk signals. These were further validated by researching government standards on the sizing of street signs. 
 
 ![Prototyping the height of Night Light]({{ site.images }}projects/{{page.thumbnail}}/{{page.thumbnail}}-3.jpg){: data-action="zoom"}
@@ -68,5 +67,7 @@ By the end of our prototyping sprint, we had gone from sketches to high-fidelity
 
 ![a motorcyclist waits for a pedestrian]({{ site.images }}projects/{{ page.thumbnail }}/{{ page.thumbnail }}-9.jpg){: .ignore-margin-bottom data-action="zoom"}
 ![Adam assembles Night Light]({{ site.images }}thumbnails/{{ page.thumbnail }}.jpg){: .ignore-margin-bottom data-action="zoom"}
-[![Night Light video]({{ site.images }}projects/{{ page.thumbnail }}/{{ page.thumbnail }}-10.jpg)](https://vimeo.com/164376095 "Night Light video - click to watch!"){: .ignore-margin-bottom target="_blank"}
+<div class="vimeo-embed">
+<iframe src="https://player.vimeo.com/video/164376095?color=ffffff&title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
 

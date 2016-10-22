@@ -5,8 +5,13 @@ article.post{
   margin-right: auto;
 
 
-  header p{
-    line-height: 1.5em;
+  header {
+    .right-side img{
+      margin-bottom: 0;
+    }
+    p {
+      line-height: 1.5em;
+    }
   }
   h1{
     font-family: $base-font-family;

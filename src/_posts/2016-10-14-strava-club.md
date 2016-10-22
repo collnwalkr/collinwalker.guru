@@ -23,8 +23,7 @@ Recent years have seen the increasing popularity of fitness tracking application
 ## Objective
 Given the limited visualizations Strava currently offers regarding club activities, we propose **Strava Club Visualizer**, an exploratory visualization for Strava users, allowing athletes to find prospective clubs, explore new routes and meet new partners.
 
-## Process
-### Research
+## Research
 To better understand the problem space we interviewed Strava end-users to gather our design specifications. Of the two Strava users we recruited, one is an officer for the [Husky Cycling Club](http://www.huskycycling.org/){:target="_blank"} and the other is an active member in two other cycling clubs.
 
 The goal of the interview was to understand how Strava Club administrators currently use clubs to organize and recruit and how Strava athletes find clubs to join. To ease into the interview, we first asked each participant to describe their current cycling habits. Then we transitioned into social riding to get a sense of how rides are organized and routes are discovered and shared. Finally we dove deep into their experience with Strava Clubs and how they use these current tools to accomplish their goals. We summarized our findings as follows:
@@ -38,7 +37,7 @@ most] would be pretty cool.
 >
 > -- Strava Athlete
 
-### Ideation
+## Ideation
 Equipped with our research findings, our team first set off to outline our design requirements. We decided early on that it was imperative that we visualize a club's activity data onto an interactive map. This would alleviate several user frustrations and needs: discovering groups in your area and popular routes taken by group members. Our team communicated our ideas the whiteboard in order to quickly generate ideas and visuals. Whiteboarding also allowed for the developers on the team (me and Li) to map the UI to the data we would need to access either via API or through data scraping techniques. While we did photograph our whiteboarding their kind of difficult to read. Below are some re-drawn sketches of our whiteboarding during our project.
 
 ![Me whiteboarding potential designs]({{ site.images }}projects/{{page.thumbnail}}/{{page.thumbnail}}-4.jpg){: .ignore-margin-bottom data-action="zoom"}
@@ -46,7 +45,7 @@ Equipped with our research findings, our team first set off to outline our desig
 ![Mapping between UI and data]({{ site.images }}projects/{{page.thumbnail}}/{{page.thumbnail}}-2.jpg){: .small data-action="zoom"}
 
 
-### Prototype
+## Prototype
 Our team then took our design requirements and sketches and refined them into wireframes and ultimately a high-fidelity mockup. I took these renderings and created a small web application that can consume preprocessed Strava data for a club and render a fully interactive map.
 
 ![Wireframe]({{ site.images }}projects/{{page.thumbnail}}/{{page.thumbnail}}-5.jpg){: .small data-action="zoom"}

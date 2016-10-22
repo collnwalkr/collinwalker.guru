@@ -346,7 +346,7 @@ header{
     margin-right: 0.5em;
   }
   p{
-    width: 300px;
+    width: 310px;
     line-height: 1.5rem;
     margin-bottom: 2rem;
   }
@@ -633,4 +633,22 @@ pre {
   position:fixed;
   top:0;
   left:0;
+}
+
+/**
+ * Video
+ */
+
+.vimeo-embed {
+  position: relative;
+  padding-bottom: 54.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+.vimeo-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
