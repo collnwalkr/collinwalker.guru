@@ -188,11 +188,28 @@ footer{
     }
 }
 
-/**
- * Page content
- */
-.page-content {
 
+
+/**
+ * 404
+ */
+.div-404 {
+  height: 520px;
+  max-width: 400px;
+  padding: 10px;
+  text-align: center;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  img{
+    margin-bottom: 20px;
+  }
+  h1{
+    font-family: $secondary-font-family;
+  }
 }
 
 

@@ -43,10 +43,25 @@ article.post{
       }
     }
   }
+  li{
+    line-height: 2rem;
+    strong{
+      font-weight: $semi-font-weight;
+    }
+  }
 
   h3{
     font-weight: $semi-font-weight;
     margin-bottom: 0;
+    margin-top: 2rem;
+  }
+
+  h4{
+    background-color: $highlight-color;
+    font-weight: $bold-font-weight;
+    padding: 4px 5px;
+    margin-bottom: 0;
+    display: inline-block;
     margin-top: 2rem;
   }
 
