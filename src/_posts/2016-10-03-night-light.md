@@ -18,32 +18,35 @@ permalink: /project/:title/
 ## Problem
 Growing up, most of us were instructed by our parents to look both ways before crossing the street. However, this type of precaution only works
 however if the driver is also aware. And according to the CDC: 
-more than 4,700 pedestrians are killed by vehicles every year with **3/4 of the deaths happening in low-light**.
-With this information, our team asked the question: how can we increase drivers awareness of pedestrians in low-light situations?
+more than 4,700 pedestrians are killed by vehicles every year with 3/4 of the deaths happening in low-light.
+With this information, our team asked the question: **How can we increase drivers awareness of pedestrians in low-light situations?**
 
 > In 2013, 4,735 pedestrians were killed in traffic crashes in the United States. This averages to one crash-related pedestrian death every 2 hours.
 >
 > -- [CDC Report](https://www.cdc.gov/motorvehiclesafety/pedestrian_safety/){:target="_blank"}
 
-## Objective 
-To build and test a modern crosswalk solution that excels in low light situations.
-This project took place in a prototyping studio class and was designed to showcase our prototyping skills.
-Our team decided at the beginning to make a concerted effort to actually design and build a working prototype by the end of the two weeks.
+
+<hr class='magnifying'>
 
 ## Ideation
 In order to validate our design, our team discussed the stakeholders involved and their goals.
-Three stakeholders were identified: the driver, the pedestrian, and the city. The driver and pedestrians are both direct stakeholders as they would be interacting directly with the system. The city, on the other hand, is an indirect stakeholder because the crosswalk impacts the city in an indirect way.
-
-For the two direct stakeholders (the pedestrian and driver), we identified of their goals through our own experiences. We bypassed formal interviews with drivers and pedestrians due to the project's time constraint and the nature of the project. For the driver, their goals are to acknowledge any crossing pedestrians and to understand the boundaries for themselves and pedestrians. Pedestrians have the same goals with the additional goal of preceding into the crosswalk confident that they have been acknowledged by the driver. 
+Three stakeholders were identified: the driver, the pedestrian, and the city.
+For the two direct stakeholders (the pedestrian and driver), we identified of their goals through our own experiences. For the driver, their goals are to acknowledge any crossing pedestrians and to understand the boundaries for themselves and pedestrians. Pedestrians have the same goals with the additional goal of preceding into the crosswalk confident that they have been acknowledged by the driver. 
  
-![initial sketches]({{ site.images }}projects/{{page.thumbnail}}/{{page.thumbnail}}-2.jpg){: data-action="zoom"}
+![initial sketches]({{ site.images }}projects/{{page.thumbnail}}/{{page.thumbnail}}-2.jpg){: .small data-action="zoom"}
+![original timing diagram]({{ site.images }}projects/{{page.thumbnail}}/{{page.thumbnail}}-1.jpg){: .small .right data-action="zoom"}
 
 After identifying the stakeholders and their goals, we began sketching out various builds and forms that our crosswalk to take.
 In order to satisfy a pedestrian's goal of confidently crossing in a low-light environment, our team developed the concept of illuminating the boundaries of the crosswalk with lasers. This would be coupled with the primary ways of displaying the state of the crosswalk, the pedestrian crossing and hand signs.
-Taking queues from existing crosswalk systems, we would present pedestrians with both a crossing and hand sign while the drivers only the pedestrian sign. The position of drivers and pedestrians informed our design to have our final 'twisting' design (shown in the illustration below). Pedestrians could approach our system facing the crosswalk and interact with upward sloping console which housed the button to trigger the crosswalk. The crosswalk sign then 'twists' in order to face pedestrians crossing in the street and display either the pedestrian or hand sign. The sign takes one final 'twist' to face cars driving which is where the big pedestrian sign would be. The order of these twists is important as well as they correlate with the distance to be interacted with. The first twist lowest to the ground is where the console is housed. This console needs to be high enough for both adults and children. The second twists that communicates pedestrians the state of the crosswalk should be seen at a medium range. The final twists that communicates drivers the state of the crosswalk should be visible at the greatest distance which is why it is at the top.
+Taking queues from existing crosswalk systems, we would present pedestrians with both a crossing and hand sign while the drivers only the pedestrian sign. The position of drivers and pedestrians informed our design to have our final 'twisting' design (shown in the illustration below).
 
-![final digital rendering]({{ site.images }}projects/{{page.thumbnail}}/{{page.thumbnail}}-0.jpg){: .small data-action="zoom"}
-![original timing diagram]({{ site.images }}projects/{{page.thumbnail}}/{{page.thumbnail}}-1.jpg){: .small .right data-action="zoom"}
+#### Final Concept
+
+![final digital rendering]({{ site.images }}projects/{{page.thumbnail}}/{{page.thumbnail}}-0.jpg){: data-action="zoom"}
+
+Pedestrians could approach our system facing the crosswalk and interact with upward sloping console which housed the button to trigger the crosswalk. The crosswalk sign then 'twists' in order to face pedestrians crossing in the street and display either the pedestrian or hand sign. The sign takes one final 'twist' to face cars driving which is where the big pedestrian sign would be. The order of these twists is important as well as they correlate with the distance to be interacted with. The first twist lowest to the ground is where the console is housed. This console needs to be high enough for both adults and children. The second twists that communicates pedestrians the state of the crosswalk should be seen at a medium range. The final twists that communicates drivers the state of the crosswalk should be visible at the greatest distance which is why it is at the top.
+
+<hr class='flex'>
 
 ## Prototype
 From our ideation sessions, our crosswalk had a shape (three twists) a main interface (pedestrian facing console to trigger the crosswalk) and three signals (pedestrian facing hand/crossing sign, driver facing crossing sign, and lasers to define the crosswalk boundaries). Before jumping into a high-fidelity prototype, we wanted to validate our idea quickly. So we used big foam blocks and blue scotch tape to create a 1:1 low-fidelity prototype and simulated a crosswalk scenario (Adam and Tim are pictured below discussing this low-fidelity prototype). This prototype illuminated the sizing and placement of the crosswalk signals. These were further validated by researching government standards on the sizing of street signs. 
@@ -61,6 +64,8 @@ The next step was to assemble the electrical components of the crosswalk. I took
 ![Me testing different configurations for stop-hand LED]({{ site.images }}projects/{{page.thumbnail}}/{{page.thumbnail}}-6.jpg){: .small .ignore-margin-bottom data-action="zoom"}
 ![fully assembled Arduino controller]({{ site.images }}projects/{{page.thumbnail}}/{{page.thumbnail}}-11.jpg){: .small .ignore-margin-bottom .right data-action="zoom"}
 ![Me wiring up the LEDs to the Arduino]({{ site.images }}projects/{{page.thumbnail}}/{{page.thumbnail}}-12.jpg){: data-action="zoom"}
+
+<hr class='hundred'>
 
 ## Results
 By the end of our prototyping sprint, we had gone from sketches to high-fidelity working prototype. We took it to the streets in order to see our prototype in its target context. Below our some photos of the final build as well as a video demonstrating the prototype and our collective vision for Night Light.
