@@ -144,13 +144,13 @@ article.index{
 
       .span-underline-soon.span-stay{
         border-bottom: 1px solid $light-grey-color;
-        width: 72px;
+        width: 96px;
         top: 2px;
       }
 
       .span-underline.span-stay{
         border-bottom: 1px solid $light-grey-color;
-        width: 60px;
+        width: 78px;
         top: 2px;
       }
 
@@ -158,13 +158,13 @@ article.index{
         .span-underline{
           border-bottom: 1px solid $dark-text-color;
           @include width-animation();
-          width: 60px;
+          width: 78px;
         }
 
         .span-underline-soon{
           border-bottom: 1px solid $dark-text-color;
           @include width-animation();
-          width: 72px;
+          width: 96px;
         }
         .span-stay{
           border-bottom: 1px solid $light-grey-color;
@@ -388,7 +388,16 @@ article.index{
       }
 
       a {
+        .span-underline-soon.span-stay{
+          width: 73px;
+        }
+
+        .span-underline.span-stay{
+          width: 60px;
+        }
+
         .span-underline, .span-underline-soon{
+          height: 0;
           margin-top: initial;
         }
         span{

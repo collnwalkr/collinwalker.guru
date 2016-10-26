@@ -39,40 +39,35 @@ title: Collin Walker
   </header>
 
   <div class="flex-container flex-row flex-start" id="projects">
-    {% for project in site.project_list %}
+    {% for project in site.posts %}
+    {% if project.layout == "post" %}
     <div class="project" id="index-project-{{project.link}}">
 
       <span class="project-block" id="project-block-{{project.link}}"></span>
 
       <div class="flex-container project-contents">
 
-          {% if project.published %}
-          <a href="{{site.url}}project/{{project.link}}/" class="left-side published">
-          {% else %}
+          {% if project.draft %}
           <a class="left-side">
+          {% else %}
+          <a href="{{site.url}}project/{{project.link}}/" class="left-side published">
           {% endif %}
 
             <h2>{{ project.title }}</h2>
-            {% for takeaway in project.takeaways %}
-            <span>{{takeaway}}</span>
-            {% endfor %}
+            <span>{{ project.description }}</span>
 
-            {% if project.published %}
-            <span class="span-read-more">read more</span>
-            <span class="span-underline"></span>
-            <span class="span-underline span-stay"></span>
-            {% else %}
+            {% if project.draft %}
             <span class="span-read-more">coming soon</span>
             <span class="span-underline-soon"></span>
             <span class="span-underline-soon span-stay"></span>
+            {% else %}
+            <span class="span-read-more">read more</span>
+            <span class="span-underline"></span>
+            <span class="span-underline span-stay"></span>
             {% endif %}
 
 
-          {% if project.published %}
           </a>
-          {% else %}
-          </a>
-          {% endif %}
 
 
 
@@ -83,6 +78,7 @@ title: Collin Walker
       </div>
 
     </div>
+    {% endif %}
     {% endfor %}
   </div>
 

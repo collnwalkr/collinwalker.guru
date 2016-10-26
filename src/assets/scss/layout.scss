@@ -200,15 +200,24 @@ footer{
   text-align: center;
   margin: auto;
   position: absolute;
-  top: 0;
+  top: 60px;
   left: 0;
   bottom: 0;
   right: 0;
+  p{
+    margin-bottom: 10px;
+  }
   img{
     margin-bottom: 20px;
   }
   h1{
     font-family: $secondary-font-family;
+  }
+  a{
+    color: $brand-color;
+    &:visited{
+      color: $brand-color;
+    }
   }
 }
 
