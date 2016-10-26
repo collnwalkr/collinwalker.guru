@@ -2,23 +2,22 @@
   <a href="{{site.url}}">{{site.title}}</a>
   <div class="flex-container flex-row flex-start footer-wrapper">
 
-    {% for project in site.project_list %}
-    {% if project.title != page.title %}
+    {% for project in site.posts %}
+    {% if project.title != page.title and project.layout == "post"%}
     <div class="project full-width flex-container center-children flex-column" id="project-{{project.link}}">
 
-      {% if project.published %}
-        <a href="{{site.url}}project/{{project.link}}">
+      {% if project.draft %}
+        <a>
           <h3>{{ project.title }}</h3>
         </a>
+      <p>coming soon</p>
       {% else %}
-      <a>
+      <a href="{{site.url}}project/{{project.link}}">
         <h3>{{ project.title }}</h3>
       </a>
-      <p>coming soon</p>
       {% endif %}
 
     </div>
-
     {% endif %}
     {% endfor %}
   </div>
