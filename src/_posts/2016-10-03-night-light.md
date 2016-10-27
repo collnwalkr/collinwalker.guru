@@ -40,7 +40,7 @@ After identifying the stakeholders and their goals, we began sketching out vario
 In order to satisfy a pedestrian's goal of confidently crossing in a low-light environment, our team developed the concept of illuminating the boundaries of the crosswalk with lasers. This would be coupled with the primary ways of displaying the state of the crosswalk, the pedestrian crossing and hand signs.
 Taking queues from existing crosswalk systems, we would present pedestrians with both a crossing and hand sign while the drivers only the pedestrian sign. The position of drivers and pedestrians informed our design to have our final 'twisting' design (shown in the illustration below).
 
-#### Final Concept
+#### Final Design
 
 ![final digital rendering]({{ site.images }}projects/{{page.thumbnail}}/{{page.thumbnail}}-0.jpg){: data-action="zoom"}
 

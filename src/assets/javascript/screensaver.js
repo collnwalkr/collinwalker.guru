@@ -44,7 +44,7 @@ $(document).ready( function($) {
   }
 
   if (!isMobile) {
-    var time_to_wait = 40000;
+    var time_to_wait = 90000;
     window.screen_saver_timer = setTimeout(initScreenSaver,time_to_wait);
   } else {
     clearTimeout(window.screen_saver_timer);
