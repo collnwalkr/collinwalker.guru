@@ -2,8 +2,8 @@
 # Can be used in your theme by calling 'site.title' and so on
 title: collinwalker.guru
 description: A portfolio of sorts
-url: http://collinwalker.guru/
-images: http://collinwalker.guru/assets/images/
+url: https://collinwalker.guru/
+images: https://collinwalker.guru/assets/images/
 
 # Used so Jekyll outputs the site correctly so Gulp can do what it wants
 source: .tmp/src
@@ -16,7 +16,7 @@ exclude: ['assets']
 author:
   name: Collin Walker
   email:
-  uri: http://collinwalker.guru/
+  uri: https://collinwalker.guru/
   bio:
 
 
