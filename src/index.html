@@ -12,8 +12,8 @@ title: Collin Walker
         <span>Hello there friend! I'm a </span>
         <span class="underline-default_color-white_bg" id="hello-ux">ux engineer</span>
         <span>gallivanting up in </span>
-        <span class="underline-default_color-white_bg" id="hello-seattle">Seattle.</span>
-        <span>When I'm offline you can catch me </span>
+        <span class="underline-default_color-white_bg" id="hello-seattle">Seattle</span>.
+        <span> When I'm offline you can catch me </span>
         <span class="underline-default_color-white_bg" id="hello-slack">slacklining</span>
         <span>and bumping my</span>
         <span class="underline-default_color-white_bg" id="hello-music">music</span>
@@ -47,11 +47,7 @@ title: Collin Walker
 
       <div class="flex-container project-contents">
 
-          {% if project.draft %}
-          <a class="left-side">
-          {% else %}
-          <a href="{{site.url}}project/{{project.link}}/" class="left-side published">
-          {% endif %}
+         <a href="{{site.url}}project/{{project.link}}/" class="left-side published">
 
             <h2>{{ project.title }}</h2>
             <span>{{ project.description }}</span>
