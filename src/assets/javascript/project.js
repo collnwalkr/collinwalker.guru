@@ -19,11 +19,11 @@ $( document ).ready(function() {
           (function( index ){
             a_links[ i ].addEventListener( 'click', function(e){
 
-              // prevent default
-              e.preventDefault();
+              // if the link is valid and not going elsewhere
+              if(a_links[index].href && a_links[index].target != '_blank'){
 
-              // if the link is valid
-              if(a_links[index].href){
+                // prevent default
+                e.preventDefault();
 
                 // add the overlay
                 var zoom_overlay = '<div class=\'zoom-overlay\'></div>';

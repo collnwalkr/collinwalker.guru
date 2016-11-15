@@ -586,6 +586,16 @@ pre {
 
 }
 
+#project-weekli{
+
+  &::after {
+    //noinspection CssUnknownTarget
+    @include project-image-after('weekli');
+    background-position: right top;
+  }
+
+}
+
 #project-dover{
 
   &:after{

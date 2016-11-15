@@ -41,19 +41,23 @@ title: Collin Walker
   <div class="flex-container flex-row flex-start" id="projects">
     {% for project in site.posts %}
     {% if project.layout == "post" %}
-    <div class="project" id="index-project-{{project.link}}">
+    <div class="project" id="index-project-{{project.thumbnail}}">
 
-      <span class="project-block" id="project-block-{{project.link}}"></span>
+      <span class="project-block" id="project-block-{{project.thumbnail}}"></span>
 
       <div class="flex-container project-contents">
 
-         <a href="{{site.url}}project/{{project.link}}/" class="left-side published">
+        {% if project.category == "outside-project" %}
+        <a href="{{project.link}}"  target="_blank" class="left-side published">
+        {% else %}
+        <a href="{{site.url}}project/{{project.link}}/" class="left-side published">
+        {% endif %}
 
-            <h2>{{ project.title }}</h2>
+          <h2>{{ project.title }}</h2>
             <span>{{ project.description }}</span>
 
-            {% if project.draft %}
-            <span class="span-read-more">coming soon</span>
+            {% if project.category == "outside-project" %}
+            <span class="span-read-more">go to site</span>
             <span class="span-underline-soon"></span>
             <span class="span-underline-soon span-stay"></span>
             {% else %}
@@ -68,7 +72,7 @@ title: Collin Walker
 
 
         <div class="right-side">
-          <img src="{{site.images}}thumbnails/{{project.link}}.jpg" data-action="zoom">
+          <img src="{{site.images}}thumbnails/{{project.thumbnail}}.jpg" data-action="zoom">
         </div>
 
       </div>
