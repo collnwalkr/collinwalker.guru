@@ -32,8 +32,31 @@ nav {
   border-bottom: $dashed-border;
 
   a {
+    display: inline;
     @include linkUnderlines(white, $light-text-color);
     color: $light-text-color;
+
+    &.active{
+      @include linkUnderlines(white, $brand-color);
+
+    }
+  }
+}
+
+.logo-svg{
+  width: 20px;
+  display: inline-block;
+  a{
+    @include linkUnderlines(white, white);
+  }
+}
+
+.nav-right{
+  display: inline;
+  float: right;
+
+  a{
+    margin-left: $spacing-unit / 2;
   }
 }
 

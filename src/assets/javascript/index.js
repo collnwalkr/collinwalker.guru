@@ -12,6 +12,27 @@ $( document ).ready(function() {
     }
   });
 
+  switch(window.location.pathname) {
+    case '/':
+      setActive('work');
+      break;
+    case '/about/':
+      setActive('about');
+      break;
+  }
+
+  function setActive(page){
+    $('.' + page).addClass('active');
+  }
+
+  var logo = $('.logo-svg');
+  console.log(logo);
+
+  logo.hover(function(){
+    $('.logo-anim')[0].beginElement();
+    $('.logo-anim')[1].beginElement();
+  });
+
   $(function () {
     if ($('article').hasClass('index')) {
 

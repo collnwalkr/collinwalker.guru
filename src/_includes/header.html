@@ -1,20 +1,11 @@
-<header class="site-header">
-
-  <div class="wrapper">
-
-
-    <div id="logo">
-      {% include logo.svg %}
-    </div>
-
-    <div class="vertical-align">
-      <h1>COLLIN WALKER</h1>
-    </div>
-
-    <nav class="site-nav">
-
-    </nav>
-
+<nav>
+  <div class="logo-svg">
+    <a href="{{site.url}}">{% include logo.svg %}</a>
   </div>
 
-</header>
+  <div class="nav-right">
+    <a href="{{site.url}}" class="work">Work</a>
+    <a href="{{site.url}}about" class="about">About</a>
+    <a href="https://www.linkedin.com/in/walkercollin" target="_blank" class="linkedin">Linkedin</a>
+  </div>
+</nav>
