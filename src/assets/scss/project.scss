@@ -15,8 +15,8 @@ article.post{
   }
   h1{
     font-family: $base-font-family;
-    font-size: 2em;
-    text-transform: uppercase;
+    font-weight: $semi-font-weight;
+    font-size: 1.75em;
   }
   h2{
     font-family: $secondary-font-family;

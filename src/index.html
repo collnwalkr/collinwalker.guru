@@ -6,36 +6,12 @@ title: Collin Walker
 <div class="index">
 
   <header class="flex-container flex-items-end">
-    <div class="flex-container flex-column left-side">
-      <h1 class="post-title" itemprop="name headline">Collin Walker</h1>
-      <span class="hello-span">
-        <span>Hello there friend! I'm a </span>
-        <span class="underline-default_color-white_bg" id="hello-ux">ux engineer</span>
-        <span>gallivanting up in </span>
-        <span class="underline-default_color-white_bg" id="hello-seattle">Seattle</span>.
-        <span> When I'm offline you can catch me </span>
-        <span class="underline-default_color-white_bg" id="hello-slack">slacklining</span>
-        <span>and bumping my</span>
-        <span class="underline-default_color-white_bg" id="hello-music">music</span>
-        <span>a bit too loud.</span>
-      </span>
-
+    <div class="flex-container flex-column">
+      <p>Hello there!</p>
+      <p>I'm a <b>ux designer & developer</b> laser focused on simplifying obscure problems into memorable experiences. I'm fueled by new perspectives, analyzing weird movies, and hip-hop.</p>
     </div>
-    <div class="right-side" id="index-right">
-      <img id="gif-ux" class="visibility-hidden" src="./assets/images/ux-engineer.gif">
-      <img id="gif-slack" class="visibility-hidden" src="./assets/images/slackline-dog.gif">
-      <img id="gif-seattle" class="visibility-hidden" src="./assets/images/seattle.gif">
-      <img id="gif-music" class="visibility-hidden" src="./assets/images/music.gif">
+    <canvas id="index-canv" width="32" height="32"></canvas>
 
-      <div class="index-scroll-down">
-        <span>
-          <i class="fa fa-angle-down" aria-hidden="true"></i>
-          <a href="#projects">
-            the good stuff
-          </a>
-        </span>
-      </div>
-    </div>
   </header>
 
   <div class="flex-container flex-row flex-start" id="projects">
@@ -47,11 +23,7 @@ title: Collin Walker
 
       <div class="flex-container project-contents">
 
-        {% if project.category == "outside-project" %}
-        <a href="{{project.link}}"  target="_blank" class="left-side published">
-        {% else %}
         <a href="{{site.url}}project/{{project.link}}/" class="left-side published">
-        {% endif %}
 
           <h2>{{ project.title }}</h2>
             <span>{{ project.description }}</span>
@@ -65,14 +37,12 @@ title: Collin Walker
             <span class="span-underline"></span>
             <span class="span-underline span-stay"></span>
             {% endif %}
-
-
           </a>
 
-
-
         <div class="right-side">
-          <img src="{{site.images}}thumbnails/{{project.thumbnail}}.jpg" data-action="zoom">
+          <a href="{{site.url}}project/{{project.link}}/">
+            <img src="{{site.images}}thumbnails/{{project.thumbnail}}.jpg">
+          </a>
         </div>
 
       </div>

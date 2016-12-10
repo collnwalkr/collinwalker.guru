@@ -2,14 +2,16 @@
 
     <g transform="translate(76.000000, 0.000000)" fill="#CA6AFF">
         <path d="M79.3383,0 L0.5113,0 L50.3673,83 L79.3383,83 C83.0173,83 86.0003,80.017 86.0003,76.338 L86.0003,6.662 C86.0003,2.983 83.0173,0 79.3383,0"></path>
-        <animateTransform class="logo-anim" begin="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".42 0 1 1" attributeName="transform" type="translate" dur="200ms" fill="freeze" to="70.000000, 0.000000"/>
+        <animateTransform class="logo-anim-i" begin="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".42 0 1 1" attributeName="transform" type="translate" dur="200ms" fill="freeze" to="70.000000, 0.000000"/>
+        <animateTransform class="logo-anim-o" begin="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".42 0 1 1" attributeName="transform" type="translate" dur="200ms" fill="freeze" to="76.000000, 0.000000"/>
     </g>
 
     <g fill="#CA6AFF">
         <path d="M35.6329,0 L6.6619,0 C2.9829,0 -0.0001,2.983 -0.0001,6.662 L-0.0001,76.338 C-0.0001,80.017 2.9829,83 6.6619,83 L85.4889,83 L35.6329,0 Z" id="Fill-4">
         </path>
 
-        <animateTransform class="logo-anim" begin="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".42 0 1 1" attributeName="transform" type="translate" dur="200ms" fill="freeze" to="6.000000, 0.000000"/>
+        <animateTransform class="logo-anim-i" begin="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".42 0 1 1" attributeName="transform" type="translate" dur="200ms" fill="freeze" to="6.000000, 0.000000"/>
+        <animateTransform class="logo-anim-o" begin="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".42 0 1 1" attributeName="transform" type="translate" dur="200ms" fill="freeze" to="0.000000, 0.000000"/>
     </g>
 
 </svg>

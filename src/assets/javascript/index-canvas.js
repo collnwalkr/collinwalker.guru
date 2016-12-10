@@ -1,5 +1,5 @@
 /*
- Based off pen by Tiffany Rayside http://codepen.io/tmrDevelops/pen/vOPZBv
+ Based off http://thecodeplayer.com/walkthrough/html5-canvas-snow-effect
  */
 
 
@@ -8,50 +8,96 @@ $( document ).ready(function() {
   $(function () {
     if ($('article').hasClass('index')) {
 
-      var l = document.getElementById('index-canv-left');
-      var r = document.getElementById('index-canv-right');
-      var lxt = l.getContext('2d');
-      var rxt = r.getContext('2d');
+      var canvas = document.getElementById('index-canv');
+      var ctx = canvas.getContext('2d');
 
-      var x, y = 0;
+      //canvas dimensions
+      var W = window.innerWidth;
+      var H = window.innerHeight;
+      canvas.width = W;
+      canvas.height = H;
 
+      $(window).resize(function(){
+        W = window.innerWidth;
+        H = window.innerHeight;
+        canvas.width = W;
+        canvas.height = H;
+      });
 
-      var col = function(x, y, r, g, b) {
+      //snowflake particles
+      var mp = 10; //max particles
+      var particles = [];
+      for(var i = 0; i < mp; i++)
+      {
+        particles.push({
+          x: Math.random()*W, //x-coordinate
+          y: Math.random()*H, //y-coordinate
+          r: Math.random()*4+1, //radius
+          d: Math.random()*mp //density
+        })
+      }
 
-        rxt.fillStyle = "rgb(" + r + "," + g + "," + b + ")";
-        rxt.fillRect(x, y, 1,1);
+      //Lets draw the flakes
+      function draw()
+      {
+        ctx.clearRect(0, 0, W, H);
 
-        g+= 188;
-        lxt.fillStyle = "rgb(" + g + "," + g + "," + g + ")";
-        lxt.fillRect(x, y, 1,1);
-      };
-      var R = function(x, y, t) {
-        return( Math.floor(202 + 6*Math.cos( (x*x-y*y)/300 + t )) );
-      };
+        ctx.fillStyle = "rgba(202, 106, 255, 0.3)";
+        ctx.beginPath();
+        for(var i = 0; i < mp; i++)
+        {
+          var p = particles[i];
+          ctx.moveTo(p.x, p.y);
+          ctx.arc(p.x, p.y, p.r, 0, Math.PI*2, true);
+        }
+        ctx.fill();
+        update();
+      }
 
-      var G = function(x, y, t) {
-        return( Math.floor(62 + 9*Math.sin( (x*x*Math.cos(t/4)+y*y*Math.sin(t/3))/300 ) ) );
-      };
+      //Function to move the snowflakes
+      //angle will be an ongoing incremental flag. Sin and Cos functions will be applied to it to create vertical and horizontal movements of the flakes
+      var angle = 0;
+      function update()
+      {
+        angle += 0.001;
+        for(var i = 0; i < mp; i++)
+        {
+          var p = particles[i];
+          //Updating X and Y coordinates
+          //We will add 1 to the cos function to prevent negative values which will lead flakes to move upwards
+          //Every particle has its own density which can be used to make the downward movement different for each flake
+          //Lets make it more random by adding in the radius
+          p.y += (Math.cos(angle+p.d) + 1 + p.r/2) / 2;
+          p.x += Math.sin(angle) * 2;
 
-      var B = function(x, y, t) {
-        return( Math.floor(252 + 8*Math.sin( 5*Math.sin(t/9) + ((x-100)*(x-100)+(y-100)*(y-100))/1100) ));
-      };
-
-      var t = 0;
-
-      var run = function() {
-        for(x=0;x<=35;x++) {
-          for(y=0;y<=35;y++) {
-            col(x, y, R(x,y,t), G(x,y,t), B(x,y,t));
+          //Sending flakes back from the top when it exits
+          //Lets make it a bit more organic and let flakes enter from the left and right also.
+          if(p.x > W+5 || p.x < -5 || p.y > H)
+          {
+            if(i%3 > 0) //66.67% of the flakes
+            {
+              particles[i] = {x: Math.random()*W, y: -10, r: p.r, d: p.d};
+            }
+            else
+            {
+              //If the flake is exitting from the right
+              if(Math.sin(angle) > 0)
+              {
+                //Enter from the left
+                particles[i] = {x: -5, y: H, r: p.r, d: p.d};
+              }
+              else
+              {
+                //Enter from the right
+                particles[i] = {x: W+5, y: H, r: p.r, d: p.d};
+              }
+            }
           }
         }
-        t = t + 0.070;
-        window.requestAnimationFrame(run);
-      };
+      }
 
-      run();
-
-
+      //animation loop
+      setInterval(draw, 5);
     }
   })
 });

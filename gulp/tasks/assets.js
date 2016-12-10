@@ -29,6 +29,7 @@ gulp.task('scripts', () =>
     'src/assets/javascript/index.js',
     'src/assets/javascript/project.js',
     'src/assets/javascript/pretty-console.js',
+    'src/assets/javascript/index-canvas.js',
     'src/assets/javascript/screensaver.js'
     ])
     .pipe(newer('.tmp/assets/javascript/index.js', {dest: '.tmp/assets/javascript', ext: '.js'}))
