@@ -30,35 +30,22 @@ $z-back:     0;
 
 nav {
   border-bottom: $dashed-border;
-
-  a {
-    display: inline;
-    @include linkUnderlines(white, $light-text-color);
-    color: $light-text-color;
-
-    &.active{
-      @include linkUnderlines(white, $brand-color);
-
-    }
-  }
 }
 
 .logo-svg{
   width: 20px;
+  height: 17px;
+  padding-top: 4px;
   display: inline-block;
   a{
     @include linkUnderlines(white, white);
+    &:hover{
+      @include linkUnderlines(white, white);
+    }
   }
 }
 
-.nav-right{
-  display: inline;
-  float: right;
 
-  a{
-    margin-left: $spacing-unit / 2;
-  }
-}
 
 body.zoom-overlay-open.transition-overlay nav{
   z-index: 500;
@@ -82,15 +69,29 @@ nav, footer{
 
   max-width: $project-header;
   margin: 50px auto 0 auto;
+  padding-bottom: 5px;
+  padding-top: 5px;
+
+  .nav-right{
+    display: inline;
+    float: right;
+
+    a{
+      margin-left: $spacing-unit / 2;
+    }
+  }
 
   a{
     @include linkUnderlines(white,$light-text-color);
     color: $light-text-color;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     &:hover, &:visited:hover {
       @include color-animation();
       @include linkUnderlines(white, $brand-color);
       color: $brand-color;
+    }
+    &.active{
+      @include linkUnderlines(white, $brand-color);
     }
   }
 }
@@ -135,9 +136,7 @@ footer{
 
 @include media-query($project-header) {
   footer {
-    a{
-      margin: 20px 40px;
-    }
+    padding: 20px 40px;
   }
 }
 
@@ -155,9 +154,8 @@ footer{
 
 @include media-query($on-mobile) {
   footer{
-    padding-bottom: 0;
+    padding: 20px 20px 10px 20px;
     a{
-      margin: 20px 20px;
       top: -6px;
       position: relative;
     }

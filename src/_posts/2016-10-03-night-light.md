@@ -9,6 +9,7 @@ team:
     link: http://www.timothyxwong.com/
 category: project
 time: two weeks
+role: designer and developer
 thumbnail: night-light
 link: night-light
 permalink: /project/:title/

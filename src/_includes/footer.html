@@ -1,12 +1,14 @@
 <footer class="site-footer" xmlns="http://www.w3.org/1999/html">
 
-  <a href="{{site.url}}">Collin Walker</a>
-
-  <div class="nav-right">
-    <a href="{{site.url}}" class="work">Work</a>
-    <a href="{{site.url}}about" class="about">About</a>
-    <a href="https://www.linkedin.com/in/walkercollin" target="_blank" class="linkedin">Linkedin</a>
+  <div class="logo-svg">
+    <a href="{{site.url}}">{% include logo.svg %}</a>
   </div>
+
+  <!--<div class="nav-right">-->
+    <!--<a href="{{site.url}}" class="work">Work</a>-->
+    <!--<a href="{{site.url}}about" class="about">About</a>-->
+    <!--<a href="https://www.linkedin.com/in/walkercollin" target="_blank" class="linkedin">Linkedin</a>-->
+  <!--</div>-->
 
   <div class="flex-container flex-row flex-start footer-wrapper">
 
@@ -14,15 +16,9 @@
     {% if project.title != page.title and project.layout == "post"%}
     <div class="project full-width flex-container center-children flex-column" id="project-{{project.thumbnail}}">
 
-      {% if project.category == "outside-project" %}
-      <a href="{{project.link}}" target="_blank">
-          <h3>{{ project.title }}</h3>
-        </a>
-      {% else %}
       <a href="{{site.url}}project/{{project.link}}">
         <h3>{{ project.title }}</h3>
       </a>
-      {% endif %}
 
     </div>
     {% endif %}

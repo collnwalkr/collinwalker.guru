@@ -319,7 +319,6 @@ h1{
 }
 
 header{
-  margin-top: $spacing-unit;
   margin-bottom: $spacing-unit * 2;
 
 
@@ -346,9 +345,9 @@ header{
     margin-right: 0.5em;
   }
   p{
-    width: 310px;
+    max-width: 700px;
     line-height: 1.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 }
 

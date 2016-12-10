@@ -15,12 +15,23 @@ article.index{
   }
 
 
+  canvas{
+    width: 100%;
+    top:0;
+    left:0;
+    position:absolute;
+    z-index: $z-back;
+  }
+
+
   // INDEX HEADER
   header{
     height: 255px;
+    position:relative;
 
     div{
       height: 193px;
+      width: 100%;
     }
 
     h1{
@@ -35,6 +46,15 @@ article.index{
       top: 0;
       margin: auto;
       bottom: 0;
+    }
+
+    p, a{
+      font-size: 1.5rem;
+      line-height: 2.25rem;
+      z-index: $z-middle;
+      b{
+        font-weight: $semi-font-weight;
+      }
     }
     .right-side{
       height: 240px;
@@ -152,7 +172,6 @@ article.index{
       justify-content: flex-end;
       padding: 0 30px;
       color: $dark-text-color;
-      cursor: crosshair;
 
       .span-read-more{
         margin-top: 20px;
@@ -374,6 +393,9 @@ article.index{
 
   article.index {
 
+    canvas{
+      display:none;
+    }
 
     #index-project-night-light, #index-project-weekli{
       .project-contents{
@@ -442,9 +464,12 @@ article.index{
     header{
       flex-direction: column;
       height: initial;
-      margin-left: 20px;
-      margin-right:20px;
-      margin-bottom: 0;
+      margin: 30px 40px 0 40px;
+
+      p, a{
+        font-size: 1rem;
+        line-height: 1.75rem;
+      }
 
       .right-side{
         width: 100%;

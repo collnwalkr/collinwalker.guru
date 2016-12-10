@@ -26,11 +26,17 @@ $( document ).ready(function() {
   }
 
   var logo = $('.logo-svg');
-  console.log(logo);
 
-  logo.hover(function(){
-    $('.logo-anim')[0].beginElement();
-    $('.logo-anim')[1].beginElement();
+  logo.mouseenter(function(){
+    $('.logo-anim-i').each(function(){
+      this.beginElement();
+    });
+  });
+
+  logo.mouseleave(function(){
+    $('.logo-anim-o').each(function(){
+      this.beginElement();
+    });
   });
 
   $(function () {
@@ -84,7 +90,7 @@ $( document ).ready(function() {
       $(function(){
 
         // get all of the links
-        var a_links = $('.project-contents , .blog-posts').find(' a ');
+        var a_links = $('.project-contents , .blog-posts, header').find(' a ');
 
         // give them handlers
         for( var i = 0; i < a_links.length; i++){
