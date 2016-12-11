@@ -26,11 +26,10 @@ article.index{
 
   // INDEX HEADER
   header{
-    height: 255px;
+    height: 300px;
     position:relative;
 
     div{
-      height: 193px;
       width: 100%;
     }
 
@@ -49,9 +48,9 @@ article.index{
     }
 
     p, a{
-      font-size: 1.5rem;
-      line-height: 2.25rem;
-      z-index: $z-middle;
+      font-size: 1.75rem;
+      line-height: 2.75rem;
+      z-index: 1;
       b{
         font-weight: $semi-font-weight;
       }

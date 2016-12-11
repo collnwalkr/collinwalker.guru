@@ -25,15 +25,17 @@ $( document ).ready(function() {
       });
 
       //snowflake particles
-      var mp = 10; //max particles
+      var mp = 15; //max particles
       var particles = [];
       for(var i = 0; i < mp; i++)
       {
         particles.push({
           x: Math.random()*W, //x-coordinate
           y: Math.random()*H, //y-coordinate
-          r: Math.random()*4+1, //radius
-          d: Math.random()*mp //density
+          r: Math.random()*2+1, //radius
+          d: Math.random()*mp, //density
+          s: Math.random(),
+          o: Math.floor(Math.random() * (360 - 1)) // rotation
         })
       }
 
@@ -42,15 +44,19 @@ $( document ).ready(function() {
       {
         ctx.clearRect(0, 0, W, H);
 
-        ctx.fillStyle = "rgba(202, 106, 255, 0.3)";
-        ctx.beginPath();
+        ctx.fillStyle = "rgba(202, 106, 255, 0.5)";
         for(var i = 0; i < mp; i++)
         {
           var p = particles[i];
-          ctx.moveTo(p.x, p.y);
-          ctx.arc(p.x, p.y, p.r, 0, Math.PI*2, true);
+          ctx.save();
+          ctx.translate(p.x, p.y);
+          ctx.scale(p.r/3, p.r/3);
+          ctx.rotate(p.o*Math.PI/180);
+          ctx.beginPath();
+          ctx.rect(-2, -6, 4, 12);
+          ctx.fill();
+          ctx.restore();
         }
-        ctx.fill();
         update();
       }
 
@@ -59,24 +65,20 @@ $( document ).ready(function() {
       var angle = 0;
       function update()
       {
-        angle += 0.001;
+        angle += 0.005;
         for(var i = 0; i < mp; i++)
         {
           var p = particles[i];
-          //Updating X and Y coordinates
-          //We will add 1 to the cos function to prevent negative values which will lead flakes to move upwards
-          //Every particle has its own density which can be used to make the downward movement different for each flake
-          //Lets make it more random by adding in the radius
-          p.y += (Math.cos(angle+p.d) + 1 + p.r/2) / 2;
+          p.y += (Math.cos(angle+p.d) + 1 + p.r) / 4;
           p.x += Math.sin(angle) * 2;
+          p.o = p.x;
+          //isNaN(p.o) ? p.o = 0 : p.o += 1;
 
-          //Sending flakes back from the top when it exits
-          //Lets make it a bit more organic and let flakes enter from the left and right also.
           if(p.x > W+5 || p.x < -5 || p.y > H)
           {
             if(i%3 > 0) //66.67% of the flakes
             {
-              particles[i] = {x: Math.random()*W, y: -10, r: p.r, d: p.d};
+              particles[i] = {x: Math.random()*W, y: -10, r: p.r, d: p.d, s: Math.random(),o: Math.floor(Math.random() * (360 - 1))};
             }
             else
             {
