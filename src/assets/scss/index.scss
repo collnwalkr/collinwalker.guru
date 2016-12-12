@@ -18,7 +18,7 @@ article.index{
   h3{
     text-transform: uppercase;
     font-weight: $semi-font-weight;
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 
 
@@ -97,6 +97,7 @@ article.index{
       h3{
         @include linkUnderlines(white, $dark-text-color);
         display: inline;
+        text-transform: none;
 
         &:hover{
           @include color-animation();
@@ -127,8 +128,18 @@ article.index{
     background-color: white;
     margin: $spacing-unit 10px 0 10px;
     flex-basis: 200px;
+    height: 470px;
+
+    .project-description{
+      font-size: 1rem;
+    }
+
+    .project-contents{
+      height: 100%;
+    }
+
     p{
-      padding: $spacing-unit/2;
+      padding: 0 $spacing-unit/2;
     }
     a{
       color: $dark-text-color;
@@ -228,9 +239,6 @@ article.index{
 
   article.index {
 
-    canvas{
-      display:none;
-    }
 
     .project{
       flex-basis: 100%;

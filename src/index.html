@@ -22,11 +22,11 @@ title: Collin Walker
 
       <a href="{{site.url}}project/{{project.link}}/" class="left-side published">
 
-      <div class="flex-container flex-child project-contents">
+      <div class="flex-container flex-child project-contents flex-column">
           <img src="{{site.images}}thumbnails/{{project.thumbnail}}.jpg" class="flex-child">
-          <h3>{{ project.title }}</h3>
-          <p>{{ project.description }}</p>
-          <div class="flex-end">
+          <h3 class="flex-child">{{ project.title }}</h3>
+          <p class="flex-child project-description">{{ project.description }}</p>
+          <div class="flex-end flex-child">
             <p><i>{{ project.role }}</i></p>
             <p><b>view project</b></p>
           </div>
