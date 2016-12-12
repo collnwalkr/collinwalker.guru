@@ -6,7 +6,7 @@
 $( document ).ready(function() {
 
   $(function () {
-    if ($('article').hasClass('post')) {
+    if ($('article').hasClass('post') || $('article').hasClass('about')) {
 
       // animate screen transitions
       $(function(){

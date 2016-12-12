@@ -8,25 +8,33 @@ article.about {
   margin: $spacing-unit auto;
   h2{
     display: block;
-    max-width: 800px;
     font-size: 1.75rem;
     line-height: 2.75rem;
     z-index: 1;
     margin: $spacing-unit * 2 0;
     font-weight: $light-font-weight;
-    b{
-      font-weight: $semi-font-weight;
-    }
+  }
+
+  b{
+    font-weight: $semi-font-weight;
   }
 
   img{
-    margin: 0 auto;
+    margin: 0 auto 10px auto;
     display: block;
+
   }
 
   p{
-    font-size: 0.9rem;
-    line-height: 1.5rem;
+    font-size: 1rem;
+    line-height: 2.25rem;
+    a{
+      @include linkUnderlines(white, $dark-text-color);
+      @include color-animation();
+      &:hover{
+        @include linkUnderlines(white, $brand-color);
+      }
+    }
   }
 
   .img-side{
@@ -35,7 +43,7 @@ article.about {
 
   .text-side{
     flex:2;
-    padding-right: 50px;
+    padding-right: 55px;
   }
 
 }
@@ -53,6 +61,18 @@ article.about {
   article.about {
     padding-left: 15px;
     padding-right: 15px;
+    flex-direction: column;
+    h2{
+      font-size: 1.25rem;
+      line-height: 2rem;
+    }
+    p{
+      line-height: 2rem;
+    }
+
+    .text-side{
+      padding-right: 0;
+    }
   }
 
 }

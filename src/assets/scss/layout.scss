@@ -30,6 +30,8 @@ $z-back:     0;
 
 nav {
   border-bottom: $dashed-border;
+  position: relative;
+  z-index: 0;
 }
 
 .logo-svg{
