@@ -1,0 +1,58 @@
+/**
+ * Index content
+ */
+
+article.about {
+
+  max-width: $content-width;
+  margin: $spacing-unit auto;
+  h2{
+    display: block;
+    max-width: 800px;
+    font-size: 1.75rem;
+    line-height: 2.75rem;
+    z-index: 1;
+    margin: $spacing-unit * 2 0;
+    font-weight: $light-font-weight;
+    b{
+      font-weight: $semi-font-weight;
+    }
+  }
+
+  img{
+    margin: 0 auto;
+    display: block;
+  }
+
+  p{
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+  }
+
+  .img-side{
+    flex:1;
+  }
+
+  .text-side{
+    flex:2;
+    padding-right: 50px;
+  }
+
+}
+
+// ON TABLET
+@include media-query($on-tablet) {
+
+  article.about {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@include media-query($on-mobile) {
+
+  article.about {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+}

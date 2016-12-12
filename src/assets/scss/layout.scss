@@ -143,6 +143,9 @@ footer{
       padding-top: 9px;
       z-index: 40;
       position: relative;
+      &:hover{
+        color: $brand-color;
+      }
     }
   }
   .logo-svg{
@@ -152,9 +155,6 @@ footer{
     position: absolute;
     margin: 0 auto;
     width: 100%;
-    a{
-
-    }
   }
 }
 
@@ -304,6 +304,10 @@ footer{
   display: -ms-flexbox;  /* TWEENER - IE 10 */
   display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
   display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+}
+
+.flex-wrap{
+  flex-wrap: wrap;
 }
 
 .flex-row{

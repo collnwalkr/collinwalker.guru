@@ -116,6 +116,13 @@ $base-animation-delay: 10ms;
   transition: bottom $base-animation-speed ease-out;
 }
 
+@mixin margin-bottom-animation{
+  -webkit-transition: margin-bottom $base-animation-speed ease-out;
+  -moz-transition: margin-bottom $base-animation-speed ease-out;
+  -o-transition: margin-bottom $base-animation-speed ease-out;
+  transition: margin-bottom $base-animation-speed ease-out;
+}
+
 @mixin width-animation{
   -webkit-transition: width $base-animation-speed ease-out;
   -moz-transition: width $base-animation-speed ease-out;
@@ -123,13 +130,11 @@ $base-animation-delay: 10ms;
   transition: width $base-animation-speed ease-out;
 }
 
-@mixin underline-pre{
-  width: 0;
-  white-space: nowrap;
-  height: 25px;
-  text-decoration: none;
-  display: inline-block;
-  border-bottom: 1px solid transparent;
+@mixin height-animation{
+  -webkit-transition: height $base-animation-speed ease-out;
+  -moz-transition: height $base-animation-speed ease-out;
+  -o-transition: height $base-animation-speed ease-out;
+  transition: height $base-animation-speed ease-out;
 }
 
 @mixin slide-up{
@@ -148,13 +153,6 @@ $base-animation-delay: 10ms;
 
 }
 
-@mixin grow{
-  -webkit-transform: scale(1.03);
-  -ms-transform:  scale(1.03);
-  -moz-transform: scale(1.03);
-  -o-transform:   scale(1.03);
-  transform:      scale(1.03);
-}
 
 
 // SLIDE UP

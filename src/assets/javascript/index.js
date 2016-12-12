@@ -90,7 +90,7 @@ $( document ).ready(function() {
       $(function(){
 
         // get all of the links
-        var a_links = $('.project-contents , .blog-posts, nav, footer').find(' a ');
+        var a_links = $('#projects , .blog-posts, nav, footer').find(' a ');
 
         // give them handlers
         for( var i = 0; i < a_links.length; i++){

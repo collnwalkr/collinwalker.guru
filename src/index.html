@@ -23,13 +23,17 @@ title: Collin Walker
       <a href="{{site.url}}project/{{project.link}}/" class="left-side published">
 
       <div class="flex-container flex-child project-contents flex-column">
-          <img src="{{site.images}}thumbnails/{{project.thumbnail}}.jpg" class="flex-child">
-          <h3 class="flex-child">{{ project.title }}</h3>
+        <div class="flex-child">
+          <img src="{{site.images}}thumbnails/{{project.thumbnail}}.jpg" class="">
+          <span class="project-stripe"></span>
+          <h3>{{ project.title }}</h3>
           <p class="flex-child project-description">{{ project.description }}</p>
-          <div class="flex-end flex-child">
-            <p><i>{{ project.role }}</i></p>
-            <p><b>view project</b></p>
-          </div>
+        </div>
+        <span class="project-hover"></span>
+        <div class="flex-end flex-child flex-container flex-column">
+          <p class="project-role"><i>{{ project.role }}</i></p>
+          <p class="project-view"><b>view project</b></p>
+        </div>
       </div>
       </a>
 
@@ -38,13 +42,24 @@ title: Collin Walker
     {% endfor %}
   </div>
 
-  <div class="blog-posts contact">
+  <div class="blog-posts">
     <h2>Blog & Side Projects</h2>
     {% for post in site.posts %}
     {% if post.layout == "blog" and post.published %}
-      <a href="{{site.url}}post/{{post.link}}"><h3>{{ post.title }}</h3></a>
-      <span>{{ post.date | date_to_string }}</span>
-      <p>{{ post.description }}</p>
+      {% if post.type == "blog" %}
+      <a href="{{site.url}}post/{{post.link}}" class="post">
+        <h3>{{ post.title }}</h3>
+        <span>Blog | {{ post.date | date_to_string }}</span>
+        <p>{{ post.description }}</p>
+      </a>
+      {% else %}
+        <a href="{{post.link}}" target="_blank" class="post">
+          <h3>{{ post.title }}</h3>
+          <span>Side Project</span>
+          <p>{{ post.description }}</p>
+        </a>
+      {% endif %}
+
     {% endif %}
     {% endfor %}
 

@@ -14,6 +14,7 @@ article.index{
     font-size: 1.5rem;
     color: $brand-color;
     display: block;
+    margin-bottom: 0;
   }
   h3{
     text-transform: uppercase;
@@ -93,24 +94,32 @@ article.index{
 
   // INDEX BLOG
   .blog-posts{
+    .post{
+      margin: $spacing-unit/2 0;
+      display: inline-block;
+      max-width: 600px;
+    }
     a{
       h3{
         @include linkUnderlines(white, $dark-text-color);
         display: inline;
         text-transform: none;
-
-        &:hover{
+      }
+      &:hover{
+        h3{
           @include color-animation();
           @include linkUnderlines(white, $brand-color);
         }
       }
-    }
-    p{
-      font-size: 1rem;
-    }
-    span{
-      display: block;
-      font-size: 0.75rem;
+      p{
+        font-size: 1rem;
+        color: $dark-text-color;
+      }
+      span{
+        color: $dark-text-color;
+        display: block;
+        font-size: 0.75rem;
+      }
     }
   }
 
@@ -122,20 +131,72 @@ article.index{
     justify-content: space-around;
     h2{
       width: 100%;
+      position:absolute;
+      top: -18px;
+      left: 0;
     }
   }
   .project{
     background-color: white;
-    margin: $spacing-unit 10px 0 10px;
+    margin: $spacing-unit 15px 0 15px;
     flex-basis: 200px;
-    height: 470px;
+    min-height: 450px;
+
+    div{
+      position: relative;
+    }
+    img{
+      max-height: none;
+    }
+
+    .project-role{
+      margin-bottom: 0;
+      position: relative;
+      top: 0;
+      @include top-animation();
+    }
+    .project-view{
+      color: $dark-text-color;
+      @include color-animation();
+    }
+    .project-stripe{
+      width: 100%;
+      height: 7px;
+      background-color: $brand-color;
+    }
+
+    .project-hover{
+      width: 100%;
+      background-color: $brand-color;
+      position: absolute;
+      bottom: 0;
+      height:0;
+      @include height-animation();
+    }
+
+    .flex-end{
+      margin-top: $spacing-unit * 3;
+    }
+
+    &:hover{
+      .project-hover{
+        height: 50px;
+      }
+      .project-role{
+        top: -20px;
+      }
+      .project-view{
+        color: white;
+      }
+    }
 
     .project-description{
-      font-size: 1rem;
+      font-size: 0.9rem;
     }
 
     .project-contents{
       height: 100%;
+      position: relative;
     }
 
     p{
@@ -146,15 +207,16 @@ article.index{
     }
     h3{
       text-align: center;
+      padding-top: 15px;
       margin: $spacing-unit/2 0;
       color: $brand-color;
     }
   }
 
   // INDEX CONTACT
-  .contact{
+  .blog-posts{
 
-    margin-top: $spacing-unit * 4;
+    margin-top: $spacing-unit * 2;
     margin-bottom: $spacing-unit * 2;
 
     a.email{
@@ -213,17 +275,25 @@ article.index{
     header{
       margin-left: 40px;
       margin-right: 40px;
+      p, a {
+        font-size: 1.5rem;
+        line-height: 2rem;
+      }
     }
 
 
-    .contact{
+    .blog-posts{
       margin-left: 40px;
       margin-right: 40px;
-    }
+  }
 
     #projects{
       padding-left: 40px;
       padding-right: 40px;
+      h2{
+        position:relative;
+        top:0;
+      }
     }
 
     .blog-posts{
@@ -244,15 +314,21 @@ article.index{
       flex-basis: 100%;
       max-width: none;
       margin: $spacing-unit 0 0 0;
+      height: auto;
     }
 
 
     header{
       flex-direction: column;
       height: initial;
-      margin: 30px 40px 0 40px;
+      margin:0;
+      div{
+        padding: 25px 0;
+      }
 
       p, a{
+        padding: 15px 15px 0 15px;
+
         font-size: 1rem;
         line-height: 1.75rem;
       }

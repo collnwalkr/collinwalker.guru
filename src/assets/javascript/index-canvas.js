@@ -25,7 +25,7 @@ $( document ).ready(function() {
       });
 
       //snowflake particles
-      var mp = 15; //max particles
+      var mp = 10; //max particles
       var particles = [];
       for(var i = 0; i < mp; i++)
       {
@@ -77,7 +77,7 @@ $( document ).ready(function() {
           {
             if(i%3 > 0) //66.67% of the flakes
             {
-              particles[i] = {x: Math.random()*W, y: -10, r: p.r, d: p.d, o: p.o};
+              particles[i] = {x: Math.random()*W, y: -10, r: Math.random()+1 + W/1000, d: p.d, o: p.o};
             }
             else
             {
