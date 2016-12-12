@@ -12,6 +12,13 @@ article.index{
     text-transform: uppercase;
     font-weight: $bold-font-weight;
     font-size: 1.5rem;
+    color: $brand-color;
+    display: block;
+  }
+  h3{
+    text-transform: uppercase;
+    font-weight: $semi-font-weight;
+    font-size: 1rem;
   }
 
 
@@ -84,187 +91,8 @@ article.index{
     }
   }
 
-  #index-project-dover{
-    .project-contents{
-      top: 25px;
-    }
-    span.project-block{
-      background-color: #FDFFE2;
-    }
-    .span-stay {
-      border-bottom: 1px solid #b3b4a0;
-    }
-  }
-
-  #index-project-weekli{
-    .project-contents{
-      flex-direction: row-reverse;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      margin: auto;
-    }
-    img{
-      margin-left: 0;
-    }
-    span.project-block{
-      float: right;
-      background-color: #fff4e6;
-    }
-    .span-stay {
-      border-bottom: 1px solid #b4aca2;
-    }
-  }
-
-  #index-project-night-light{
-    .project-contents{
-      flex-direction: row-reverse;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      margin: auto;
-    }
-    img{
-      margin-left: 0;
-    }
-    span.project-block{
-      float: right;
-      background-color: #FFE8E8;
-    }
-    .span-stay {
-      border-bottom: 1px solid #b49f9f;
-    }
-  }
-
-
-  #index-project-strava-club{
-    .project-contents{
-      bottom: 25px;
-      top: initial;
-    }
-    span.project-block{
-      background-color: #DEF8F1;
-    }
-    .span-stay {
-      border-bottom: 1px solid #9db4ae;
-    }
-  }
-
-
-  // INDEX BODY
-  .project{
-    width: 100%;
-
-    margin-top: $spacing-unit;
-    margin-bottom: $spacing-unit;
-
-    a.published{
-      cursor: pointer;
-    }
-
-
-    a{
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 0 30px;
-      color: $dark-text-color;
-
-      .span-read-more{
-        margin-top: 20px;
-        border-bottom:0;
-      }
-
-      .span-underline, .span-underline-soon{
-        @include width-animation();
-        @include underline-pre();
-        margin-top: -27px;
-      }
-
-
-      .span-underline-soon.span-stay{
-        border-bottom: 1px solid $light-grey-color;
-        width: 69px;
-        top: 2px;
-      }
-
-      .span-underline.span-stay{
-        border-bottom: 1px solid $light-grey-color;
-        width: 78px;
-        top: 2px;
-      }
-
-      &:hover{
-        .span-underline{
-          border-bottom: 1px solid $dark-text-color;
-          @include width-animation();
-          width: 78px;
-        }
-
-        .span-underline-soon{
-          border-bottom: 1px solid $dark-text-color;
-          @include width-animation();
-          width: 69px;
-        }
-        .span-stay{
-          border-bottom: 1px solid $light-grey-color;
-          width: 0;
-        }
-      }
-
-      span{
-        top: 0;
-        font-size: 1rem;
-      }
-    }
-
-    .project-contents{
-      position: absolute;
-      top: 0;
-      width: 100%;
-      height: 292px;
-    }
-
-    .left-side{
-      flex: 1;
-    }
-
-    .right-side{
-      flex: 2;
-    }
-
-    span.project-block{
-      top:initial;
-      width: 470px;
-      height: 405px;
-      background-color: #d1d1d1;
-    }
-
-    img{
-      max-width: 480px;
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      margin: auto;
-      margin-right: 0;
-      bottom: 0;
-    }
-  }
-
-  .divider{
-    margin-bottom: $spacing-unit;
-    max-width: 550px;
-    height: 30px;
-    display: block;
-  }
   // INDEX BLOG
   .blog-posts{
-    .blog-divider{
-      background-color: #ddf3ff;
-    }
     a{
       h3{
         @include linkUnderlines(white, $dark-text-color);
@@ -285,6 +113,33 @@ article.index{
     }
   }
 
+  // INDEX PROJECT
+  #projects{
+    background-color: $light-grey-color;
+    position: relative;
+    padding: $spacing-unit 0;
+    justify-content: space-around;
+    h2{
+      width: 100%;
+    }
+  }
+  .project{
+    background-color: white;
+    margin: $spacing-unit 10px 0 10px;
+    flex-basis: 200px;
+    p{
+      padding: $spacing-unit/2;
+    }
+    a{
+      color: $dark-text-color;
+    }
+    h3{
+      text-align: center;
+      margin: $spacing-unit/2 0;
+      color: $brand-color;
+    }
+  }
+
   // INDEX CONTACT
   .contact{
 
@@ -301,9 +156,6 @@ article.index{
       }
     }
 
-    .contact-divider{
-      background-color: #ECE6FF;
-    }
 
     span.contact-label{
       font-weight: $base-font-weight;
@@ -352,36 +204,20 @@ article.index{
       margin-right: 40px;
     }
 
-    .divider{
-      max-width:100%;
-    }
+
     .contact{
       margin-left: 40px;
       margin-right: 40px;
     }
 
+    #projects{
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
     .blog-posts{
       margin-left: 40px;
       margin-right: 40px;
-    }
-
-    .project{
-      margin-left: 40px;
-      margin-right: 40px;
-      span.project-block{
-          height: 355px;
-      }
-
-      #project-night-light, #project-weekli{
-        .left-side{
-          padding: 0;
-        }
-
-      }
-
-      img{
-        width: 90%;
-      }
     }
   }
 
@@ -396,67 +232,10 @@ article.index{
       display:none;
     }
 
-    #index-project-night-light, #index-project-weekli{
-      .project-contents{
-        flex-direction: column-reverse;
-      }
-
-      img{
-        margin-left: auto;
-      }
-
-      .project-block{
-        float: none !important;
-      }
-    }
-
-    #index-project-dover{
-      .project-contents{
-        top: 0;
-      }
-    }
-
     .project{
-      margin-top: 0;
-      span.project-block{
-        margin-top: $spacing-unit * 2;
-        width: 100%;
-        height: 405px;
-      }
-      .left-side{
-        margin-bottom: $spacing-unit;
-      }
-      .project-contents{
-        flex-direction: column-reverse;
-        height: 100%;
-        top: 0;
-      }
-
-      a {
-        .span-underline-soon.span-stay{
-          width: 51px;
-        }
-
-        .span-underline.span-stay{
-          width: 60px;
-        }
-
-        .span-underline, .span-underline-soon{
-          height: 0;
-          margin-top: initial;
-        }
-        span{
-          top: 0;
-          font-size: 0.75rem;
-        }
-      }
-
-      .right-side{
-        img{
-          width: 430px;
-          max-width: 100%;
-        }
-      }
+      flex-basis: 100%;
+      max-width: none;
+      margin: $spacing-unit 0 0 0;
     }
 
 

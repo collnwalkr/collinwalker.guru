@@ -11,7 +11,7 @@ team:
     link: https://ischool.uw.edu/people/phd/lizeng
 category: project
 time: one month
-role: designer and developer
+role: product designer and developer
 thumbnail: strava-club
 link: strava-club
 permalink: /project/:title/

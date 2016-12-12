@@ -10,42 +10,28 @@ title: Collin Walker
       <p>Hello there!</p>
       <p>I'm a <b>ux designer & developer</b> who is laser focused on simplifying obscure problems into memorable experiences. I'm fueled by new perspectives, analyzing weird movies and hip-hop.</p>
     </div>
-    <canvas id="index-canv" width="32" height="32"></canvas>
+    <canvas id="index-canv" width="32" height="5"></canvas>
 
   </header>
 
   <div class="flex-container flex-row flex-start" id="projects">
+    <h2>Projects</h2>
     {% for project in site.posts %}
     {% if project.layout == "post" %}
-    <div class="project" id="index-project-{{project.thumbnail}}">
+    <div class="project flex-child" id="index-project-{{project.thumbnail}}">
 
-      <span class="project-block" id="project-block-{{project.thumbnail}}"></span>
+      <a href="{{site.url}}project/{{project.link}}/" class="left-side published">
 
-      <div class="flex-container project-contents">
-
-        <a href="{{site.url}}project/{{project.link}}/" class="left-side published">
-
-          <h2>{{ project.title }}</h2>
-            <span>{{ project.description }}</span>
-
-            {% if project.category == "outside-project" %}
-            <span class="span-read-more">go to site</span>
-            <span class="span-underline-soon"></span>
-            <span class="span-underline-soon span-stay"></span>
-            {% else %}
-            <span class="span-read-more">read more</span>
-            <span class="span-underline"></span>
-            <span class="span-underline span-stay"></span>
-            {% endif %}
-          </a>
-
-        <div class="right-side">
-          <a href="{{site.url}}project/{{project.link}}/">
-            <img src="{{site.images}}thumbnails/{{project.thumbnail}}.jpg">
-          </a>
-        </div>
-
+      <div class="flex-container flex-child project-contents">
+          <img src="{{site.images}}thumbnails/{{project.thumbnail}}.jpg" class="flex-child">
+          <h3>{{ project.title }}</h3>
+          <p>{{ project.description }}</p>
+          <div class="flex-end">
+            <p><i>{{ project.role }}</i></p>
+            <p><b>view project</b></p>
+          </div>
       </div>
+      </a>
 
     </div>
     {% endif %}
@@ -53,8 +39,7 @@ title: Collin Walker
   </div>
 
   <div class="blog-posts contact">
-    <span class="blog-divider divider"></span>
-    <h2>Writings</h2>
+    <h2>Blog & Side Projects</h2>
     {% for post in site.posts %}
     {% if post.layout == "blog" and post.published %}
       <a href="{{site.url}}post/{{post.link}}"><h3>{{ post.title }}</h3></a>
@@ -62,21 +47,6 @@ title: Collin Walker
       <p>{{ post.description }}</p>
     {% endif %}
     {% endfor %}
-
-  </div>
-
-  <div class="contact">
-    <span class="contact-divider divider"></span>
-    <h2>Contact</h2>
-    <span class="contact-label">EMAIL</span>
-    <a href="mailto:colln.walkr@gmail.com" class="email underline-default_color-white_bg" target="_top">colln.walkr@gmail.com</a>
-    <div class="social-group">
-      <span class="contact-label">LINKS</span>
-      <a href="https://github.com/collnwalkr" aria-label="collin walker's github" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-      <a href="https://www.linkedin.com/in/walkercollin" aria-label="collin walker's linkedin" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
-      <a href="https://www.instagram.com/collnwalkr/" aria-label="collin walker's instagram" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i> </a>
-      <a href="https://open.spotify.com/user/12110227" aria-label="collin walker's instagram" target="_blank"><i class="fa fa-spotify" aria-hidden="true"></i></a>
-    </div>
 
   </div>
 

@@ -37,6 +37,8 @@ nav {
   height: 17px;
   padding-top: 4px;
   display: inline-block;
+  z-index: 40;
+  position: relative;
   a{
     @include linkUnderlines(white, white);
     &:hover{
@@ -82,8 +84,8 @@ nav, footer{
   }
 
   a{
-    @include linkUnderlines(white,$light-text-color);
-    color: $light-text-color;
+    @include linkUnderlines(white,$dark-text-color);
+    color: $dark-text-color;
     font-size: 0.8rem;
     &:hover, &:visited:hover {
       @include color-animation();
@@ -114,6 +116,8 @@ footer{
   margin: $spacing-unit auto;
   position: relative;
   z-index: $z-back;
+  min-height: 40px;
+  text-align: center;
 
   #more-projects{
     background-color: $brand-color;
@@ -131,12 +135,40 @@ footer{
       font-size: 1rem;
     }
   }
+  .social-group {
+    a {
+      font-size: 1rem;
+      @include linkUnderlines(white, $dark-text-color);
+      background-image: none;
+      padding-top: 9px;
+      z-index: 40;
+      position: relative;
+    }
+  }
+  .logo-svg{
+    float:left;
+  }
+  .center{
+    position: absolute;
+    margin: 0 auto;
+    width: 100%;
+    a{
+
+    }
+  }
 }
 
 
 @include media-query($project-header) {
   footer {
     padding: 20px 40px;
+    .center{
+      display: inline-block;
+      position: relative;
+      width: auto;
+      a{
+      }
+    }
   }
 }
 
@@ -162,6 +194,19 @@ footer{
     .footer-wrapper{
       height: 325px;
       margin: 10px auto 0 auto;
+    }
+    .logo-svg{
+      float: none;
+    }
+    .center{
+      display: block;
+      margin-bottom: 5px;
+    }
+    .social-group{
+      float: none;
+      a{
+        margin-right: 15px;
+      }
     }
   }
 }

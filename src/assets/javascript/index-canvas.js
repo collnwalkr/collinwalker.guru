@@ -32,9 +32,8 @@ $( document ).ready(function() {
         particles.push({
           x: Math.random()*W, //x-coordinate
           y: Math.random()*H, //y-coordinate
-          r: Math.random()*2+1, //radius
+          r: Math.random()+1, //radius
           d: Math.random()*mp, //density
-          s: Math.random(),
           o: Math.floor(Math.random() * (360 - 1)) // rotation
         })
       }
@@ -50,7 +49,7 @@ $( document ).ready(function() {
           var p = particles[i];
           ctx.save();
           ctx.translate(p.x, p.y);
-          ctx.scale(p.r/3, p.r/3);
+          ctx.scale(p.r/2, p.r/2);
           ctx.rotate(p.o*Math.PI/180);
           ctx.beginPath();
           ctx.rect(-2, -6, 4, 12);
@@ -70,15 +69,15 @@ $( document ).ready(function() {
         {
           var p = particles[i];
           p.y += (Math.cos(angle+p.d) + 1 + p.r) / 4;
-          p.x += Math.sin(angle) * 2;
-          p.o = p.x;
+          p.x += Math.sin(angle);
+          p.o = p.x * 4;
           //isNaN(p.o) ? p.o = 0 : p.o += 1;
 
           if(p.x > W+5 || p.x < -5 || p.y > H)
           {
             if(i%3 > 0) //66.67% of the flakes
             {
-              particles[i] = {x: Math.random()*W, y: -10, r: p.r, d: p.d, s: Math.random(),o: Math.floor(Math.random() * (360 - 1))};
+              particles[i] = {x: Math.random()*W, y: -10, r: p.r, d: p.d, o: p.o};
             }
             else
             {
@@ -86,12 +85,12 @@ $( document ).ready(function() {
               if(Math.sin(angle) > 0)
               {
                 //Enter from the left
-                particles[i] = {x: -5, y: H, r: p.r, d: p.d};
+                particles[i] = {x: -5, y: H, r: p.r, d: p.d, o: p.o};
               }
               else
               {
                 //Enter from the right
-                particles[i] = {x: W+5, y: H, r: p.r, d: p.d};
+                particles[i] = {x: W+5, y: H, r: p.r, d: p.d, o: p.o};
               }
             }
           }

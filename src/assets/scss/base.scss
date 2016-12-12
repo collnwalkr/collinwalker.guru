@@ -510,10 +510,6 @@ pre {
 
 
 .project{
-  display: block;
-  position: relative;
-  overflow: hidden;
-
   @include stop-flicker();
 
   h3, span{
