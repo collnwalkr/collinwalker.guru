@@ -4,7 +4,7 @@
 
 ### How did you build this?
 
-Well, friend, I'm glad you asked! My website lives on a [digitalocean](https://www.digitalocean.com/) droplet as a [NGINX](https://www.nginx.com/resources/wiki/) server. I used this [wonderful tutorial](https://www.digitalocean.com/community/tutorials/how-to-setup-fastcgi-caching-with-nginx-on-your-vps) to create a virtual front-facing server that caches all static files to make it lickety split fast. 
+My website lives on a [digitalocean](https://www.digitalocean.com/) droplet as a [NGINX](https://www.nginx.com/resources/wiki/) server. I used this [wonderful tutorial](https://www.digitalocean.com/community/tutorials/how-to-setup-fastcgi-caching-with-nginx-on-your-vps) to create a virtual front-facing server that caches all static files to make it lickety split fast. 
 
 In terms of my developer workflow, I [Yeoman'ed](http://yeoman.io/) up a project using [this generator](https://github.com/sondr3/generator-jekyllized) that utilizes [Jekyll](https://jekyllrb.com/) (a static website builder) and [Gulp](http://gulpjs.com/) (an automation tool).
 
@@ -16,7 +16,7 @@ After scouring the internet looking inspiration, it became obvious to me that my
 
 ### Do you have a favorite part?
 
-Wow, you're asking some great questions! I think my favorite part would have to be the gifs that pop up when you hover (or click on mobile) the links under my name.
+My favorite part would have to be the screensaver that happens if my site is inactive for a minute and a half.
 
 ### Any future plans?
 
