@@ -14,7 +14,7 @@ $( document ).ready(function() {
       //canvas dimensions
       var W = window.innerWidth;
       var H = window.innerHeight;
-      if(W < 500){
+      if(W < 800){
         W *= 2;
         H *= 2;
         ctx.scale(2,2);
@@ -28,7 +28,7 @@ $( document ).ready(function() {
       $(window).resize(function(){
         W = window.innerWidth;
         H = window.innerHeight;
-        if(W < 500){
+        if(W < 800){
           W *= 2;
           H *= 2;
           ctx.scale(2,2);
@@ -39,7 +39,7 @@ $( document ).ready(function() {
         canvas.height = H;
       });
 
-      var mp = 10; //max particles
+      var mp = 7; //max particles
       var particles = [];
       for(var i = 0; i < mp; i++)
       {
@@ -79,13 +79,13 @@ $( document ).ready(function() {
         for(var i = 0; i < mp; i++)
         {
           var p = particles[i];
-          p.y += (Math.cos(angle * p.r) + p.r) / 4;
+          p.y += (Math.cos(angle) + p.r) / 6;
           p.x += Math.sin(angle);
           p.o = p.x * 4;
 
           if(p.y > H)
           {
-            particles[i] = {x: Math.random()*W, y: -10, r: Math.random()+1 + W/1000, d: p.d, o: p.o};
+            particles[i] = {x: Math.random()*W, y: -10, r: p.r, d: p.d, o: p.o};
           }
         }
       }

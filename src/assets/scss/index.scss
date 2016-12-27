@@ -285,7 +285,7 @@ article.index{
     .blog-posts{
       margin-left: 40px;
       margin-right: 40px;
-  }
+    }
 
     #projects{
       padding-left: 40px;
@@ -315,6 +315,15 @@ article.index{
       max-width: none;
       margin: $spacing-unit 0 0 0;
       height: auto;
+    }
+    #projects {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    .blog-posts{
+      margin-left: 15px;
+      margin-right: 15px;
     }
 
 

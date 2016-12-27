@@ -12,6 +12,7 @@ const postcss = require('gulp-postcss');
 const rename = require('gulp-rename');
 const rev = require('gulp-rev');
 const sass = require('gulp-sass');
+const moduleImporter =  require('sass-module-importer');
 const size = require('gulp-size');
 const sourcemaps = require('gulp-sourcemaps');
 const uglify = require('gulp-uglify');
@@ -62,7 +63,8 @@ gulp.task('scripts', () =>
 // 'gulp styles --prod' -- creates a CSS file from your SASS, adds prefixes and
 // then minwhenies, gzips and cache busts it. Does not create a Sourcemap
 gulp.task('styles', () =>
-  gulp.src(['src/assets/scss/style.scss', 'node_modules/zoom-vanilla.js/css/zoom.css'])
+  gulp.src(['src/assets/scss/style.scss'])
+    .pipe(sass({ importer: moduleImporter() }))
     .pipe(when(!argv.prod, sourcemaps.init()))
     .pipe(sass({
       precision: 10
