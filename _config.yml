@@ -38,10 +38,12 @@ excerpt_separator: '<!--more-->'
 
 # Markdown library and options
 markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 redcarpet:
   extensions: ['no_intra_emphasis', 'tables', 'fenced_code_blocks', 'autolink', 'smart',
-              'strikethrough', 'superscript', 'underline', 'highlight', 'footnotes']
-highlighter: true
+              'strikethrough', 'superscript', 'underline', 'footnotes']
 
 # Extending Jekyll
 gems:

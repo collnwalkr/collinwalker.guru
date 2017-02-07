@@ -300,6 +300,9 @@ li {
     > ul,
     > ol {
          margin-bottom: 0;
+      > li {
+        margin-bottom: 80px;
+      }
     }
 }
 
@@ -401,7 +404,6 @@ code {
     font-size: 15px;
     //border: 1px solid $grey-color-light;
     border-radius: 3px;
-    background-color: #eef;
 }
 
 code {

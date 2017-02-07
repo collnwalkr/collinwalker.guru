@@ -46,6 +46,9 @@ article.post{
   li{
     line-height: 1.5rem;
     margin: 10px 0 30px 0;
+    ul li {
+      margin-bottom: 0;
+    }
     strong{
       font-weight: $semi-font-weight;
     }
