@@ -13,7 +13,7 @@ link: chrome-extension
 <hr class='flex'>
 
 Prototypes exist on a **spectrum of fidelity and functionality**.
-In this post I'll outline my journey from one side of the spectrum to the other as I sketch, design, and build a fully functioning prototype.
+In this post I'll outline my journey from one side of the spectrum to the other as I sketch, design, and build a fully functioning Chrome extension prototype.
 
 ![Paper outlining my project goals]({{ site.images }}posts/{{page.thumbnail}}/overview.jpg){: data-action="zoom"}
 
@@ -62,10 +62,9 @@ I began my design process by identifying key components and establishing early d
 * **Hashtags**: hashtags in the tweet
   * Emphasize #Amazon over other hashtags to show common thread throughout all of the tweets
 
-![Initial thumbnails]({{ site.images }}posts/{{page.thumbnail}}/thumbnails.jpg){: .small .ignore-margin-bottom data-action="zoom"}
-![Paper mockups]({{ site.images }}posts/{{page.thumbnail}}/sketches.jpg){: .small .right .ignore-margin-bottom data-action="zoom"}
+![Initial thumbnails]({{ site.images }}posts/{{page.thumbnail}}/thumbnails.jpg){: .small data-action="zoom"}
+![Paper mockups]({{ site.images }}posts/{{page.thumbnail}}/sketches.jpg){: .small .right data-action="zoom"}
 
-![High fidelity mockup]({{ site.images }}posts/{{page.thumbnail}}/high-fidelity.jpg){: data-action="zoom"}
 
 I then moved from the individual design components to sketching thumbnails with various layouts and interaction models.
  During this phase I decided on several interaction and layout principles:
@@ -77,7 +76,16 @@ I then moved from the individual design components to sketching thumbnails with 
 * **Layout**
   * Show parts of the previous and next tweet as hints to interact
   * Primary focus should be first **creation time**, second **user**, third **#Amazon** and finally **tweet**.
- 
+
+
+### Final Mockup and Animation Test
+
+![High fidelity mockup]({{ site.images }}posts/{{page.thumbnail}}/high-fidelity.jpg){: .ignore-margin-bottom data-action="zoom"}
+
+<video width="100%" height="auto" controls preload autoplay loop>
+ <source src="{{site.images}}posts/{{page.thumbnail}}/amazon_principle.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
 
 ## Building and Deploying
 
