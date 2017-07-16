@@ -94,6 +94,8 @@ article.index{
 
   // INDEX BLOG
   .blog-posts{
+    background: white;
+    position: relative;
     .post{
       margin: $spacing-unit/2 0;
       display: inline-block;
@@ -340,6 +342,9 @@ article.index{
 
         font-size: 1.25rem;
         line-height: 2rem;
+      }
+      a{
+        padding:0;
       }
 
       .right-side{
