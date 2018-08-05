@@ -5,50 +5,23 @@ title: Collin Walker
 
 <div class="index">
 
-  <header class="flex-container flex-items-end">
+  <header class="flex-container flex-items-center">
     <div class="flex-container flex-column">
-      <p>Hello there!</p>
-      <p>I'm a <b>design technologist at </b><a href="http://hcd.amazon.jobs/" target="_blank"><b>Amazon</b></a> who is laser focused on simplifying obscure problems into memorable experiences. I'm fueled by new perspectives, analyzing weird movies and hip-hop.</p>
+      <p>I'm a <a href="http://hcd.amazon.jobs/">design technologist</a> at Amazon laser focused on simplifying obscure problems into memorable experiences.</p>
     </div>
+    <div class="fade-white"></div>
     <canvas id="index-canv" width="32" height="5"></canvas>
 
   </header>
-
-  <!--<div class="flex-container flex-row flex-start" id="projects">-->
-    <!--<h2>Projects</h2>-->
-    <!--{% for project in site.posts %}-->
-    <!--{% if project.layout == "post" %}-->
-    <!--<div class="project flex-child" id="index-project-{{project.thumbnail}}">-->
-
-      <!--<a href="{{site.url}}project/{{project.link}}/" class="left-side published">-->
-
-      <!--<div class="flex-container flex-child project-contents flex-column">-->
-        <!--<div class="flex-child">-->
-          <!--<img src="{{site.images}}thumbnails/{{project.thumbnail}}.jpg" class="">-->
-          <!--<span class="project-stripe"></span>-->
-          <!--<h3>{{ project.title }}</h3>-->
-          <!--<p class="flex-child project-description">{{ project.description }}</p>-->
-        <!--</div>-->
-        <!--<span class="project-hover"></span>-->
-        <!--<div class="flex-end flex-child flex-container flex-column">-->
-          <!--<p class="project-role"><i>{{ project.role }}</i></p>-->
-          <!--<p class="project-view"><b>view project</b></p>-->
-        <!--</div>-->
-      <!--</div>-->
-      <!--</a>-->
-
-    <!--</div>-->
-    <!--{% endif %}-->
-    <!--{% endfor %}-->
-  <!--</div>-->
 
   <div class="blog-posts">
     {% for post in site.posts %}
     {% if post.layout == "blog" and post.published %}
       {% if post.type == "blog" %}
-      <a href="{{site.url}}post/{{post.link}}" class="post">
+      <a href="post/{{post.link}}" class="post">
         <h3>{{ post.title }}</h3>
-        <span>Blog | {{ post.date | date_to_string }}</span>
+        <span >
+          Blog | {{ post.date | date_to_string }} |  <span class="{{post.emoji}}" style="display: inline-block"></span></span>
         <p>{{ post.description }}</p>
       </a>
       {% else %}

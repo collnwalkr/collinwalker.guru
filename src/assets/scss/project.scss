@@ -1,8 +1,7 @@
 article.post{
 
-  max-width: $content-width;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 600px;
+  margin: auto;
 
 
   header {
@@ -137,6 +136,26 @@ article.post{
 
 
 }
+
+.fire:after{
+  content: '\01F525';
+}
+.flex:after{
+  content: '\01F4AA';
+}
+.ok:after{
+  content: '\01F44C';
+}
+.praise:after{
+  content: '\01F64C';
+}
+.magnifying:after{
+  content: '\01F50D';
+}
+.hundred:after{
+  content: '\01F4AF';
+}
+
 
 @include media-query($on-tablet) {
   article.post{

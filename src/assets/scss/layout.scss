@@ -263,28 +263,29 @@ footer{
  */
 .div-404 {
   height: 520px;
-  max-width: 400px;
-  padding: 10px;
+  max-width: 100%;
+  box-sizing: border-box;
+  width: 600px;
+  padding: $spacing-unit * 2 10px;
   text-align: center;
   margin: auto;
-  position: absolute;
-  top: 60px;
-  left: 0;
-  bottom: 0;
-  right: 0;
   p{
     margin-bottom: 10px;
+    font-size: 1rem;
   }
   img{
     margin-bottom: 20px;
   }
   h1{
     font-family: $secondary-font-family;
+    font-size: 1.5rem;
   }
   a{
-    color: $brand-color;
+    color: $dark-text-color;
+    @include linkUnderlines(white, $dark-text-color);
     &:visited{
-      color: $brand-color;
+      color: $dark-text-color;
+      @include linkUnderlines(white, $dark-text-color);
     }
   }
 }
@@ -341,6 +342,10 @@ footer{
 
 .flex-items-end{
   align-items: flex-end;
+}
+
+.flex-items-center{
+  align-items: center;
 }
 
 .flex-start{

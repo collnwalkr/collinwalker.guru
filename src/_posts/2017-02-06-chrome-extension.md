@@ -8,6 +8,7 @@ permalink: /post/:title/
 thumbnail: chrome-extension
 published: true
 link: chrome-extension
+emoji: flex
 ---
 
 <hr class='flex'>

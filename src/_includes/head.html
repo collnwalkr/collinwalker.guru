@@ -6,6 +6,7 @@
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="stylesheet" href="/css/style.css">
 
   <!-- CSS -->
   <!-- inject:css -->
@@ -22,8 +23,6 @@
   <meta name="theme-color" content="#CA6AFF">
 
   <!-- RSS -->
-  {% feed_meta %}
 
   <!-- SEO -->
-  {% seo %}
 </head>

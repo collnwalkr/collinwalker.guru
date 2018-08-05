@@ -320,8 +320,6 @@ h1{
 }
 
 header{
-  margin-bottom: $spacing-unit * 3;
-
 
   .left-side{
     background: white;
@@ -333,6 +331,7 @@ header{
     line-height: 1.5rem;
   }
   a {
+    font-weight: 600;
     @include linkUnderlines(white, $dark-text-color);
     color: $dark-text-color;
     &:hover{

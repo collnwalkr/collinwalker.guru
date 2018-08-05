@@ -28,7 +28,6 @@ gulp.task('scripts', () =>
   gulp.src([
     'node_modules/zoom-vanilla.js/dist/zoom-vanilla.min.js',
     'src/assets/javascript/index.js',
-    'src/assets/javascript/project.js',
     'src/assets/javascript/pretty-console.js',
     'src/assets/javascript/index-canvas.js',
     'src/assets/javascript/screensaver.js'

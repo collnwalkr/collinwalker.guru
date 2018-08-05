@@ -1,7 +1,6 @@
 <footer class="site-footer" xmlns="http://www.w3.org/1999/html">
 
   <div class="logo-svg">
-    <a href="{{site.url}}">{% include logo.svg %}</a>
   </div>
 
   <div class="center">
@@ -13,21 +12,6 @@
     <a href="https://www.linkedin.com/in/walkercollin" aria-label="collin walker's linkedin" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
     <a href="https://www.instagram.com/collnwalkr/" aria-label="collin walker's instagram" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i> </a>
     <a href="https://open.spotify.com/user/12110227" aria-label="collin walker's instagram" target="_blank"><i class="fa fa-spotify" aria-hidden="true"></i></a>
-  </div>
-
-  <div class="flex-container flex-row flex-start footer-wrapper">
-
-    {% for project in site.posts %}
-    {% if project.title != page.title and project.layout == "post"%}
-    <div class="project full-width flex-container center-children flex-column" id="project-{{project.thumbnail}}">
-
-      <a href="{{site.url}}project/{{project.link}}">
-        <h3>{{ project.title }}</h3>
-      </a>
-
-    </div>
-    {% endif %}
-    {% endfor %}
   </div>
 
 </footer>

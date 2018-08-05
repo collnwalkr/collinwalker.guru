@@ -6,9 +6,9 @@ url: https://collinwalker.guru/
 images: https://collinwalker.guru/assets/images/
 
 # Used so Jekyll outputs the site correctly so Gulp can do what it wants
-source: .tmp/src
+source: ./src/
 destination: .tmp/dist
-exclude: ['assets']
+# exclude: ['assets']
 
 # Same as the title etc for your site but can instead be
 # called by using 'site.author.name' and so on
@@ -18,7 +18,6 @@ author:
   email:
   uri: https://collinwalker.guru/
   bio:
-
 
 
 # _config.build.yml overwrites these options when you run `gulp build`
@@ -32,9 +31,6 @@ limit_posts: 10
 
 # Permalink structure and pagination options
 permalink: none
-paginate: 10
-paginate_path: 'page:num'
-excerpt_separator: '<!--more-->'
 
 # Markdown library and options
 markdown: kramdown
@@ -44,11 +40,14 @@ kramdown:
 redcarpet:
   extensions: ['no_intra_emphasis', 'tables', 'fenced_code_blocks', 'autolink', 'smart',
               'strikethrough', 'superscript', 'underline', 'footnotes']
+sass:
+  style: compressed
+  sass_dir: assets/scss
 
 # Extending Jekyll
 gems:
+  - jekyll-assets
   - jekyll-feed
   - jekyll-gist
-  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-seo-tag

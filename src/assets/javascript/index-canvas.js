@@ -12,42 +12,28 @@ $( document ).ready(function() {
       var ctx = canvas.getContext('2d');
 
       //canvas dimensions
-      var W = window.innerWidth;
-      var H = window.innerHeight;
-      if(W < 800){
-        W *= 2;
-        H *= 2;
-        ctx.scale(2,2);
-      } else{
-        ctx.scale(1,1);
-      }
+      let H = $('article').height() * 2;
+      let W = $('article').width() * 2;
+      ctx.scale(2,2);
       canvas.width = W;
       canvas.height = H;
 
 
       $(window).resize(function(){
-        W = window.innerWidth;
-        H = window.innerHeight;
-        if(W < 800){
-          W *= 2;
-          H *= 2;
-          ctx.scale(2,2);
-        } else{
-          ctx.scale(1,1);
-        }
+        H = $('article').height() * 2;
+        W = $('article').width() * 2;
+        ctx.scale(2,2);
         canvas.width = W;
         canvas.height = H;
       });
 
-      var mp = 7; //max particles
+      var mp = 6; //max particles
       var particles = [];
-      for(var i = 0; i < mp; i++)
-      {
+      for(var i = 0; i < mp; i++) {
         particles.push({
           x: Math.random()*W, //x-coordinate
-          y: Math.random()*H, //y-coordinate
+          y: (i+1)*H/mp, //y-coordinate
           r: Math.random()+1 + W/1000, //radius
-          d: Math.random()*mp, //density
           o: Math.floor(Math.random() * (360 - 1)) // rotation
         })
       }
@@ -79,13 +65,13 @@ $( document ).ready(function() {
         for(var i = 0; i < mp; i++)
         {
           var p = particles[i];
-          p.y += (Math.cos(angle) + p.r) / 6;
+          p.y += (Math.cos(angle) + p.r) / 8;
           p.x += Math.sin(angle);
           p.o = p.x * 4;
 
           if(p.y > H)
           {
-            particles[i] = {x: Math.random()*W, y: -10, r: p.r, d: p.d, o: p.o};
+            particles[i] = {x: Math.random()*W, y: -10, r: p.r, o: p.o};
           }
         }
       }

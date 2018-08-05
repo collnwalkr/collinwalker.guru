@@ -37,6 +37,7 @@
     "yargs": "^4.7.0"
   },
   "dependencies": {
+    "medium-zoom": "^0.4.0",
     "zoom-vanilla.js": "^2.0.1"
   }
 }
